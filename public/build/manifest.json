@@ -1,0 +1,52 @@
+{
+  "_swiper-bundle-CvY2A7Et.css": {
+    "file": "assets/swiper-bundle-CvY2A7Et.css",
+    "src": "_swiper-bundle-CvY2A7Et.css"
+  },
+  "_swiper-bundle-ej4IQf75.js": {
+    "file": "assets/swiper-bundle-ej4IQf75.js",
+    "name": "swiper-bundle",
+    "css": [
+      "assets/swiper-bundle-CvY2A7Et.css"
+    ]
+  },
+  "resources/assets/bg/tictalks-bg.png": {
+    "file": "assets/tictalks-bg-D3HzoZZv.png",
+    "src": "resources/assets/bg/tictalks-bg.png"
+  },
+  "resources/css/app.css": {
+    "file": "assets/app-DQoMXZEH.css",
+    "src": "resources/css/app.css",
+    "isEntry": true
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-CAiCLEjY.js",
+    "name": "app",
+    "src": "resources/js/app.js",
+    "isEntry": true
+  },
+  "resources/js/gsap.js": {
+    "file": "assets/gsap-BoPnNK7J.js",
+    "name": "gsap",
+    "src": "resources/js/gsap.js",
+    "isEntry": true
+  },
+  "resources/js/slider.js": {
+    "file": "assets/slider-ChFR2NIN.js",
+    "name": "slider",
+    "src": "resources/js/slider.js",
+    "isEntry": true,
+    "imports": [
+      "_swiper-bundle-ej4IQf75.js"
+    ]
+  },
+  "resources/js/sliderProduct.js": {
+    "file": "assets/sliderProduct-CYyEtzzf.js",
+    "name": "sliderProduct",
+    "src": "resources/js/sliderProduct.js",
+    "isEntry": true,
+    "imports": [
+      "_swiper-bundle-ej4IQf75.js"
+    ]
+  }
+}

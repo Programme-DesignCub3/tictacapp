@@ -1,0 +1,1 @@
+import{S as e}from"./swiper-bundle-ej4IQf75.js";new e("#activitySlider",{slidesPerView:1,spaceBetween:20,breakpoints:{425:{slidesPerView:2,spaceBetween:20},720:{slidesPerView:3,spaceBetween:30},1240:{slidesPerView:4,spaceBetween:40}},scrollbar:{el:".swiper-scrollbar",draggable:!0,snapOnRelease:!0}});

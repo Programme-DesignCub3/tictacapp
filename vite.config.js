@@ -10,6 +10,7 @@ export default defineConfig({
                 "resources/js/app.js",
                 "resources/js/gsap.js",
                 "resources/js/slider.js",
+                "resources/js/sliderProduct.js",
             ],
             refresh: true,
         }),
