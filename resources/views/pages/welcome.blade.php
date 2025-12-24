@@ -117,7 +117,7 @@
                     title="TicTacTalks">
             </div>
 
-            <div class="absolute right-[43%] top-[76%]">
+            <div class="absolute left-[43%] top-[76%]">
                 <img class="text-image w-[355px]" src="{{ asset('img/char/spicy.gif') }}" alt="TicTacTalks"
                     title="TicTacTalks">
             </div>
