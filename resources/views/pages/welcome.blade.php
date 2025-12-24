@@ -11,11 +11,7 @@
 
     <div id="smooth-wrapper">
         <div class="relative pt-28" id="smooth-content">
-            <picture>
-                <source srcset="{{ asset('img/resized_grafich-bg.webp') }}" type="image/webp">
-                <source srcset="{{ asset('img/grafich_bg--sm.png') }}" type="image/jpeg">
-                <img class="h-auto w-full" id="mainbackground" src="{{ asset('img/grafich_bg--sm.png') }}" alt="">
-            </picture>
+            <img class="h-auto w-full" id="mainbackground" src="{{ asset('img/main-bg.png') }}" alt="mainbackground">
             {{-- <img src="{{ asset('img/cave1-1-01-sm.png') }}" alt="" class="absolute inset-0 w-full h-full object-cover"> --}}
 
             {{-- Cloud images --}}
@@ -80,25 +76,57 @@
 
 
             {{-- Text Image --}}
-            <a class="absolute right-[32%] top-[26.7%]" href="#">
-                <img class="text-image w-[355px]" src="{{ asset('img/text/Website TicTac-04.png') }}"
-                    alt="Crunch Selection" title="Crunch Selection">
+            <a class="absolute right-[32%] top-[26.7%]" href="{{ route('tictacstation') }}">
+                <img class="text-image w-[355px]" src="{{ asset('img/text/tictacstation.png') }}" alt="TicTacStation"
+                    title="TicTacStation">
             </a>
 
-            <a class="absolute left-[13%] top-[49.5%]" href="#">
-                <img class="text-image w-[355px]" src="{{ asset('img/text/Website TicTac-05.png') }}" alt="TicTacvity"
-                    title="TicTacvity">
+            <a class="absolute left-[13%] top-[49.5%]" href="{{ route('tictactivity') }}">
+                <img class="text-image w-[355px]" src="{{ asset('img/text/tictactivity.png') }}" alt="TicTacTivity"
+                    title="TicTacTivity">
             </a>
 
-            <a class="absolute right-[10%] top-[62.1%]" href="#">
-                <img class="text-image w-[355px]" src="{{ asset('img/text/Website TicTac-06.png') }}" alt="TicTacvity"
-                    title="TicTacvity">
+            <a class="absolute right-[10%] top-[62.1%]" href="{{ route('tictalks') }}">
+                <img class="text-image w-[355px]" src="{{ asset('img/text/tictactalks.png') }}" alt="TicTacTalks"
+                    title="TicTacTalks">
             </a>
 
-            <a class="absolute left-[33.8%] top-[83.6%]" href="#">
-                <img class="text-image w-[355px]" src="{{ asset('img/text/Website TicTac-07.png') }}" alt="TicTacvity"
-                    title="TicTacvity">
+            <a class="absolute left-[33.8%] top-[83.6%]" href="{{ route('tictacplay') }}">
+                <img class="text-image w-[355px]" src="{{ asset('img/text/tictacplay.png') }}" alt="TicTacPlay"
+                    title="TicTacPlay">
             </a>
+
+            {{-- character images --}}
+            <div class="absolute right-[22%] top-[17%]">
+                <img class="text-image w-[355px]" src="{{ asset('img/char/original.gif') }}" alt="original"
+                    title="original">
+            </div>
+
+            <div class="absolute right-[30%] top-[35.5%]">
+                <img class="text-image w-[355px]" src="{{ asset('img/char/cow.gif') }}" alt="TicTacTivity"
+                    title="TicTacTivity">
+            </div>
+
+            <div class="absolute left-[8%] top-[56.5%]">
+                <img class="text-image w-[355px]" src="{{ asset('img/char/seweed.gif') }}" alt="TicTacPlay"
+                    title="TicTacPlay">
+            </div>
+
+            <div class="absolute right-[15%] top-[49%]">
+                <img class="text-image w-[355px]" src="{{ asset('img/char/mix.gif') }}" alt="TicTacTalks"
+                    title="TicTacTalks">
+            </div>
+
+            <div class="absolute right-[43%] top-[76%]">
+                <img class="text-image w-[355px]" src="{{ asset('img/char/spicy.gif') }}" alt="TicTacTalks"
+                    title="TicTacTalks">
+            </div>
+
+            <div class="absolute right-[12%] top-[69%]">
+                <img class="text-image w-[355px]" src="{{ asset('img/char/noodle.gif') }}" alt="TicTacTalks"
+                    title="TicTacTalks">
+            </div>
+
 
         </div>
     </div>

@@ -39,7 +39,7 @@
 
                 <li>
                     <a class="flex items-center text-white hover:text-gray-300" href="{{ route('home') }}">
-                        <img class="h-auto w-60" src="{{ asset('logo.png') }}" alt="Logo" />
+                        <img class="h-auto w-60" src="{{ asset('img/text/tictacland.png') }}" alt="Logo" />
                     </a>
                 </li>
 
