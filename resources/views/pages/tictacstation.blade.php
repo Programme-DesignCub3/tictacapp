@@ -34,7 +34,7 @@
 
             <div class="flex flex-col gap-y-8 text-white">
                 <div>
-                    <img src="{{ asset('img/product_placeholder/product-headline.png') }}"
+                    <img src="{{ asset('img/product_placeholder/product-headline-1.png') }}"
                         alt="Enjoy out tic-tac selections">
                 </div>
                 <div class="relative flex items-center justify-start rounded-lg px-4 py-8 before:absolute before:-z-10 before:-ml-[10%] before:size-full before:rounded-2xl before:lg:-ml-[45%]"
