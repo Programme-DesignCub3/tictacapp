@@ -22,6 +22,10 @@
                     ['thumbnail' => asset('img/thumbnail_placeholder/activity-2.png')],
                     ['thumbnail' => asset('img/thumbnail_placeholder/activity-3.png')],
                     ['thumbnail' => asset('img/thumbnail_placeholder/activity-4.png')],
+                    ['thumbnail' => asset('img/thumbnail_placeholder/activity-1.png')],
+                    ['thumbnail' => asset('img/thumbnail_placeholder/activity-2.png')],
+                    ['thumbnail' => asset('img/thumbnail_placeholder/activity-3.png')],
+                    ['thumbnail' => asset('img/thumbnail_placeholder/activity-4.png')],
                 ]" />
             </div>
         </div>

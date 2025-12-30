@@ -21,6 +21,10 @@
                 ['thumbnail' => asset('img/thumbnail_placeholder/talk-2.png')],
                 ['thumbnail' => asset('img/thumbnail_placeholder/talk-3.png')],
                 ['thumbnail' => asset('img/thumbnail_placeholder/talk-4.png')],
+                ['thumbnail' => asset('img/thumbnail_placeholder/talk-1.png')],
+                ['thumbnail' => asset('img/thumbnail_placeholder/talk-2.png')],
+                ['thumbnail' => asset('img/thumbnail_placeholder/talk-3.png')],
+                ['thumbnail' => asset('img/thumbnail_placeholder/talk-4.png')],
             ]" />
         </div>
     </div>
