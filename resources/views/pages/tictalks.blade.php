@@ -16,7 +16,12 @@
                 </div>
             </div>
 
-            <x-slider.slider id="activitySlider" :items=[1,2,3,4,5,6] />
+            <x-slider.slider id="activitySlider" :items="[
+                ['thumbnail' => asset('img/thumbnail_placeholder/talk-1.png')],
+                ['thumbnail' => asset('img/thumbnail_placeholder/talk-2.png')],
+                ['thumbnail' => asset('img/thumbnail_placeholder/talk-3.png')],
+                ['thumbnail' => asset('img/thumbnail_placeholder/talk-4.png')],
+            ]" />
         </div>
     </div>
 

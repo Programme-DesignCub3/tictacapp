@@ -17,7 +17,12 @@
                         <x-button>Music</x-button>
                     </div>
                 </div>
-                <x-slider.slider id="activitySlider" :items=[1,2,3,4,5,6] />
+                <x-slider.slider id="activitySlider" :items="[
+                    ['thumbnail' => asset('img/thumbnail_placeholder/activity-1.png')],
+                    ['thumbnail' => asset('img/thumbnail_placeholder/activity-2.png')],
+                    ['thumbnail' => asset('img/thumbnail_placeholder/activity-3.png')],
+                    ['thumbnail' => asset('img/thumbnail_placeholder/activity-4.png')],
+                ]" />
             </div>
         </div>
     </div>
