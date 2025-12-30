@@ -25,7 +25,8 @@
     <header class="relative z-10">
 
         <nav class="container mx-auto text-white">
-            <ul class="*:font-coopbl flex items-center justify-between p-4 text-xl font-semibold *:text-center">
+            <ul
+                class="*:font-coopbl flex flex-wrap items-center justify-between p-4 text-xl font-semibold *:text-center">
 
                 {{-- menulist --}}
                 {{-- Crunch Selection, TicTacvity, Logo Image, TicTalks, Game On! --}}
