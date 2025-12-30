@@ -102,7 +102,7 @@
                     title="original">
             </div>
 
-            <div class="absolute right-[33%] top-[36%]">
+            <div class="absolute right-[33%] top-[35.7%]">
                 <img class="text-image w-[13vw]" src="{{ asset('img/char/cow.gif') }}" alt="TicTacTivity"
                     title="TicTacTivity">
             </div>

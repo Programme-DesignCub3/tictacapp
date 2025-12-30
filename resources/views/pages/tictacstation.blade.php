@@ -44,7 +44,7 @@
                         <p class="text-xl">Available in 2 sizes :<span class="font-bold"> 14g & 45g </span></p>
                     </div>
                 </div>
-                <div class="md:max-w-3/5">
+                <div class="md:max-w-3/5 p-4">
                     <p>
                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos aspernatur corporis quisquam
                         minus, cupiditate distinctio neque aut sequi illo consequatur quas nisi rerum sapiente ipsum
