@@ -11,7 +11,7 @@ Route::get('/tictalks', function () {
 })->name('tictalks');
 
 Route::get('/gameon', function () {
-    return view('pages.welcome');
+    return view('pages.gameon');
 })->name('gameon');
 
 Route::get('/tictacstation', function () {
