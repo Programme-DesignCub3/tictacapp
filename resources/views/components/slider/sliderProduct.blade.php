@@ -2,7 +2,7 @@
 
 <!-- Slider main container -->
 <div class="grid-overlay grid content-center items-center justify-center justify-items-center">
-    <img class="" src="{{ asset('img/product-item-bg.png') }}" alt="" />
+    <img class="-ml-40" src="{{ asset('img/product-item-bg.png') }}" alt="" />
 
     <div class="swiper max-w-full" id="{{ $id }}">
 

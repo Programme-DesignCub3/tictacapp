@@ -39,7 +39,7 @@
                         alt="Enjoy out tic-tac selections">
                 </div>
 
-                <div class="relative flex items-center justify-start rounded-lg px-4 py-8 before:absolute before:-z-10 before:-ml-[10%] before:size-full before:w-[140%] before:rounded-2xl before:sm:-ml-[45%] before:lg:-ml-[45%]"
+                <div class="relative flex items-center justify-start rounded-lg px-4 py-8 before:absolute before:-z-10 before:-ml-[10%] before:size-full before:w-[135%] before:rounded-2xl before:sm:-ml-[45%] before:lg:-ml-[45%]"
                     :class="currentProduct.color">
                     <div class="flex flex-col gap-y-2">
                         <h2 class="text-3xl font-bold" x-text="currentProduct.label"></h2>

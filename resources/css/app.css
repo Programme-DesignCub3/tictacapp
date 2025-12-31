@@ -27,11 +27,11 @@
 
 @layer components {
     .swiper-button-prev {
-        @apply left-[15%]!;
+        @apply top-[48%] left-[15%]!;
     }
 
     .swiper-button-next {
-        @apply right-[15%]!;
+        @apply top-[48%] right-[15%]!;
     }
 
     .slider-inner-shadow {
