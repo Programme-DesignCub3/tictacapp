@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
     function handleImageLoad() {
         console.log("Existing image loaded successfully!");
         // Initialize ScrollSmoother after the image has loaded
-        runScrollSmoother();
+        // runScrollSmoother();
     }
 
     existingImg.onload = handleImageLoad;
