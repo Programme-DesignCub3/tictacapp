@@ -1,16 +1,135 @@
 @font-face {
-    font-family: "Super Comic";
-    src: url("../assets/fonts/SuperComic.woff2") format("woff2"),
-        url("../assets/fonts/SuperComic.woff") format("woff");
+    font-family: "Cocogoose";
+    src: url("../assets/fonts/Cocogoose-Bold.woff2") format("woff2"),
+        url("../assets/fonts/Cocogoose-Bold.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Cocogoose";
+    src: url("../assets/fonts/Cocogoose-BoldItalic.woff2") format("woff2"),
+        url("../assets/fonts/Cocogoose-BoldItalic.woff") format("woff");
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Cocogoose";
+    src: url("../assets/fonts/Cocogoose-Italic.woff2") format("woff2"),
+        url("../assets/fonts/Cocogoose-Italic.woff") format("woff");
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Cocogoose";
+    src: url("../assets/fonts/Cocogoose-LightItalic.woff2") format("woff2"),
+        url("../assets/fonts/Cocogoose-LightItalic.woff") format("woff");
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Cocogoose Darkmode";
+    src: url("../assets/fonts/Cocogoose-Darkmode.woff2") format("woff2"),
+        url("../assets/fonts/Cocogoose-Darkmode.woff") format("woff");
     font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: "Poppins";
-    src: url("../assets/fonts/Poppins-Regular.woff2") format("woff2"),
-        url("../assets/fonts/Poppins-Regular.woff") format("woff");
+    font-family: "Cocogoose Darkmode";
+    src: url("../assets/fonts/Cocogoose-DarkmodeItalic.woff2") format("woff2"),
+        url("../assets/fonts/Cocogoose-DarkmodeItalic.woff") format("woff");
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Cocogoose Semilight";
+    src: url("../assets/fonts/Cocogoose-SemilightItalic.woff2") format("woff2"),
+        url("../assets/fonts/Cocogoose-SemilightItalic.woff") format("woff");
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Cocogoose";
+    src: url("../assets/fonts/Cocogoose-Light.woff2") format("woff2"),
+        url("../assets/fonts/Cocogoose-Light.woff") format("woff");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Cocogoose";
+    src: url("../assets/fonts/Cocogoose-Regular.woff2") format("woff2"),
+        url("../assets/fonts/Cocogoose-Regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Cocogoose";
+    src: url("../assets/fonts/Cocogoose-UltralightItalic.woff2") format("woff2"),
+        url("../assets/fonts/Cocogoose-UltralightItalic.woff") format("woff");
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Cocogoose Semilight";
+    src: url("../assets/fonts/Cocogoose-Semilight.woff2") format("woff2"),
+        url("../assets/fonts/Cocogoose-Semilight.woff") format("woff");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Cocogoose";
+    src: url("../assets/fonts/Cocogoose-ThinItalic.woff2") format("woff2"),
+        url("../assets/fonts/Cocogoose-ThinItalic.woff") format("woff");
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "CocogooseProLetterpressTrial";
+    src: url("../assets/fonts/CocogooseProLetterpressTrial-Regular.woff2")
+            format("woff2"),
+        url("../assets/fonts/CocogooseProLetterpressTrial-Regular.woff")
+            format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Cocogoose";
+    src: url("../assets/fonts/Cocogoose-Thin.woff2") format("woff2"),
+        url("../assets/fonts/Cocogoose-Thin.woff") format("woff");
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Super Comic";
+    src: url("../assets/fonts/SuperComic.woff2") format("woff2"),
+        url("../assets/fonts/SuperComic.woff") format("woff");
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -21,6 +140,24 @@
     src: url("../assets/fonts/CooperBlack.woff2") format("woff2"),
         url("../assets/fonts/CooperBlack.woff") format("woff");
     font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Cocogoose";
+    src: url("../assets/fonts/Cocogoose-Ultralight.woff2") format("woff2"),
+        url("../assets/fonts/Cocogoose-Ultralight.woff") format("woff");
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url("../assets/fonts/Poppins-Regular.woff2") format("woff2"),
+        url("../assets/fonts/Poppins-Regular.woff") format("woff");
+    font-weight: normal;
     font-style: normal;
     font-display: swap;
 }

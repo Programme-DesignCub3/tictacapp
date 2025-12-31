@@ -22,31 +22,38 @@
     <header class="relative z-10">
 
         <nav class="container mx-auto text-white">
-            <ul
-                class="*:font-cooper flex flex-wrap items-center justify-between p-4 text-xl font-semibold *:text-center">
+            <ul class="font-cocogoose flex flex-wrap items-center justify-between p-4 text-center text-xl">
 
                 {{-- menulist --}}
                 {{-- Crunch Selection, TicTacvity, Logo Image, TicTalks, Game On! --}}
-                <li>
-                    <a class="text-white hover:text-gray-300" href="{{ route('tictacstation') }}">TicTacStation</a>
+                <li data-before-content="TicTacStation" @class([
+                    'nav--item-outline' => request()->routeIs('tictacstation'),
+                ])>
+                    <a class="text-white" href="{{ route('tictacstation') }}">TicTacStation</a>
                 </li>
 
-                <li>
-                    <a class="text-white hover:text-gray-300" href="{{ route('tictactivity') }}">TicTacvity</a>
+                <li data-before-content="TicTacvity" @class([
+                    'nav--item-outline' => request()->routeIs('tictactivity'),
+                ])>
+                    <a class="text-white" href="{{ route('tictactivity') }}">TicTacvity</a>
                 </li>
 
-                <li>
-                    <a class="flex items-center text-white hover:text-gray-300" href="{{ route('home') }}">
+                <li data-before-content="TicTacapp">
+                    <a class="flex items-center text-white" href="{{ route('home') }}">
                         <img class="h-auto w-60" src="{{ asset('img/logo.png') }}" alt="Logo" />
                     </a>
                 </li>
 
-                <li>
-                    <a class="text-white hover:text-gray-300" href="{{ route('tictalks') }}">TicTalks</a>
+                <li data-before-content="TicTalks" @class([
+                    'nav--item-outline' => request()->routeIs('tictalks'),
+                ])>
+                    <a class="text-white" href="{{ route('tictalks') }}">TicTalks</a>
                 </li>
 
-                <li>
-                    <a class="text-white hover:text-gray-300" href="{{ route('tictacplay') }}">Game On!</a>
+                <li data-before-content="Game On!" @class([
+                    'nav--item-outline' => request()->routeIs('gameon'),
+                ])>
+                    <a class="text-white" href="{{ route('tictacstation') }}">Game On!</a>
                 </li>
 
             </ul>

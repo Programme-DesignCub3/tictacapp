@@ -4,13 +4,12 @@
     @endpush
 
     {{-- ...existing code or welcome page content... --}}
-
     {{-- <div class="top-[60px] left-[10%] absolute w-[705px]">
             <img src="{{ asset('img/text/Website TicTac-03.png') }}" alt="" class="w-full text-welcome-image">
         </div> --}}
 
-    <div id="smooth-wrapper">
-        <div class="relative mt-28" id="smooth-content">
+    <div id="smooth-wrapper -mt-28">
+        <div class="relative" id="smooth-content">
             <img class="h-auto w-full" id="mainbackground" src="{{ asset('img/main-bg.png') }}" alt="mainbackground">
             {{-- <img src="{{ asset('img/cave1-1-01-sm.png') }}" alt="" class="absolute inset-0 w-full h-full object-cover"> --}}
 
@@ -77,8 +76,8 @@
 
             {{-- Text Image --}}
             <a class="absolute right-[32%] top-[26%]" href="{{ route('tictacstation') }}">
-                <img class="text-image w-[20vw]" src="{{ asset('img/text/tictacstation.png') }}" alt="TicTacStation"
-                    title="TicTacStation">
+                <img class="text-image w-[20vw]" src="{{ asset('img/text/tictacstation.png') }}" alt="tictacstation"
+                    title="tictacstation">
                 <p class="text-center text-white">Click here to read more about
                     <br /> our product varieties >
                 </p>
@@ -100,9 +99,9 @@
                 </p>
             </a>
 
-            <a class="absolute left-[33%] top-[82%]" href="{{ route('tictacplay') }}">
-                <img class="text-image w-[15vw]" src="{{ asset('img/text/tictacplay.png') }}" alt="TicTacPlay"
-                    title="TicTacPlay">
+            <a class="absolute left-[33%] top-[82%]" href="{{ route('gameon') }}">
+                <img class="text-image w-[15vw]" src="{{ asset('img/text/gameon.png') }}" alt="gameon"
+                    title="gameon">
                 <p class="text-center text-white">Click here to play some
                     <br /> exciting games!s >
                 </p>
@@ -125,8 +124,8 @@
             </div>
 
             <div class="absolute left-[11%] top-[58%]">
-                <img class="text-image w-[12vw]" src="{{ asset('img/char/seweed.gif') }}" alt="TicTacPlay"
-                    title="TicTacPlay">
+                <img class="text-image w-[12vw]" src="{{ asset('img/char/seweed.gif') }}" alt="gameon"
+                    title="gameon">
             </div>
 
             <div class="absolute right-[20%] top-[50%]">
@@ -148,7 +147,7 @@
         </div>
     </div>
 
-    <div class="fixed right-[4%] top-[20%] w-[10vw]">
+    <div class="fixed right-[4%] top-[20%] w-[7vw]">
         <div class="relative w-full">
             <img class="cloud absolute h-auto w-auto" data-direction="left" data-speed="1"
                 src="{{ asset('img/air_baloon.png') }}" alt="" style="width: 290px; height: auto;">

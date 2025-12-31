@@ -10,9 +10,9 @@ Route::get('/tictalks', function () {
     return view('pages.tictalks');
 })->name('tictalks');
 
-Route::get('/tictacplay', function () {
+Route::get('/gameon', function () {
     return view('pages.welcome');
-})->name('tictacplay');
+})->name('gameon');
 
 Route::get('/tictacstation', function () {
     return view('pages.tictacstation');

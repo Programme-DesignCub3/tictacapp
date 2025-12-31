@@ -6,5 +6,5 @@ enum ActivityTypeEnum: string
 {
     case TICTACTIVITY = 'tictactivity';
     case TICTALKS = 'tictalks';
-    case TICTACPLAY = 'tictacplay';
+    case gameon = 'gameon';
 }

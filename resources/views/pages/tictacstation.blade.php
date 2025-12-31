@@ -5,7 +5,7 @@
 
     <section class="max-w-384 mx-auto">
         <div class="mb-28">
-            <x-breadcrumb :links="[['label' => 'TicTacStation', 'url' => route('tictacstation')]]" />
+            <x-breadcrumb :links="[['label' => 'tictacstation', 'url' => route('tictacstation')]]" />
         </div>
 
         @php

@@ -14,6 +14,126 @@
     "file": "assets/tictalks-bg-D3HzoZZv.png",
     "src": "resources/assets/bg/tictalks-bg.png"
   },
+  "resources/assets/fonts/Cocogoose-Bold.woff": {
+    "file": "assets/Cocogoose-Bold-FDNXZNXN.woff",
+    "src": "resources/assets/fonts/Cocogoose-Bold.woff"
+  },
+  "resources/assets/fonts/Cocogoose-Bold.woff2": {
+    "file": "assets/Cocogoose-Bold-DERcZq2U.woff2",
+    "src": "resources/assets/fonts/Cocogoose-Bold.woff2"
+  },
+  "resources/assets/fonts/Cocogoose-BoldItalic.woff": {
+    "file": "assets/Cocogoose-BoldItalic-DbePJbcH.woff",
+    "src": "resources/assets/fonts/Cocogoose-BoldItalic.woff"
+  },
+  "resources/assets/fonts/Cocogoose-BoldItalic.woff2": {
+    "file": "assets/Cocogoose-BoldItalic-DO5D6IpG.woff2",
+    "src": "resources/assets/fonts/Cocogoose-BoldItalic.woff2"
+  },
+  "resources/assets/fonts/Cocogoose-Darkmode.woff": {
+    "file": "assets/Cocogoose-Darkmode-BmofgCrI.woff",
+    "src": "resources/assets/fonts/Cocogoose-Darkmode.woff"
+  },
+  "resources/assets/fonts/Cocogoose-Darkmode.woff2": {
+    "file": "assets/Cocogoose-Darkmode-PUU9NSAh.woff2",
+    "src": "resources/assets/fonts/Cocogoose-Darkmode.woff2"
+  },
+  "resources/assets/fonts/Cocogoose-DarkmodeItalic.woff": {
+    "file": "assets/Cocogoose-DarkmodeItalic-Bq_fj4-m.woff",
+    "src": "resources/assets/fonts/Cocogoose-DarkmodeItalic.woff"
+  },
+  "resources/assets/fonts/Cocogoose-DarkmodeItalic.woff2": {
+    "file": "assets/Cocogoose-DarkmodeItalic-BVe38m3V.woff2",
+    "src": "resources/assets/fonts/Cocogoose-DarkmodeItalic.woff2"
+  },
+  "resources/assets/fonts/Cocogoose-Italic.woff": {
+    "file": "assets/Cocogoose-Italic-CwtM77yY.woff",
+    "src": "resources/assets/fonts/Cocogoose-Italic.woff"
+  },
+  "resources/assets/fonts/Cocogoose-Italic.woff2": {
+    "file": "assets/Cocogoose-Italic-C-yM-GZ5.woff2",
+    "src": "resources/assets/fonts/Cocogoose-Italic.woff2"
+  },
+  "resources/assets/fonts/Cocogoose-Light.woff": {
+    "file": "assets/Cocogoose-Light-BKpbq9Wp.woff",
+    "src": "resources/assets/fonts/Cocogoose-Light.woff"
+  },
+  "resources/assets/fonts/Cocogoose-Light.woff2": {
+    "file": "assets/Cocogoose-Light-BFJ4w0E5.woff2",
+    "src": "resources/assets/fonts/Cocogoose-Light.woff2"
+  },
+  "resources/assets/fonts/Cocogoose-LightItalic.woff": {
+    "file": "assets/Cocogoose-LightItalic-CWTMBbLE.woff",
+    "src": "resources/assets/fonts/Cocogoose-LightItalic.woff"
+  },
+  "resources/assets/fonts/Cocogoose-LightItalic.woff2": {
+    "file": "assets/Cocogoose-LightItalic-BF5cqMun.woff2",
+    "src": "resources/assets/fonts/Cocogoose-LightItalic.woff2"
+  },
+  "resources/assets/fonts/Cocogoose-Regular.woff": {
+    "file": "assets/Cocogoose-Regular--5gcYmk3.woff",
+    "src": "resources/assets/fonts/Cocogoose-Regular.woff"
+  },
+  "resources/assets/fonts/Cocogoose-Regular.woff2": {
+    "file": "assets/Cocogoose-Regular-DYEsd6LO.woff2",
+    "src": "resources/assets/fonts/Cocogoose-Regular.woff2"
+  },
+  "resources/assets/fonts/Cocogoose-Semilight.woff": {
+    "file": "assets/Cocogoose-Semilight-BSnZGdGD.woff",
+    "src": "resources/assets/fonts/Cocogoose-Semilight.woff"
+  },
+  "resources/assets/fonts/Cocogoose-Semilight.woff2": {
+    "file": "assets/Cocogoose-Semilight-BX9qLtij.woff2",
+    "src": "resources/assets/fonts/Cocogoose-Semilight.woff2"
+  },
+  "resources/assets/fonts/Cocogoose-SemilightItalic.woff": {
+    "file": "assets/Cocogoose-SemilightItalic-bfvIbfd-.woff",
+    "src": "resources/assets/fonts/Cocogoose-SemilightItalic.woff"
+  },
+  "resources/assets/fonts/Cocogoose-SemilightItalic.woff2": {
+    "file": "assets/Cocogoose-SemilightItalic-BsMPiwMu.woff2",
+    "src": "resources/assets/fonts/Cocogoose-SemilightItalic.woff2"
+  },
+  "resources/assets/fonts/Cocogoose-Thin.woff": {
+    "file": "assets/Cocogoose-Thin-BMvEBEt6.woff",
+    "src": "resources/assets/fonts/Cocogoose-Thin.woff"
+  },
+  "resources/assets/fonts/Cocogoose-Thin.woff2": {
+    "file": "assets/Cocogoose-Thin-B0gjM2Il.woff2",
+    "src": "resources/assets/fonts/Cocogoose-Thin.woff2"
+  },
+  "resources/assets/fonts/Cocogoose-ThinItalic.woff": {
+    "file": "assets/Cocogoose-ThinItalic-R-uanhZs.woff",
+    "src": "resources/assets/fonts/Cocogoose-ThinItalic.woff"
+  },
+  "resources/assets/fonts/Cocogoose-ThinItalic.woff2": {
+    "file": "assets/Cocogoose-ThinItalic-B7t2ogro.woff2",
+    "src": "resources/assets/fonts/Cocogoose-ThinItalic.woff2"
+  },
+  "resources/assets/fonts/Cocogoose-Ultralight.woff": {
+    "file": "assets/Cocogoose-Ultralight-TyoxilmH.woff",
+    "src": "resources/assets/fonts/Cocogoose-Ultralight.woff"
+  },
+  "resources/assets/fonts/Cocogoose-Ultralight.woff2": {
+    "file": "assets/Cocogoose-Ultralight-jLdkh4Th.woff2",
+    "src": "resources/assets/fonts/Cocogoose-Ultralight.woff2"
+  },
+  "resources/assets/fonts/Cocogoose-UltralightItalic.woff": {
+    "file": "assets/Cocogoose-UltralightItalic-RzD362Qt.woff",
+    "src": "resources/assets/fonts/Cocogoose-UltralightItalic.woff"
+  },
+  "resources/assets/fonts/Cocogoose-UltralightItalic.woff2": {
+    "file": "assets/Cocogoose-UltralightItalic-vCa8aUY0.woff2",
+    "src": "resources/assets/fonts/Cocogoose-UltralightItalic.woff2"
+  },
+  "resources/assets/fonts/CocogooseProLetterpressTrial-Regular.woff": {
+    "file": "assets/CocogooseProLetterpressTrial-Regular-D6vsiwem.woff",
+    "src": "resources/assets/fonts/CocogooseProLetterpressTrial-Regular.woff"
+  },
+  "resources/assets/fonts/CocogooseProLetterpressTrial-Regular.woff2": {
+    "file": "assets/CocogooseProLetterpressTrial-Regular-BxWX1QGr.woff2",
+    "src": "resources/assets/fonts/CocogooseProLetterpressTrial-Regular.woff2"
+  },
   "resources/assets/fonts/CooperBlack.woff": {
     "file": "assets/CooperBlack-B8n78_BM.woff",
     "src": "resources/assets/fonts/CooperBlack.woff"
@@ -23,11 +143,11 @@
     "src": "resources/assets/fonts/CooperBlack.woff2"
   },
   "resources/assets/fonts/Poppins-Regular.woff": {
-    "file": "assets/Poppins-Regular-TcdwcXWk.woff",
+    "file": "assets/Poppins-Regular-D1uVZrgl.woff",
     "src": "resources/assets/fonts/Poppins-Regular.woff"
   },
   "resources/assets/fonts/Poppins-Regular.woff2": {
-    "file": "assets/Poppins-Regular-BHWtkC9A.woff2",
+    "file": "assets/Poppins-Regular-Cuo6fK1n.woff2",
     "src": "resources/assets/fonts/Poppins-Regular.woff2"
   },
   "resources/assets/fonts/SuperComic.woff": {
@@ -39,7 +159,7 @@
     "src": "resources/assets/fonts/SuperComic.woff2"
   },
   "resources/css/app.css": {
-    "file": "assets/app-Ulev0PaI.css",
+    "file": "assets/app-pjXrUhSo.css",
     "src": "resources/css/app.css",
     "isEntry": true
   },

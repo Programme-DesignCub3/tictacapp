@@ -1,5 +1,5 @@
 @props(['imageUrl'])
 
-<div>
+<div class="flex items-center justify-center">
     <img src="{{ $imageUrl }}" alt="">
 </div>

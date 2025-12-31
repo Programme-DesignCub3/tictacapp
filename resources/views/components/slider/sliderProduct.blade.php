@@ -20,8 +20,13 @@
     <div class="swiper-pagination"></div>
 
     <!-- If we need navigation buttons -->
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev">
+        <img class="rotate-180" src="{{ asset('img/slider-arrow.png') }}" alt="">
+    </div>
+
+    <div class="swiper-button-next">
+        <img src="{{ asset('img/slider-arrow.png') }}" alt="">
+    </div>
 
     <!-- If we need scrollbar -->
     {{-- <div class="swiper-scrollbar"></div> --}}
