@@ -79,27 +79,44 @@
             <a class="absolute right-[32%] top-[26%]" href="{{ route('tictacstation') }}">
                 <img class="text-image w-[20vw]" src="{{ asset('img/text/tictacstation.png') }}" alt="TicTacStation"
                     title="TicTacStation">
+                <p class="text-center text-white">Click here to read more about
+                    <br /> our product varieties >
+                </p>
             </a>
 
             <a class="absolute left-[13%] top-[45%]" href="{{ route('tictactivity') }}">
                 <img class="text-image w-[20vw]" src="{{ asset('img/text/tictactivity.png') }}" alt="TicTacTivity"
                     title="TicTacTivity">
+                <p class="text-center text-white">Click here to read more about
+                    <br /> our recent campaign >
+                </p>
             </a>
 
             <a class="absolute right-[10%] top-[59%]" href="{{ route('tictalks') }}">
                 <img class="text-image w-[20vw]" src="{{ asset('img/text/tictactalks.png') }}" alt="TicTacTalks"
                     title="TicTacTalks">
+                <p class="text-center text-white">Click here to read more about
+                    <br /> our intriguing articles >
+                </p>
             </a>
 
             <a class="absolute left-[33%] top-[82%]" href="{{ route('tictacplay') }}">
                 <img class="text-image w-[15vw]" src="{{ asset('img/text/tictacplay.png') }}" alt="TicTacPlay"
                     title="TicTacPlay">
+                <p class="text-center text-white">Click here to play some
+                    <br /> exciting games!s >
+                </p>
             </a>
 
             {{-- character images --}}
-            <div class="absolute right-[27%] top-[17%]">
-                <img class="text-image w-[12vw]" src="{{ asset('img/char/original.gif') }}" alt="original"
+            <div class="absolute right-[26.5%] top-[17.7%]">
+                <img class="text-image w-[13vw]" src="{{ asset('img/char/original.gif') }}" alt="original"
                     title="original">
+            </div>
+
+            {{-- bush --}}
+            <div class="absolute right-[29.6%] top-[18.7%]">
+                <img class="text-image w-[17.3vw]" src="{{ asset('img/bush.png') }}" alt="bush" title="bush">
             </div>
 
             <div class="absolute right-[33%] top-[35.7%]">
@@ -117,7 +134,7 @@
                     title="TicTacTalks">
             </div>
 
-            <div class="absolute left-[46%] top-[79%]">
+            <div class="absolute left-[44%] top-[79%]">
                 <img class="text-image w-[15vw]" src="{{ asset('img/char/spicy.gif') }}" alt="TicTacTalks"
                     title="TicTacTalks">
             </div>

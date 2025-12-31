@@ -15,7 +15,7 @@
     "src": "resources/assets/bg/tictalks-bg.png"
   },
   "resources/css/app.css": {
-    "file": "assets/app-BDj3h9sp.css",
+    "file": "assets/app-8iCVLN5Q.css",
     "src": "resources/css/app.css",
     "isEntry": true
   },
@@ -26,7 +26,7 @@
     "isEntry": true
   },
   "resources/js/gsap.js": {
-    "file": "assets/gsap-BoPnNK7J.js",
+    "file": "assets/gsap-DCIVKlE0.js",
     "name": "gsap",
     "src": "resources/js/gsap.js",
     "isEntry": true

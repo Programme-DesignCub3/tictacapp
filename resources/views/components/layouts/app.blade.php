@@ -26,7 +26,7 @@
 
         <nav class="container mx-auto text-white">
             <ul
-                class="*:font-coopbl flex flex-wrap items-center justify-between p-4 text-xl font-semibold *:text-center max-md:hidden">
+                class="*:font-coopbl n flex flex-wrap items-center justify-between p-4 text-xl font-semibold *:text-center">
 
                 {{-- menulist --}}
                 {{-- Crunch Selection, TicTacvity, Logo Image, TicTalks, Game On! --}}
@@ -40,7 +40,7 @@
 
                 <li>
                     <a class="flex items-center text-white hover:text-gray-300" href="{{ route('home') }}">
-                        <img class="h-auto w-60" src="{{ asset('img/text/tictacland.png') }}" alt="Logo" />
+                        <img class="h-auto w-60" src="{{ asset('img/logo.png') }}" alt="Logo" />
                     </a>
                 </li>
 
