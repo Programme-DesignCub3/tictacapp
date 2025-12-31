@@ -53,7 +53,7 @@
                 <li data-before-content="Game On!" @class([
                     'nav--item-outline' => request()->routeIs('gameon'),
                 ])>
-                    <a class="text-white" href="{{ route('tictacstation') }}">Game On!</a>
+                    <a class="text-white" href="{{ route('gameon') }}">Game On!</a>
                 </li>
 
             </ul>
