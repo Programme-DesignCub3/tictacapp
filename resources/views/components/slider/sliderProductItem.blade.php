@@ -1,5 +1,11 @@
-@props(['imageUrl'])
+@props(['productImage', 'mascotImage'])''
 
-<div class="flex items-center justify-center">
-    <img src="{{ $imageUrl }}" alt="">
+<div class="relative flex items-center justify-center">
+    <div class="grid-overlay grid content-center items-center justify-center justify-items-center">
+        <img class="" src="{{ asset('img/product-item-bg.png') }}" alt="" />
+        <img class="max-w-[60%]" src="{{ $productImage }}" alt="" />
+    </div>
+    <div class="max-w-2/5 absolute bottom-0 left-0">
+        <img src="{{ $mascotImage }}" alt="">
+    </div>
 </div>

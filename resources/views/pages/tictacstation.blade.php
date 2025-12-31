@@ -57,11 +57,36 @@
 
             <div class="">
                 <x-slider.sliderProduct id="productSlider" :items="[
-                    ['label' => 'Rasa Original', 'id' => 1],
-                    ['label' => 'Rasa Pedas', 'id' => 2],
-                    ['label' => 'Rasa Rumput Laut', 'id' => 3],
-                    ['label' => 'Rasa BBQ', 'id' => 4],
-                    ['label' => 'Rasa Ayam Bawang', 'id' => 5],
+                    [
+                        'label' => 'Rasa Original',
+                        'productImage' => asset('img/package-original.png'),
+                        'productMascot' => asset('img/char/original.gif'),
+                        'id' => 1,
+                    ],
+                    [
+                        'label' => 'Rasa Pedas',
+                        'productImage' => asset('img/package-spicy.png'),
+                        'productMascot' => asset('img/char/spicy.gif'),
+                        'id' => 2,
+                    ],
+                    [
+                        'label' => 'Rasa Rumput Laut',
+                        'productImage' => asset('img/package-seaweed.png'),
+                        'productMascot' => asset('img/char/seaweed.gif'),
+                        'id' => 3,
+                    ],
+                    [
+                        'label' => 'Rasa BBQ',
+                        'productImage' => asset('img/package-cow.png'),
+                        'productMascot' => asset('img/char/cow.gif'),
+                        'id' => 4,
+                    ],
+                    [
+                        'label' => 'Rasa Ayam Bawang',
+                        'productImage' => asset('img/package-chicken.png'),
+                        'productMascot' => asset('img/char/chicken.gif'),
+                        'id' => 5,
+                    ],
                 ]" />
             </div>
         </div>

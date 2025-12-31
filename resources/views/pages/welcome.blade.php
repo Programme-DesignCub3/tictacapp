@@ -8,21 +8,21 @@
             <img src="{{ asset('img/text/Website TicTac-03.png') }}" alt="" class="w-full text-welcome-image">
         </div> --}}
 
-    <div id="smooth-wrapper -mt-28">
+    <div class="-mt-72" id="smooth-wrapper">
         <div class="relative" id="smooth-content">
             <img class="h-auto w-full" id="mainbackground" src="{{ asset('img/main-bg.png') }}" alt="mainbackground">
             {{-- <img src="{{ asset('img/cave1-1-01-sm.png') }}" alt="" class="absolute inset-0 w-full h-full object-cover"> --}}
 
             {{-- Cloud images --}}
 
-            <div class="absolute right-[16%] top-[4%] w-[10vw]">
+            <div class="absolute right-[16%] top-[14%] w-[10vw]">
                 <div class="relative h-full w-full">
                     <img class="cloud absolute h-auto w-auto" data-direction="right" data-speed="1"
                         src="{{ asset('img/cloud.png') }}" alt="" style="width: 290px; height: auto;">
                 </div>
             </div>
 
-            <div class="absolute right-[15%] top-[9%] w-[10vw]">
+            <div class="absolute right-[15%] top-[19%] w-[10vw]">
                 <div class="relative h-full w-full">
                     <img class="cloud absolute h-auto w-auto" data-direction="right" data-speed="1"
                         src="{{ asset('img/cloud.png') }}" alt="" style="width: 100px; height: auto;">
@@ -115,16 +115,16 @@
 
             {{-- bush --}}
             <div class="absolute right-[29.6%] top-[18.7%]">
-                <img class="text-image w-[17.3vw]" src="{{ asset('img/bush.png') }}" alt="bush" title="bush">
+                <img class="w-[17.3vw]" src="{{ asset('img/bush.png') }}" alt="bush" title="bush">
             </div>
 
-            <div class="absolute right-[33%] top-[35.7%]">
+            <div class="absolute right-[33%] top-[36%]">
                 <img class="text-image w-[13vw]" src="{{ asset('img/char/cow.gif') }}" alt="TicTacTivity"
                     title="TicTacTivity">
             </div>
 
             <div class="absolute left-[11%] top-[58%]">
-                <img class="text-image w-[12vw]" src="{{ asset('img/char/seweed.gif') }}" alt="gameon"
+                <img class="text-image w-[12vw]" src="{{ asset('img/char/seaweed.gif') }}" alt="gameon"
                     title="gameon">
             </div>
 

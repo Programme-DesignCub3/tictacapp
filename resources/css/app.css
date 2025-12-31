@@ -58,11 +58,11 @@
         -webkit-text-stroke: 1px var(--color-nav-selected);
         color: white;
 
-        text-shadow: 1px 1px 0 var(--color-nav-selected),
+        text-shadow: 0px 0px 2px var(--color-nav-selected),
             -1px -1px 0 var(--color-nav-selected),
             1px -1px 0 var(--color-nav-selected),
             -1px 1px 0 var(--color-nav-selected),
-            1px 1px 0 var(--color-nav-selected), 0px 1px 0 white;
+            1px 1px 0 var(--color-nav-selected), 0px 2px 0 white;
 
         @apply relative;
 
@@ -76,6 +76,10 @@
                 1px 1px 0 var(--color-nav-selected-before);
             @apply absolute left-0.5 top-0.5 -z-10 text-nowrap;
         }
+    }
+
+    .grid-overlay {
+        @apply *:col-start-1 *:row-start-1;
     }
 }
 

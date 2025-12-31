@@ -10,7 +10,7 @@
         @foreach ($items as $item)
             <div class="swiper-slide"
                 @if (isset($item['key']) || isset($item['id'])) wire:key="{{ isset($item['key']) ? $item['key'] : $item['id'] }}" @endif>
-                <x-slider.sliderProductItem :imageUrl="asset('img/product_placeholder/product-' . $item['id'] . '.png')" />
+                <x-slider.sliderProductItem :productImage="$item['productImage']" :mascotImage="$item['productMascot']" />
             </div>
         @endforeach
 
