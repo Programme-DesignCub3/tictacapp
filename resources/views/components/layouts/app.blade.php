@@ -6,9 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ config('app.name', 'Tictacapp') }}</title>
 
-    {{-- add font css from local assets --}}
-    <link rel="stylesheet" href="{{ asset('fonts/font.css') }}">
-
     <!-- Add your CSS links here -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
@@ -26,7 +23,7 @@
 
         <nav class="container mx-auto text-white">
             <ul
-                class="*:font-coopbl n flex flex-wrap items-center justify-between p-4 text-xl font-semibold *:text-center">
+                class="*:font-cooper flex flex-wrap items-center justify-between p-4 text-xl font-semibold *:text-center">
 
                 {{-- menulist --}}
                 {{-- Crunch Selection, TicTacvity, Logo Image, TicTalks, Game On! --}}

@@ -13,7 +13,7 @@
                 {{-- {{ $item['category'] }} --}}
             </p>
 
-            <h3 class="text-tictac-blue text-lg font-bold">
+            <h3 class="text-tictac-blue font-poppins text-lg font-bold md:text-2xl">
                 {{ $item['category'] ?? 'Lorem ipsum dolor sit amet' }}
                 {{-- {{ $item['title'] }} --}}
             </h3>
@@ -22,7 +22,7 @@
 
                 {{ $item['excerpt'] ??
                     'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos provident quod consequuntur ipsam quaerat
-                                                                                                                                                                                                                                                                                                sint officia enim tempora' }}
+                                                                                                                                                                                                                                                                                                                                                                sint officia enim tempora' }}
 
                 {{-- {{ $excerpt }} --}}
             </p>

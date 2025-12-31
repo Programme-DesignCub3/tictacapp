@@ -14,6 +14,22 @@
     "file": "assets/tictalks-bg-D3HzoZZv.png",
     "src": "resources/assets/bg/tictalks-bg.png"
   },
+  "resources/assets/fonts/CooperBlack.woff": {
+    "file": "assets/CooperBlack-B8n78_BM.woff",
+    "src": "resources/assets/fonts/CooperBlack.woff"
+  },
+  "resources/assets/fonts/CooperBlack.woff2": {
+    "file": "assets/CooperBlack-DCTJVvXO.woff2",
+    "src": "resources/assets/fonts/CooperBlack.woff2"
+  },
+  "resources/assets/fonts/Poppins-Regular.woff": {
+    "file": "assets/Poppins-Regular-TcdwcXWk.woff",
+    "src": "resources/assets/fonts/Poppins-Regular.woff"
+  },
+  "resources/assets/fonts/Poppins-Regular.woff2": {
+    "file": "assets/Poppins-Regular-BHWtkC9A.woff2",
+    "src": "resources/assets/fonts/Poppins-Regular.woff2"
+  },
   "resources/assets/fonts/SuperComic.woff": {
     "file": "assets/SuperComic-DKLdN-4z.woff",
     "src": "resources/assets/fonts/SuperComic.woff"
@@ -23,7 +39,7 @@
     "src": "resources/assets/fonts/SuperComic.woff2"
   },
   "resources/css/app.css": {
-    "file": "assets/app-Dg_brlpz.css",
+    "file": "assets/app-Ulev0PaI.css",
     "src": "resources/css/app.css",
     "isEntry": true
   },
