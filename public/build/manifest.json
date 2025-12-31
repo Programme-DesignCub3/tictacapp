@@ -14,8 +14,16 @@
     "file": "assets/tictalks-bg-D3HzoZZv.png",
     "src": "resources/assets/bg/tictalks-bg.png"
   },
+  "resources/assets/fonts/SuperComic.woff": {
+    "file": "assets/SuperComic-DKLdN-4z.woff",
+    "src": "resources/assets/fonts/SuperComic.woff"
+  },
+  "resources/assets/fonts/SuperComic.woff2": {
+    "file": "assets/SuperComic-boMExNgx.woff2",
+    "src": "resources/assets/fonts/SuperComic.woff2"
+  },
   "resources/css/app.css": {
-    "file": "assets/app-8iCVLN5Q.css",
+    "file": "assets/app-Dg_brlpz.css",
     "src": "resources/css/app.css",
     "isEntry": true
   },

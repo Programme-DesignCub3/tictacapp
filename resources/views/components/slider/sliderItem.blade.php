@@ -22,14 +22,14 @@
 
                 {{ $item['excerpt'] ??
                     'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos provident quod consequuntur ipsam quaerat
-                                                                                                                                                                                                                                                                sint officia enim tempora' }}
+                                                                                                                                                                                                                                                                                                sint officia enim tempora' }}
 
                 {{-- {{ $excerpt }} --}}
             </p>
         </div>
 
     </div>
-    <a class="slider-outer-shadow absolute -bottom-4 left-1/2 block w-1/2 min-w-fit -translate-x-1/2 overflow-clip rounded-full bg-blue-700 p-2"
+    <a class="slider-outer-shadow font-super-comic absolute -bottom-4 left-1/2 block w-1/2 min-w-fit -translate-x-1/2 overflow-clip rounded-full bg-blue-700 p-2 text-center"
         {{-- href="{{ $link }}" --}} href="#">
         <span class="slider-inner-shadow relative block overflow-clip rounded-full bg-yellow-300">
             <span class="text-tictac-blue block size-full px-3 py-1 text-xs">Read more</span>
