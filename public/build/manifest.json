@@ -1,4 +1,8 @@
 {
+  "_index-DdWnu9fz.js": {
+    "file": "assets/index-DdWnu9fz.js",
+    "name": "index"
+  },
   "_swiper-bundle-CvY2A7Et.css": {
     "file": "assets/swiper-bundle-CvY2A7Et.css",
     "src": "_swiper-bundle-CvY2A7Et.css"
@@ -159,7 +163,7 @@
     "src": "resources/assets/fonts/SuperComic.woff2"
   },
   "resources/css/app.css": {
-    "file": "assets/app-BjlewYll.css",
+    "file": "assets/app-CRBlcN1X.css",
     "src": "resources/css/app.css",
     "isEntry": true
   },
@@ -169,11 +173,23 @@
     "src": "resources/js/app.js",
     "isEntry": true
   },
-  "resources/js/gsap.js": {
-    "file": "assets/gsap-DCIVKlE0.js",
-    "name": "gsap",
-    "src": "resources/js/gsap.js",
-    "isEntry": true
+  "resources/js/home.js": {
+    "file": "assets/home-CxnaVCGh.js",
+    "name": "home",
+    "src": "resources/js/home.js",
+    "isEntry": true,
+    "imports": [
+      "_index-DdWnu9fz.js"
+    ]
+  },
+  "resources/js/product.js": {
+    "file": "assets/product-CVPR5oQS.js",
+    "name": "product",
+    "src": "resources/js/product.js",
+    "isEntry": true,
+    "imports": [
+      "_index-DdWnu9fz.js"
+    ]
   },
   "resources/js/slider.js": {
     "file": "assets/slider-ChFR2NIN.js",

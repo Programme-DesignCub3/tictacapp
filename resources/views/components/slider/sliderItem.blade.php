@@ -10,7 +10,7 @@
                 {{ $item['category'] ?? 'Music' }}
             </p>
 
-            <h3 class="text-tictac-blue font-poppins text-lg font-bold md:text-2xl">
+            <h3 class="text-tictac-primary-blue font-poppins text-lg font-bold md:text-2xl">
                 {{ $item['title'] ?? 'Lorem ipsum dolor sit amet' }}
             </h3>
 
@@ -24,7 +24,7 @@
     <a class="slider-outer-shadow font-super-comic absolute -bottom-4 left-1/2 block w-1/2 min-w-fit -translate-x-1/2 overflow-clip rounded-full bg-blue-700 p-2 text-center"
         {{-- href="{{ $link }}" --}} href="#">
         <span class="slider-inner-shadow relative block overflow-clip rounded-full bg-yellow-300">
-            <span class="text-tictac-blue block size-full px-3 py-1 text-xs">Read more</span>
+            <span class="text-tictac-primary-blue block size-full px-3 py-1 text-xs">Read more</span>
         </span>
     </a>
 </div>

@@ -1,11 +1,11 @@
 <x-layouts.app>
     @push('plugin-scripts')
-        @vite(['resources/js/sliderProduct.js'])
+        @vite(['resources/js/product.js', 'resources/js/sliderProduct.js'])
     @endpush
 
     <section class="max-w-384 mx-auto">
         <div class="mb-28">
-            <x-breadcrumb :links="[['label' => 'tictacstation', 'url' => route('tictacstation')]]" />
+            <x-breadcrumb :links="[['label' => 'TicTacStation', 'url' => route('tictacstation')]]" />
         </div>
 
         @php

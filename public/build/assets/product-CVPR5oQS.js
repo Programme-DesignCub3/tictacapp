@@ -1,0 +1,1 @@
+import{g as a}from"./index-DdWnu9fz.js";const o=document.querySelectorAll(".cloud");o.forEach((t,r)=>{t.parentElement;const e=t.getAttribute("data-direction")||"left";a.to(t,{x:Math.random()*(e==="left"?70:-70),duration:4+Math.random()*2,ease:"sine.inOut",yoyo:!0,repeat:-1,delay:1+Math.random()})});

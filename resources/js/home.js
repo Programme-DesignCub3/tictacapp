@@ -81,8 +81,6 @@ function initCloudAnimations() {
     // Get all cloud images and their wrapper divs
     const clouds = document.querySelectorAll(".cloud");
 
-    console.log(`Found ${clouds.length} clouds to animate`);
-
     clouds.forEach((cloudImg, index) => {
         const wrapper = cloudImg.parentElement;
 
@@ -171,11 +169,10 @@ function initCloudAnimations() {
             });
         }
     });
-
-    // Refresh ScrollTrigger after setup
-    ScrollTrigger.refresh();
 }
 
+// Refresh ScrollTrigger after setup
+ScrollTrigger.refresh();
 function runScrollSmoother() {
     ScrollSmoother.create({
         smooth: 1.5, // how long (in seconds) it takes to "catch up" to the native scroll position

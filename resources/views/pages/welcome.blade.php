@@ -1,6 +1,6 @@
 <x-layouts.app>
     @push('plugin-scripts')
-        @vite(['resources/js/gsap.js'])
+        @vite(['resources/js/home.js'])
     @endpush
 
     {{-- ...existing code or welcome page content... --}}

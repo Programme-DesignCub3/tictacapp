@@ -8,7 +8,8 @@ export default defineConfig({
             input: [
                 "resources/css/app.css",
                 "resources/js/app.js",
-                "resources/js/gsap.js",
+                "resources/js/home.js",
+                "resources/js/product.js",
                 "resources/js/slider.js",
                 "resources/js/sliderProduct.js",
             ],

@@ -18,7 +18,8 @@
 
 </head>
 
-<body class="bg-linear-0 from-tictac-blue to-tictac-blue-light relative min-h-screen via-50%">
+<body class="bg-linear-0 from-tictac-primary-blue to-tictac-primary-blue-light relative min-h-screen via-50%">
+
     <header class="relative z-10">
 
         <nav class="container mx-auto text-white">
@@ -62,7 +63,7 @@
 
     </header>
 
-    <main class="" id="main-content">
+    <main class="font-poppins" id="main-content">
         {{ $slot }}
     </main>
 

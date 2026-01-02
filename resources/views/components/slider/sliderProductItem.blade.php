@@ -1,4 +1,4 @@
-@props(['productImage', 'mascotImage'])''
+@props(['productImage', 'mascotImage'])
 
 <div class="relative flex items-center justify-center">
     <div class="grid content-center items-center justify-center justify-items-center">

@@ -2,7 +2,13 @@
 
 <!-- Slider main container -->
 <div class="grid-overlay grid content-center items-center justify-center justify-items-center">
-    <img class="-ml-40" src="{{ asset('img/product-item-bg.png') }}" alt="" />
+    <div class="relative sm:-ml-40">
+        <img class="cloud absolute left-[15%] top-0 h-[25%]" data-direction="right" data-speed="1"
+            src="{{ asset('img/cloud.png') }}" alt="" />
+        <img class="cloud absolute right-[5%] top-1/4 h-[10%]" data-direction="left" data-speed="1"
+            src="{{ asset('img/cloud.png') }}" alt="" />
+        <img src="{{ asset('img/product-item-bg.png') }}" alt="" />
+    </div>
 
     <div class="swiper max-w-full" id="{{ $id }}">
 
