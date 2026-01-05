@@ -14,6 +14,14 @@
       "assets/swiper-bundle-CvY2A7Et.css"
     ]
   },
+  "resources/assets/bg/tictactivity-bg-island.png": {
+    "file": "assets/tictactivity-bg-island-Djc8n6eK.png",
+    "src": "resources/assets/bg/tictactivity-bg-island.png"
+  },
+  "resources/assets/bg/tictalks-bg-island.png": {
+    "file": "assets/tictalks-bg-island-CdlgICsZ.png",
+    "src": "resources/assets/bg/tictalks-bg-island.png"
+  },
   "resources/assets/bg/tictalks-bg.png": {
     "file": "assets/tictalks-bg-D3HzoZZv.png",
     "src": "resources/assets/bg/tictalks-bg.png"
@@ -163,7 +171,7 @@
     "src": "resources/assets/fonts/SuperComic.woff2"
   },
   "resources/css/app.css": {
-    "file": "assets/app-CRBlcN1X.css",
+    "file": "assets/app-C-t4h7cp.css",
     "src": "resources/css/app.css",
     "isEntry": true
   },

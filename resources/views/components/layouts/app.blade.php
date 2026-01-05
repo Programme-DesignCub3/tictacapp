@@ -18,7 +18,9 @@
 
 </head>
 
-<body class="bg-linear-0 from-tictac-primary-blue to-tictac-primary-blue-light relative min-h-screen via-50%">
+<body @class([
+    'bg-linear-0 from-tictac-primary-blue to-tictac-primary-blue-light relative min-h-screen via-50%',
+])>
 
     <header class="relative z-10">
 
