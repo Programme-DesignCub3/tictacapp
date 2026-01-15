@@ -1,5 +1,5 @@
 @props(['item'])
-<div class="slider-outer-shadow rounded-4xl relative mb-10 bg-blue-700 p-2">
+<div class="slider-outer-shadow rounded-4xl bg-tictac-primary-blue relative mb-10 p-2">
     <div class="slider-inner-shadow rounded-4xl overflow-clip bg-white">
         <div>
             <img src="{{ $item['thumbnail'] ?? 'https://placehold.co/600x400' }}" alt="">
@@ -21,9 +21,9 @@
         </div>
     </div>
 
-    <a class="slider-outer-shadow font-super-comic absolute -bottom-4 left-1/2 block w-1/2 min-w-fit -translate-x-1/2 overflow-clip rounded-full bg-blue-700 p-2 text-center"
+    <a class="slider-outer-shadow font-super-comic bg-tictac-primary-blue absolute -bottom-4 left-1/2 block w-1/2 min-w-fit -translate-x-1/2 overflow-clip rounded-full p-2 text-center"
         {{-- href="{{ $link }}" --}} href="#">
-        <span class="slider-inner-shadow relative block overflow-clip rounded-full bg-yellow-300">
+        <span class="slider-inner-shadow bg-tictac-secondary-yellow relative block overflow-clip rounded-full">
             <span class="text-tictac-primary-blue block size-full px-3 py-1 text-xs">Read more</span>
         </span>
     </a>

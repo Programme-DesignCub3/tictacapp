@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -21,3 +22,15 @@ Route::get('/tictacstation', function () {
 Route::get('/tictactivity', function () {
     return view('pages.tictactivity');
 })->name('tictactivity');
+
+Route::post('/login', [LoginController::class, 'login'])->name('login');
+
+Route::group(
+    ['prefix' => 'login', 'as' => 'login.', 'middleware' => ['guest', 'throttle']], function () {
+        Route::get('/auth/{provider}', [LoginController::class, 'redirectToProvider'])
+            ->where('provider', 'facebook|google|apple')
+            ->name('auth');
+        Route::get('/auth/{provider}/callback', [LoginController::class, 'handleProviderCallback'])
+            ->where('provider', 'facebook|google|apple')
+            ->name('auth.redirect');
+    });

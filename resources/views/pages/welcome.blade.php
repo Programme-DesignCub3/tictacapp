@@ -10,6 +10,9 @@
 
     <div class="-mt-72" id="smooth-wrapper">
         <div class="relative" id="smooth-content">
+            <div class="absolute left-1/2 top-96 z-50 -translate-x-1/2">
+                <livewire:auth-modal />
+            </div>
             <img class="h-auto w-full" id="mainbackground" src="{{ asset('img/main-bg.png') }}" alt="mainbackground">
             {{-- <img src="{{ asset('img/cave1-1-01-sm.png') }}" alt="" class="absolute inset-0 w-full h-full object-cover"> --}}
 
