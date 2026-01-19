@@ -37,16 +37,19 @@
             </div>
 
             <div class="inline-block h-full min-h-[1em] w-0.5 bg-white"></div>
+
+
             <x-modal>
                 <x-slot:trigger>
                     <div class="flex cursor-pointer items-center gap-2">
                         <x-lucide-lock class="size-8" />
-                        <span>Login</span>
+                        <span class="">Login</span>
                     </div>
                 </x-slot:trigger>
 
                 <div class="mx-auto w-max">
                     <livewire:auth-modal />
+                </div>
             </x-modal>
         </div>
 
