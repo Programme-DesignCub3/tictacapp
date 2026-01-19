@@ -2,7 +2,8 @@
     <div class="slider-inner-shadow relative overflow-clip rounded-3xl bg-white p-8">
 
         <div class='text-tictac-primary-blue grid grid-cols-[1fr_auto_1fr] gap-4'>
-            <div>
+            <div class="flex flex-col gap-4">
+                <h2 class="text-center text-2xl">{{ $isLoginForm ? 'Login' : 'Register' }}</h2>
                 @if ($isLoginForm)
                     <livewire:login-form />
                 @else
@@ -12,9 +13,9 @@
 
             <div class="bg-tictac-primary-blue inline-block h-full min-h-[1em] w-0.5 self-stretch"></div>
 
-            <div class="">
-                <h2>Login</h2>
-                <div class="flex flex-col gap-2">
+            <div class="flex flex-col gap-4">
+                <h2 class="text-center text-2xl">Login with</h2>
+                <div class="flex flex-col gap-2 rounded-lg bg-gray-100 p-4">
                     <a href="{{ route('login.auth', ['provider' => 'facebook']) }}">
                         <x-facebook-login-button />
                     </a>

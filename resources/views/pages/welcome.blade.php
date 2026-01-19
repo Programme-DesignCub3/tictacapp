@@ -3,21 +3,14 @@
         @vite(['resources/js/home.js'])
     @endpush
 
-    {{-- ...existing code or welcome page content... --}}
-    {{-- <div class="top-[60px] left-[10%] absolute w-[705px]">
-            <img src="{{ asset('img/text/Website TicTac-03.png') }}" alt="" class="w-full text-welcome-image">
-        </div> --}}
+
 
     <div class="-mt-72" id="smooth-wrapper">
         <div class="relative" id="smooth-content">
-            <div class="absolute left-1/2 top-96 z-50 -translate-x-1/2">
-                <livewire:auth-modal />
-            </div>
-            <img class="h-auto w-full" id="mainbackground" src="{{ asset('img/main-bg.png') }}" alt="mainbackground">
+            <img class="h-auto w-full" id="mainbackground" src="{{ asset('img/main-bg-3.png') }}" alt="mainbackground">
             {{-- <img src="{{ asset('img/cave1-1-01-sm.png') }}" alt="" class="absolute inset-0 w-full h-full object-cover"> --}}
 
             {{-- Cloud images --}}
-
             <div class="absolute right-[16%] top-[14%] w-[10vw]">
                 <div class="relative h-full w-full">
                     <img class="cloud absolute h-auto w-auto" data-direction="right" data-speed="1"

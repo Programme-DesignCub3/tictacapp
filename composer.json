@@ -14,6 +14,8 @@
         "laravel/framework": "^12.0",
         "laravel/socialite": "^5.24",
         "laravel/tinker": "^2.10.1",
+        "mallardduck/blade-lucide-icons": "^1.26",
+        "mcamara/laravel-localization": "^2.3",
         "spatie/eloquent-sortable": "^4.5",
         "spatie/laravel-medialibrary": "^11.17",
         "spatie/laravel-sitemap": "^7.3",

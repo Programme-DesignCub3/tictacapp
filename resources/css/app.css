@@ -6,9 +6,9 @@
 @source '../../storage/framework/views/*.php';
 @source '../**/*.blade.php';
 @source '../**/*.js';
-
 @theme {
-    --font-sans: "Instrument Sans", ui-sans-serif, system-ui, sans-serif,
+    --font-sans:
+        "Instrument Sans", ui-sans-serif, system-ui, sans-serif,
         "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
         "Noto Color Emoji";
     --font-cooper: "Cooper", sans-serif;
@@ -85,7 +85,8 @@
             -1px 1px 0 var(--color-nav-selected),
             1px 1px 0 var(--color-nav-selected); */
 
-        text-shadow: var(--color-nav-selected) 4px 0px 0px,
+        text-shadow:
+            var(--color-nav-selected) 4px 0px 0px,
             var(--color-nav-selected) 3.87565px 0.989616px 0px,
             var(--color-nav-selected) 3.51033px 1.9177px 0px,
             var(--color-nav-selected) 2.92676px 2.72656px 0px,
@@ -118,7 +119,8 @@
             content: attr(data-before-content);
             -webkit-text-stroke: 1px var(--color-nav-selected-before);
             color: var(--color-nav-selected-before);
-            text-shadow: var(--color-nav-selected-before) 4px 0px 0px,
+            text-shadow:
+                var(--color-nav-selected-before) 4px 0px 0px,
                 var(--color-nav-selected-before) 3.87565px 0.989616px 0px,
                 var(--color-nav-selected-before) 3.51033px 1.9177px 0px,
                 var(--color-nav-selected-before) 2.92676px 2.72656px 0px,
@@ -150,6 +152,49 @@
 
     .grid-overlay {
         @apply *:col-start-1 *:row-start-1;
+    }
+
+    .hk-toggle {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+
+        & span {
+            font-size: 13px;
+            opacity: 0.8;
+        }
+
+        & input {
+            display: none;
+        }
+
+        & label {
+            width: 78px;
+            height: 38px;
+            border-radius: 40px;
+            position: relative;
+            cursor: pointer;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+
+            &::after {
+                content: "";
+                width: 30px;
+                height: 30px;
+                position: absolute;
+                top: 4px;
+                left: 4px;
+                border-radius: 50%;
+                transition: 0.35s;
+                background: #fff;
+            }
+        }
+
+        & input:checked + label::after {
+            transform: translateX(38px);
+        }
     }
 }
 

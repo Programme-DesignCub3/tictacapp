@@ -22,7 +22,37 @@
     'bg-linear-0 from-tictac-primary-blue to-tictac-primary-blue-light relative min-h-screen via-50%',
 ])>
 
-    <header class="relative z-10">
+    <header class="container relative z-10 py-4">
+
+        <div class="justify-end-safe flex content-center items-center gap-4 text-white">
+            <div>
+                <div class="flex items-center justify-between gap-2">
+                    <span>ID</span>
+                    <div class="hk-toggle">
+                        <input id="local-toggle" type="checkbox">
+                        <label for="local-toggle"></label>
+                    </div>
+                    <span>EN</span>
+                </div>
+            </div>
+
+            <div class="inline-block h-full min-h-[1em] w-0.5 bg-white"></div>
+
+
+
+            <x-modal>
+                <x-slot:trigger>
+                    <div class="flex cursor-pointer items-center gap-2">
+                        <x-lucide-lock class="size-8" />
+                        <span>Login</span>
+                    </div>
+                </x-slot:trigger>
+
+                <div class="mx-auto w-max">
+                    <livewire:auth-modal />
+            </x-modal>
+        </div>
+        </div>
 
         <nav class="container mx-auto text-white">
             <ul class="font-cocogoose flex flex-wrap items-center justify-between p-4 text-center text-xl">
