@@ -37,9 +37,6 @@
             </div>
 
             <div class="inline-block h-full min-h-[1em] w-0.5 bg-white"></div>
-
-
-
             <x-modal>
                 <x-slot:trigger>
                     <div class="flex cursor-pointer items-center gap-2">
@@ -51,7 +48,6 @@
                 <div class="mx-auto w-max">
                     <livewire:auth-modal />
             </x-modal>
-        </div>
         </div>
 
         <nav class="container mx-auto text-white">
