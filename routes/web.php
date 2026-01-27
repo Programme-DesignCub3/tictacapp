@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\LogoutController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -23,8 +24,6 @@ Route::get('/tictactivity', function () {
     return view('pages.tictactivity');
 })->name('tictactivity');
 
-Route::post('/login', [LoginController::class, 'login'])->name('login');
-
 Route::group(
     ['prefix' => 'login', 'as' => 'login.', 'middleware' => ['guest', 'throttle']], function () {
         Route::get('/auth/{provider}', [LoginController::class, 'redirectToProvider'])
@@ -33,4 +32,8 @@ Route::group(
         Route::get('/auth/{provider}/callback', [LoginController::class, 'handleProviderCallback'])
             ->where('provider', 'facebook|google|apple')
             ->name('auth.redirect');
-    });
+    }
+);
+
+Route::post('/logout', LogoutController::class)
+    ->name('logout');

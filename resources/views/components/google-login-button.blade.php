@@ -1,4 +1,4 @@
-<button class="border-button-border-light flex w-full items-center gap-3 rounded-md border bg-white p-0.5 px-4 py-2 pr-3"
+<div class="border-button-border-light flex w-full items-center gap-3 rounded-md border bg-white p-0.5 px-4 py-2 pr-3"
     aria-label="Sign in with Google">
     <div class="flex h-9 w-9 items-center justify-center rounded-l bg-white">
         <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -19,4 +19,4 @@
         </svg>
     </div>
     <span class="text-google-text-gray text-sm tracking-wider">Sign in with Google</span>
-</button>
+</div>

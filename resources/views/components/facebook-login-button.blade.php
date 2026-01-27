@@ -1,5 +1,4 @@
-<button
-    class="border-button-border-light flex w-full items-center gap-4 rounded-md border bg-blue-500 p-0.5 px-4 py-2 pr-3"
+<div class="border-button-border-light flex w-full items-center gap-4 rounded-md border bg-blue-500 p-0.5 px-4 py-2 pr-3"
     aria-label="Sign in with Google">
     <div class="flex size-8 items-center justify-center rounded-full bg-white text-blue-500">
         <svg class="mr-0.5" fill="currentColor" width="20" height="20" viewBox="0 0 1792 1792"
@@ -10,4 +9,4 @@
         </svg>
     </div>
     <span class="text-sm tracking-wider text-white">Sign in with Facebook</span>
-</button>
+</div>

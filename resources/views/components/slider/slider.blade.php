@@ -8,10 +8,7 @@
 
         <!-- Slides -->
         @foreach ($items as $item)
-            <div class="swiper-slide"
-                @if (isset($item['key']) || isset($item['id'])) wire:key="{{ isset($item['key']) ? $item['key'] : $item['id'] }}" @endif>
-                <x-slider.sliderItem :item="$item" />
-            </div>
+            <x-slider.sliderItem :item="$item" />
         @endforeach
 
     </div>
