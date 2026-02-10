@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('order_column')->nullable();
             $table->json('name');
-            $table->json('slug');
+            $table->string('slug');
             $table->json('description');
             $table->json('specifications');
             $table->timestamps();

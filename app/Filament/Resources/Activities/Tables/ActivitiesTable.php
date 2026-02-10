@@ -16,7 +16,7 @@ class ActivitiesTable
             ->columns([
                 TextColumn::make('slug')
                     ->searchable(),
-                TextColumn::make('type')
+                TextColumn::make('category.name')
                     ->searchable(),
                 TextColumn::make('published_at')
                     ->dateTime()

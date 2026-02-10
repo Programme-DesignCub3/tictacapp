@@ -12,6 +12,7 @@ export default defineConfig({
                 "resources/js/product.js",
                 "resources/js/slider.js",
                 "resources/js/sliderProduct.js",
+                "resources/css/filament/admin/theme.css",
             ],
             refresh: true,
         }),

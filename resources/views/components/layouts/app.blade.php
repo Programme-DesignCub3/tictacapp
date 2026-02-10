@@ -19,19 +19,12 @@
 </head>
 
 <body @class([
-    'bg-linear-0 from-tictac-primary-blue to-tictac-primary-blue-light relative min-h-screen via-50%',
+    'bg-linear-0 from-tictac-primary-blue to-tictac-primary-blue-light relative min-h-screen via-50% flex-1 flex flex-col',
 ])>
     <header class="container relative z-10 mt-8">
         <div class="justify-end-safe flex content-center items-center gap-4 text-white">
             <div>
-                <div class="flex items-center justify-between gap-2">
-                    <span>ID</span>
-                    <div class="hk-toggle">
-                        <input id="local-toggle" type="checkbox">
-                        <label for="local-toggle"></label>
-                    </div>
-                    <span>EN</span>
-                </div>
+                <x-locale-toggler />
             </div>
 
             <div class="inline-block h-full min-h-[1em] w-0.5 bg-white"></div>
@@ -68,7 +61,7 @@
 
     </header>
 
-    <main class="font-poppins" id="main-content">
+    <main class="font-poppins flex flex-1 flex-col" id="main-content">
         {{ $slot }}
     </main>
 

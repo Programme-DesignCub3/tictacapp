@@ -35,6 +35,7 @@ class Product extends Model implements HasMedia, Sortable
     {
         $this->addMediaCollection('packaging')
             ->singleFile();
+
         $this->addMediaCollection('mascot')
             ->singleFile();
     }

@@ -24,9 +24,9 @@
                 <div class="flex flex-col gap-4">
                     <h2 class="text-center text-2xl">Login with</h2>
                     <div class="flex flex-col gap-2 rounded-lg bg-gray-100 p-4">
-                        <a href="{{ route('login.auth', ['provider' => 'facebook']) }}">
+                        {{-- <a href="{{ route('login.auth', ['provider' => 'facebook']) }}">
                             <x-facebook-login-button />
-                        </a>
+                        </a> --}}
                         <a href="{{ route('login.auth', ['provider' => 'google']) }}">
                             <x-google-login-button />
                         </a>

@@ -1,4 +1,27 @@
 <nav class="container mx-auto text-white">
+    <svg style="position: absolute; width: 0; height: 0;" aria-hidden="true">
+        <filter id="smooth-sticker">
+            <feMorphology operator="dilate" radius="3" in="SourceAlpha" result="thicken" />
+
+            <feGaussianBlur in="thicken" stdDeviation="1.5" result="blurred" />
+
+            <feColorMatrix in="blurred" type="matrix"
+                values="1 0 0 0 0
+                           0 1 0 0 0
+                           0 0 1 0 0
+                           0 0 0 25 -7"
+                result="smooth-outline" />
+
+            <feFlood flood-color="#FF6B00" result="orange" />
+            <feComposite in="orange" in2="smooth-outline" operator="in" result="final-outline" />
+
+            <feMerge>
+                <feMergeNode in="final-outline" />
+                <feMergeNode in="SourceGraphic" />
+            </feMerge>
+        </filter>
+    </svg>
+
     <ul class="font-cocogoose flex flex-wrap items-center justify-between p-4 text-center text-xl">
         {{-- menulist --}}
         {{-- Crunch Selection, TicTacvity, Logo Image, TicTalks, Game On! --}}

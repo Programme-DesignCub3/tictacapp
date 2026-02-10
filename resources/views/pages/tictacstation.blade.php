@@ -10,11 +10,11 @@
 
         @php
             $products = [
-                ['label' => 'Rasa Original', 'id' => 1, 'color' => 'before:bg-[#fe6b00]'],
-                ['label' => 'Rasa Pedas', 'id' => 2, 'color' => 'before:bg-[#d5343c]'],
-                ['label' => 'Rasa Rumput Laut', 'id' => 3, 'color' => 'before:bg-[#1e2671]'],
-                ['label' => 'Rasa Sapi Panggang', 'id' => 4, 'color' => 'before:bg-[#3f1710]'],
-                ['label' => 'Rasa Ayam Bawang', 'id' => 5, 'color' => 'before:bg-[#a44299]'],
+                ['label' => 'Rasa Original', 'id' => 1, 'color' => '#fe6b00'],
+                ['label' => 'Rasa Pedas', 'id' => 2, 'color' => '#d5343c'],
+                ['label' => 'Rasa Rumput Laut', 'id' => 3, 'color' => '#1e2671'],
+                ['label' => 'Rasa Sapi Panggang', 'id' => 4, 'color' => '#3f1710'],
+                ['label' => 'Rasa Ayam Bawang', 'id' => 5, 'color' => '#a44299'],
             ];
         @endphp
 
@@ -39,8 +39,8 @@
                         alt="Enjoy out tic-tac selections">
                 </div>
 
-                <div class="relative flex items-center justify-start rounded-lg px-4 py-8 before:absolute before:-z-10 before:-ml-[10%] before:size-full before:w-[135%] before:rounded-2xl before:sm:-ml-[45%] before:lg:-ml-[45%]"
-                    :class="currentProduct.color">
+                <div class="before:bg-(--title-bg-color) relative flex items-center justify-start rounded-lg px-4 py-8 before:absolute before:-z-10 before:-ml-[10%] before:size-full before:w-[135%] before:rounded-2xl before:sm:-ml-[45%] before:lg:-ml-[45%]"
+                    :style="`--title-bg-color: ${currentProduct.color}`">
                     <div class="flex flex-col gap-y-2">
                         <h2 class="text-3xl font-bold" x-text="currentProduct.label"></h2>
                         <p class="text-xl">Available in 2 sizes :<span class="font-bold"> 14g & 45g </span></p>

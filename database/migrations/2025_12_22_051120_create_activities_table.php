@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\ActivityCategory;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -15,9 +16,9 @@ return new class extends Migration
             $table->id();
             $table->json('title');
             $table->string('slug');
-            $table->json('description');
+            $table->json('description')->nullable();
             $table->json('content');
-            $table->string('type');
+            $table->foreignIdFor(ActivityCategory::class);
             $table->timestamp('published_at');
             $table->timestamps();
         });
