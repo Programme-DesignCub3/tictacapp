@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\LogoutController;
+use App\Http\Controllers\TictacstationController;
 use Illuminate\Support\Facades\Route;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
@@ -22,13 +23,11 @@ Route::group([
         return view('pages.gameon');
     })->name('gameon');
 
-    Route::get('/tictacstation', function () {
-        return view('pages.tictacstation');
-    })->name('tictacstation');
+    Route::get('/tictacstation', TictacstationController::class)
+        ->name('tictacstation');
 
-    Route::get('/tictactivity', function () {
-        return view('pages.tictactivity');
-    })->name('tictactivity');
+    Route::livewire('/tictactivity', 'pages::tictactivity')
+        ->name('tictactivity');
 });
 
 /** OTHER PAGES THAT SHOULD NOT BE LOCALIZED **/

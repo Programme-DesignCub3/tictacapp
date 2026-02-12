@@ -17,7 +17,7 @@
             <x-breadcrumb :links="[['label' => 'Tictalks', 'url' => route('tictalks')]]" />
             <div class="flex flex-wrap items-center gap-4 text-white">
                 <p class="text-lg md:text-xl">filter: </p>
-                <x-button>Semua</x-button>
+                <x-button wire:click="test">Semua</x-button>
                 <x-button>Acara</x-button>
                 <x-button>Promo</x-button>
             </div>

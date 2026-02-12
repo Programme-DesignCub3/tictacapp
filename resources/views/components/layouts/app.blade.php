@@ -46,10 +46,11 @@
 
             @auth('web')
                 <div class="flex items-center gap-2">
-                    <span class="text-white">Logged in as {{ explode(' ', auth()->user()->name)[0] }}</span>
+                    <span class="text-white">Logged in as {{ explode(' ', auth('web')->user()->name)[0] }}</span>
                     <form method="POST" action="{{ route('logout') }}">
                         @csrf
-                        <button class="text-tictac-secondary-yellow hover:text-tictac-primary-blue" type="submit">
+                        <button class="text-tictac-secondary-yellow hover:text-tictac-primary-blue cursor-pointer"
+                            type="submit">
                             Logout
                         </button>
                     </form>

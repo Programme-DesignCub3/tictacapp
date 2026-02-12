@@ -44,9 +44,7 @@ class Activity extends Model implements HasMedia
 
     public function registerMediaCollections(): void
     {
-        $this->addMediaCollection('packaging')
-            ->singleFile();
-        $this->addMediaCollection('mascot')
+        $this->addMediaCollection('thumbnail')
             ->singleFile();
     }
 }

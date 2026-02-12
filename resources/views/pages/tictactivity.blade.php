@@ -16,10 +16,12 @@
         <div class="mb-28 flex flex-wrap justify-between gap-4">
             <x-breadcrumb :links="[['label' => 'Tictactivity', 'url' => route('tictactivity')]]" />
             <div class="flex flex-wrap items-center gap-4 text-white">
+
                 <x-button>Semua</x-button>
-                <x-button>Kuliner</x-button>
-                <x-button>Olahraga</x-button>
-                <x-button>Music</x-button>
+                @foreach ($categories as $category)
+                    <x-button>{{ $category->name }}</x-button>
+                @endforeach
+
             </div>
         </div>
 

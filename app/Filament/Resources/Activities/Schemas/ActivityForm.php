@@ -5,6 +5,7 @@ namespace App\Filament\Resources\Activities\Schemas;
 use Filament\Forms\Components\DateTimePicker;
 use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\Select;
+use Filament\Forms\Components\SpatieMediaLibraryFileUpload;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Schemas\Components\Utilities\Get;
@@ -16,6 +17,8 @@ class ActivityForm
     {
         return $schema
             ->components([
+                SpatieMediaLibraryFileUpload::make('thumbnail')
+                    ->collection('thumbnail'),
                 TextInput::make('title')
                     ->required(fn (Get $get) => (bool) ! filled($get('title')['id']))
                     ->validationMessages([
@@ -24,8 +27,15 @@ class ActivityForm
                     ->translatableTabs(),
 
                 Textarea::make('description')
+                    ->required(fn (Get $get) => (bool) ! filled($get('description')['id']))
+                    ->validationMessages([
+                        'required' => 'Required in Indonesia.',
+                    ])
                     ->translatableTabs(),
                 RichEditor::make('content')
+                    ->validationMessages([
+                        'required' => 'Required in Indonesia.',
+                    ])
                     ->translatableTabs(),
                 Select::make('activity_category_id')
                     ->relationship(
@@ -45,6 +55,7 @@ class ActivityForm
                 DateTimePicker::make('published_at')
                     ->default(now())
                     ->required(),
-            ]);
+            ])
+            ->columns(1);
     }
 }

@@ -231,3 +231,23 @@
     margin-inline: auto;
     padding-inline: 1rem;
 }
+
+::view-transition-old(auth) {
+    animation: 300ms ease-out slide-out;
+}
+
+::view-transition-new(auth) {
+    animation: 300ms ease-in slide-in;
+}
+
+@keyframes slide-out {
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes slide-in {
+    from {
+        transform: translateX(100%);
+    }
+}

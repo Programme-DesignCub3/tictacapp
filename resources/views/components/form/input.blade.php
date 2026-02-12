@@ -1,6 +1,6 @@
 @props(['model', 'label' => $label ?? $model, 'type' => 'text'])
 
-<div>
+<div wire:transition {{ $attributes }}>
     <div class="grid grid-cols-2 items-center justify-between gap-2">
         <label class="flex shrink-0 basis-1/4 justify-between gap-2" for="{{ $model }}">
             <span class="basis-1/4">{{ $label }}</span>

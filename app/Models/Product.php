@@ -15,6 +15,13 @@ class Product extends Model implements HasMedia, Sortable
 {
     use HasSlug, HasTranslations, InteractsWithMedia, SortableTrait;
 
+    /**
+     * The attributes that aren't mass assignable.
+     *
+     * @var array<string>
+     */
+    protected $guarded = [];
+
     public $translatable = [
         'name',
         'description',
@@ -27,6 +34,7 @@ class Product extends Model implements HasMedia, Sortable
     public function getSlugOptions(): SlugOptions
     {
         return SlugOptions::create()
+            ->usingLanguage('id')
             ->generateSlugsFrom('name')
             ->saveSlugsTo('slug');
     }

@@ -8,16 +8,6 @@
             <x-breadcrumb :links="[['label' => 'TicTacStation', 'url' => route('tictacstation')]]" />
         </div>
 
-        @php
-            $products = [
-                ['label' => 'Rasa Original', 'id' => 1, 'color' => '#fe6b00'],
-                ['label' => 'Rasa Pedas', 'id' => 2, 'color' => '#d5343c'],
-                ['label' => 'Rasa Rumput Laut', 'id' => 3, 'color' => '#1e2671'],
-                ['label' => 'Rasa Sapi Panggang', 'id' => 4, 'color' => '#3f1710'],
-                ['label' => 'Rasa Ayam Bawang', 'id' => 5, 'color' => '#a44299'],
-            ];
-        @endphp
-
         <div class="grid grid-cols-1 sm:grid-cols-2" x-data="{
             productList: {{ json_encode($products) }},
             currentProduct: null,
@@ -41,53 +31,16 @@
 
                 <div class="before:bg-(--title-bg-color) relative flex items-center justify-start rounded-lg px-4 py-8 before:absolute before:-z-10 before:-ml-[10%] before:size-full before:w-[135%] before:rounded-2xl before:sm:-ml-[45%] before:lg:-ml-[45%]"
                     :style="`--title-bg-color: ${currentProduct.color}`">
-                    <div class="flex flex-col gap-y-2">
-                        <h2 class="text-3xl font-bold" x-text="currentProduct.label"></h2>
-                        <p class="text-xl">Available in 2 sizes :<span class="font-bold"> 14g & 45g </span></p>
+                    <div class="flex max-w-[90%] flex-col gap-y-2">
+                        <h2 class="text-3xl font-bold" x-text="currentProduct.name"></h2>
+                        <p class="text-xl" x-text="currentProduct.specifications"></p>
                     </div>
                 </div>
-                <div class="md:max-w-3/5 p-4">
-                    <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos aspernatur corporis quisquam
-                        minus, cupiditate distinctio neque aut sequi illo consequatur quas nisi rerum sapiente ipsum
-                        deleniti! Expedita amet provident maiores.
-                    </p>
-                </div>
+                <div class="md:max-w-3/5 p-4" x-text="currentProduct.description"></div>
             </div>
 
             <div class="">
-                <x-slider.sliderProduct id="productSlider" :items="[
-                    [
-                        'label' => 'Rasa Original',
-                        'productImage' => asset('img/package-original.png'),
-                        'productMascot' => asset('img/char/original.gif'),
-                        'id' => 1,
-                    ],
-                    [
-                        'label' => 'Rasa Pedas',
-                        'productImage' => asset('img/package-spicy.png'),
-                        'productMascot' => asset('img/char/spicy.gif'),
-                        'id' => 2,
-                    ],
-                    [
-                        'label' => 'Rasa Rumput Laut',
-                        'productImage' => asset('img/package-seaweed.png'),
-                        'productMascot' => asset('img/char/seaweed.gif'),
-                        'id' => 3,
-                    ],
-                    [
-                        'label' => 'Rasa BBQ',
-                        'productImage' => asset('img/package-cow.png'),
-                        'productMascot' => asset('img/char/cow.gif'),
-                        'id' => 4,
-                    ],
-                    [
-                        'label' => 'Rasa Ayam Bawang',
-                        'productImage' => asset('img/package-chicken.png'),
-                        'productMascot' => asset('img/char/chicken.gif'),
-                        'id' => 5,
-                    ],
-                ]" />
+                <x-slider.sliderProduct id="productSlider" :items="$products" />
             </div>
         </div>
     </section>

@@ -1,7 +1,7 @@
 @props(['id', 'items' => []])
 
 <!-- Slider main container -->
-<div class="swiper pb-8! pr-4!" id="{{ $id }}">
+<div class="swiper pb-8! pr-4!" id="{{ $id }}" wire:key='{{ $id }}'>
 
     <!-- Additional required wrapper -->
     <div class="swiper-wrapper">

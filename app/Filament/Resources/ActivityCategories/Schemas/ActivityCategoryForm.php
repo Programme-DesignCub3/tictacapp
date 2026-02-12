@@ -3,6 +3,7 @@
 namespace App\Filament\Resources\ActivityCategories\Schemas;
 
 use Filament\Forms\Components\TextInput;
+use Filament\Schemas\Components\Utilities\Get;
 use Filament\Schemas\Schema;
 
 class ActivityCategoryForm
@@ -12,7 +13,11 @@ class ActivityCategoryForm
         return $schema
             ->components([
                 TextInput::make('name')
-                    ->required(),
+                    ->required(fn (Get $get) => (bool) ! filled($get('name')['id']))
+                    ->validationMessages([
+                        'required' => 'Required in Indonesia.',
+                    ])
+                    ->translatableTabs(),
             ]);
     }
 }
