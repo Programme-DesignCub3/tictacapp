@@ -4,7 +4,7 @@
 <div class="swiper pb-8! pr-4!" id="{{ $id }}" wire:key='{{ $id }}'>
 
     <!-- Additional required wrapper -->
-    <div class="swiper-wrapper">
+    <div class="swiper-wrapper cursor-grab">
 
         <!-- Slides -->
         @foreach ($items as $item)

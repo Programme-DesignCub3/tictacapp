@@ -18,7 +18,8 @@ class ActivityForm
         return $schema
             ->components([
                 SpatieMediaLibraryFileUpload::make('thumbnail')
-                    ->collection('thumbnail'),
+                    ->collection('thumbnail')
+                    ->required(),
                 TextInput::make('title')
                     ->required(fn (Get $get) => (bool) ! filled($get('title')['id']))
                     ->validationMessages([

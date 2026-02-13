@@ -21,7 +21,7 @@ new #[Layout('layouts::tictack', ['bg' => "before:bg-[url('../assets/bg/tictacti
             ->when($this->selectedCategory !== 'all', function ($query) {
                 return $query->whereRelation('category', 'slug', '=', $this->selectedCategory);
             })
-            ->paginate(12);
+            ->paginate(8);
     }
 
     #[Computed]
@@ -49,7 +49,7 @@ new #[Layout('layouts::tictack', ['bg' => "before:bg-[url('../assets/bg/tictacti
 
 <div class="max-w-384 mx-auto px-4">
     @push('plugin-scripts')
-    @vite(['resources/js/slider.js'])
+        @vite(['resources/js/slider.js'])
     @endpush
     <div class="absolute left-[1%] top-[7%] z-0 w-[13vw] max-md:hidden">
         <div class="relative h-full w-full">
@@ -73,6 +73,9 @@ new #[Layout('layouts::tictack', ['bg' => "before:bg-[url('../assets/bg/tictacti
     </div>
 
     <x-slider.slider id="activitySlider" :items="$this->activities" />
+
+    {{ $this->activities->links() }}
+
 </div>
 
 <script>
@@ -105,14 +108,14 @@ new #[Layout('layouts::tictack', ['bg' => "before:bg-[url('../assets/bg/tictacti
                 snapOnRelease: true,
             },
         });
-
-        console.log('slider init')
     }
 
     initSlider();
 
-    this.$on('content-changed', () => {
-
+    Livewire.hook('morphed', ({
+        el,
+        component
+    }) => {
         activitySlider.destroy();
 
         initSlider();
