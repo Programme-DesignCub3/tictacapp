@@ -9,20 +9,15 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 /** ADD ALL LOCALIZED ROUTES INSIDE THIS GROUP **/
 Route::group([
     'prefix' => LaravelLocalization::setLocale(),
-    'middleware' => [
-        'localize',
-        'localizationRedirect',
-        'localeSessionRedirect',
-        'localeCookieRedirect',
-    ],
+    'middleware' => ['localeSessionRedirect', 'localizationRedirect', 'localeViewPath'],
+
 ], function () {
     Route::get('/', function () {
         return view('pages.welcome');
     })->name('home');
 
-    Route::get('/tictalks', function () {
-        return view('pages.tictalks');
-    })->name('tictalks');
+    Route::livewire('/tictalks', 'pages::tictalks')
+        ->name('tictalks');
 
     Route::get('/gameon', function () {
         return view('pages.gameon');

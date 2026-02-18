@@ -2,17 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Activity;
+use App\Models\Tictalk;
 
-class TictactivityController extends Controller
+class TictalkController extends Controller
 {
     public function __invoke()
     {
-        $activities = Activity::all();
+        $activities = Tictalk::all();
 
         $categories = $activities->pluck('category')->unique();
 
-        $activities = Activity::paginate(12);
+        $activities = Tictalk::paginate(12);
 
         return view('pages.tictactivity',
             compact(

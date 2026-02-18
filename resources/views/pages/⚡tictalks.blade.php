@@ -1,13 +1,13 @@
 <?php
 
-use App\Models\Activity;
+use App\Models\Tictalk;
 use Livewire\Attributes\Computed;
 use Livewire\Attributes\Layout;
 use Livewire\Attributes\Url;
 use Livewire\Component;
 use Livewire\WithPagination;
 
-new #[Layout('layouts::tictack', ['bg' => "before:bg-[url('../assets/bg/tictactivity-bg-island.png')]"])] class extends Component
+new #[Layout('layouts::tictack', ['bg' => "before:bg-[url('../assets/bg/tictalks-bg-island.png')]"])] class extends Component
 {
     use WithPagination;
 
@@ -17,7 +17,7 @@ new #[Layout('layouts::tictack', ['bg' => "before:bg-[url('../assets/bg/tictacti
     #[Computed]
     public function activities()
     {
-        return Activity::with('category')
+        return Tictalk::with('category')
             ->when($this->selectedCategory !== 'all', function ($query) {
                 return $query->whereRelation('category', 'slug', '=', $this->selectedCategory);
             })
@@ -27,7 +27,7 @@ new #[Layout('layouts::tictack', ['bg' => "before:bg-[url('../assets/bg/tictacti
     #[Computed]
     public function categories()
     {
-        return Activity::all()->pluck('category')->unique();
+        return Tictalk::all()->pluck('category')->unique();
     }
 
     public function handleCategoryChange(?string $slug = null)
@@ -66,7 +66,7 @@ new #[Layout('layouts::tictack', ['bg' => "before:bg-[url('../assets/bg/tictacti
     </div>
 
     <div class="mb-28 flex flex-wrap justify-between gap-4">
-        <x-breadcrumb :links="[['label' => 'Tictactivity', 'url' => route('tictactivity')]]" />
+        <x-breadcrumb :links="[['label' => 'Tictalks', 'url' => route('tictalks')]]" />
 
         <div class="flex flex-wrap items-center gap-4 text-white" wire:transition>
 

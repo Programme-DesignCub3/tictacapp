@@ -1,6 +1,6 @@
 <x-layouts.app>
     @push('plugin-scripts')
-        @vite(['resources/js/home.js'])
+        @vite(['resources/js/home.js', 'resources/js/slider.js'])
     @endpush
 
     <div class="max-lg:hidden">
@@ -124,5 +124,62 @@
                     src="{{ asset('img/air_baloon.png') }}" alt="" style="width: 290px; height: auto;">
             </div>
         </div>
+
+
+
     </div>
+    <!-- Slider main container -->
+    <div class="relative">
+        <div class="swiper max-lg:hidden" id="home-mobile-slider">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">Slide 1</div>
+                <div class="swiper-slide">Slide 2</div>
+                <div class="swiper-slide">Slide 3</div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </div>
+
+    @push('custom-scripts')
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                let homeSlider;
+                let isMobile;
+                const maxWidth = '64rem';
+                const initSlider = () => {
+                    homeSlider = new window.Swiper("#home-mobile-slider", {
+                        slidesPerView: 1,
+                    });
+                }
+
+                if (window.matchMedia(`screen and (max-width: ${maxWidth})`).matches) {
+                    isMobile = true;
+                    initSlider();
+                }
+
+                const homeSliderResizeHandler = () => {
+                    if (window.matchMedia(`screen and (max-width: ${maxWidth})`).matches) {
+                        initSlider();
+                    } else {
+                        if (!isMobile) {
+                            if (homeSlider) {
+                                homeSlider.destroy();
+                                homeSlider = null;
+                            }
+                        }
+                    }
+                }
+
+                window.addEventListener('resize', homeSliderResizeHandler);
+
+
+            });
+        </script>
+    @endpush
 </x-layouts.app>

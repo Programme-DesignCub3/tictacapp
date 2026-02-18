@@ -171,7 +171,7 @@
     "src": "resources/assets/fonts/SuperComic.woff2"
   },
   "resources/css/app.css": {
-    "file": "assets/app-Bzx8sSQ5.css",
+    "file": "assets/app-BKYSa0h7.css",
     "src": "resources/css/app.css",
     "isEntry": true,
     "name": "app",
@@ -180,7 +180,7 @@
     ]
   },
   "resources/css/filament/admin/theme.css": {
-    "file": "assets/theme-CMUkaLZe.css",
+    "file": "assets/theme--EXwmFYY.css",
     "src": "resources/css/filament/admin/theme.css",
     "isEntry": true,
     "name": "theme",
@@ -193,6 +193,15 @@
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true
+  },
+  "resources/js/gsap.js": {
+    "file": "assets/gsap-GrBcCN4u.js",
+    "name": "gsap",
+    "src": "resources/js/gsap.js",
+    "isEntry": true,
+    "imports": [
+      "_index-DDlvirwQ.js"
+    ]
   },
   "resources/js/home.js": {
     "file": "assets/home-Dj-zVBR5.js",

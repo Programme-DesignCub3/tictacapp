@@ -10,6 +10,7 @@ export default defineConfig({
                 "resources/js/app.js",
                 "resources/js/home.js",
                 "resources/js/product.js",
+                "resources/js/gsap.js",
                 "resources/js/slider.js",
                 "resources/js/sliderProduct.js",
                 "resources/css/filament/admin/theme.css",

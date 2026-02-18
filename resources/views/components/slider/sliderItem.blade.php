@@ -2,8 +2,8 @@
 <div class="swiper-slide"
     @if (isset($item->key) || isset($item->id)) wire:key="{{ isset($item->key) ? $item->key : $item->id }}" @endif>
     <div class="slider-outer-shadow rounded-4xl bg-tictac-primary-blue relative mb-10 p-2">
-        <div class="slider-inner-shadow rounded-4xl overflow-clip bg-white">
-            <div>
+        <div class="slider-inner-shadow overflow-clip rounded-3xl bg-white">
+            <div class="aspect-6/4 overflow-hidden">
                 <img src="{{ $item->getFirstMediaUrl('thumbnail') ? $item->getFirstMediaUrl('thumbnail') : 'https://placehold.co/600x400' }}"
                     alt="">
             </div>

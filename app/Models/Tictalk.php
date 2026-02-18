@@ -10,7 +10,7 @@ use Spatie\Sluggable\HasSlug;
 use Spatie\Sluggable\SlugOptions;
 use Spatie\Translatable\HasTranslations;
 
-class Activity extends Model implements HasMedia
+class Tictalk extends Model implements HasMedia
 {
     use HasSlug, HasTranslations, InteractsWithMedia;
 
@@ -24,11 +24,11 @@ class Activity extends Model implements HasMedia
     public array $translatable = ['title', 'description', 'content'];
 
     /**
-     * Get the category that owns the Activity
+     * Get the category that owns the Ticktalks
      */
     public function category(): BelongsTo
     {
-        return $this->belongsTo(ActivityCategory::class, 'activity_category_id');
+        return $this->belongsTo(TictalksCategory::class, 'tictalks_category_id');
     }
 
     /**

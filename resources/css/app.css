@@ -225,6 +225,18 @@
             transform: translateX(38px);
         }
     }
+
+    .category-button {
+        @apply bg-tictac-primary-orange cursor-pointer rounded-full border-2 px-8 py-2 duration-[1500]  before:-z-10 before:size-full before:rounded-full before:border before:border-white;
+
+        &:not(.selected) {
+            @apply hover:border-tictac-primary-orange hover:text-tictac-primary-orange before:bg-tictac-primary-orange-dark border-white relative ease-in-out before:absolute before:bottom-0 before:right-0 before:transition-[bottom,right] hover:bg-white hover:before:-bottom-2 hover:before:-right-1.5;
+        }
+
+        &.selected {
+            @apply text-tictac-primary-orange before:bg-tictac-primary-orange-dark relative before:absolute before:-z-10 before:transition-[bottom,right] bg-white before:-bottom-2 before:-right-1.5 border-tictac-primary-orange;
+        }
+    }
 }
 
 @utility container {
