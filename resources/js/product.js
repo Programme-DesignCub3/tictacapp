@@ -9,7 +9,7 @@ clouds.forEach((cloudImg, index) => {
     const direction = cloudImg.getAttribute("data-direction") || "left";
 
     gsap.to(cloudImg, {
-        x: Math.random() * (direction === "left" ? 70 : -70),
+        x: Math.random() * (direction === "left" ? -70 : 70),
         duration: 4 + Math.random() * 2,
         ease: "sine.inOut",
         yoyo: true,

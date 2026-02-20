@@ -41,13 +41,13 @@ new #[Layout('layouts::tictack', ['bg' => "before:bg-[url('../assets/bg/tictalks
         if ($slug) {
             if ($slug === $this->selectedCategory) {
                 $this->skipRender();
-                // $this->selectedCategory = 'all';
             } else {
                 $this->selectedCategory = $slug;
             }
         } else {
             $this->selectedCategory = 'all';
         }
+        $this->resetPage();
 
         $this->dispatch('content-changed');
     }
@@ -65,10 +65,10 @@ new #[Layout('layouts::tictack', ['bg' => "before:bg-[url('../assets/bg/tictalks
         </div>
     </div>
 
-    <div class="mb-28 flex flex-wrap justify-between gap-4">
+    <div class="clamp-[mb,12,28] flex flex-wrap justify-between gap-4">
         <x-breadcrumb :links="[['label' => 'Tictalks', 'url' => route('tictalks')]]" />
 
-        <div class="flex flex-wrap items-center gap-4 text-white" wire:transition>
+        <div class="flex flex-wrap items-center clamp-[gap,2,4] text-white" wire:transition>
 
             <x-button :selected="$selectedCategory === 'all'" wire:click="handleCategoryChange">Semua</x-button>
 

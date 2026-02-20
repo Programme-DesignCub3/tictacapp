@@ -7,12 +7,19 @@
     "file": "assets/swiper-bundle-Cnw9ticf.css",
     "src": "_swiper-bundle-Cnw9ticf.css"
   },
-  "_swiper-bundle-DuOD9fx4.js": {
-    "file": "assets/swiper-bundle-DuOD9fx4.js",
+  "_swiper-bundle-ch-kbeBt.js": {
+    "file": "assets/swiper-bundle-ch-kbeBt.js",
     "name": "swiper-bundle",
+    "imports": [
+      "_swiper-core-BitT4lrx.js"
+    ],
     "css": [
       "assets/swiper-bundle-Cnw9ticf.css"
     ]
+  },
+  "_swiper-core-BitT4lrx.js": {
+    "file": "assets/swiper-core-BitT4lrx.js",
+    "name": "swiper-core"
   },
   "resources/assets/bg/tictactivity-bg-island.png": {
     "file": "assets/tictactivity-bg-island-Djc8n6eK.png",
@@ -171,7 +178,7 @@
     "src": "resources/assets/fonts/SuperComic.woff2"
   },
   "resources/css/app.css": {
-    "file": "assets/app-BKYSa0h7.css",
+    "file": "assets/app-DvmVe19o.css",
     "src": "resources/css/app.css",
     "isEntry": true,
     "name": "app",
@@ -204,16 +211,17 @@
     ]
   },
   "resources/js/home.js": {
-    "file": "assets/home-Dj-zVBR5.js",
+    "file": "assets/home-CRI6CwrP.js",
     "name": "home",
     "src": "resources/js/home.js",
     "isEntry": true,
     "imports": [
-      "_index-DDlvirwQ.js"
+      "_index-DDlvirwQ.js",
+      "_swiper-core-BitT4lrx.js"
     ]
   },
   "resources/js/product.js": {
-    "file": "assets/product-DZWWoRz8.js",
+    "file": "assets/product-aE4A3iLv.js",
     "name": "product",
     "src": "resources/js/product.js",
     "isEntry": true,
@@ -222,21 +230,23 @@
     ]
   },
   "resources/js/slider.js": {
-    "file": "assets/slider-Bndz7aCc.js",
+    "file": "assets/slider-twPQIIG_.js",
     "name": "slider",
     "src": "resources/js/slider.js",
     "isEntry": true,
     "imports": [
-      "_swiper-bundle-DuOD9fx4.js"
+      "_swiper-bundle-ch-kbeBt.js",
+      "_swiper-core-BitT4lrx.js"
     ]
   },
   "resources/js/sliderProduct.js": {
-    "file": "assets/sliderProduct-BoEQCYBt.js",
+    "file": "assets/sliderProduct-z_tuPAqR.js",
     "name": "sliderProduct",
     "src": "resources/js/sliderProduct.js",
     "isEntry": true,
     "imports": [
-      "_swiper-bundle-DuOD9fx4.js"
+      "_swiper-bundle-ch-kbeBt.js",
+      "_swiper-core-BitT4lrx.js"
     ]
   }
 }

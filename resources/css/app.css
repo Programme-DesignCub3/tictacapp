@@ -1,4 +1,6 @@
 @import "tailwindcss";
+@plugin "tailwind-clamp";
+
 @import "./__cloud.css";
 @import "./fonts.css";
 
@@ -47,6 +49,10 @@
 }
 
 @layer components {
+    [x-cloak] {
+        display: none !important;
+    }
+
     .swiper-button-prev {
         @apply top-[48%] left-[15%]!;
     }
@@ -227,7 +233,7 @@
     }
 
     .category-button {
-        @apply bg-tictac-primary-orange cursor-pointer rounded-full border-2 px-8 py-2 duration-[1500]  before:-z-10 before:size-full before:rounded-full before:border before:border-white;
+        @apply bg-tictac-primary-orange cursor-pointer rounded-full border-2 clamp-[px,4,8] clamp-[py,1,2] duration-[1500] before:-z-10 before:size-full before:rounded-full before:border before:border-white;
 
         &:not(.selected) {
             @apply hover:border-tictac-primary-orange hover:text-tictac-primary-orange before:bg-tictac-primary-orange-dark border-white relative ease-in-out before:absolute before:bottom-0 before:right-0 before:transition-[bottom,right] hover:bg-white hover:before:-bottom-2 hover:before:-right-1.5;

@@ -148,10 +148,10 @@ new class extends Component
 };
 ?>
 
-<div class="slider-outer-shadow rounded-4xl bg-tictac-primary-blue relative mb-10 w-[60vw] max-w-4xl p-2">
+<div class="slider-outer-shadow rounded-4xl bg-tictac-primary-blue relative w-[90vw] mb-10 md:w-[60vw] max-w-4xl p-2">
     <form wire:submit="{{ $isLoginForm ? 'login' : 'register' }}">
-        <div class="slider-inner-shadow relative overflow-hidden rounded-3xl bg-white p-8">
-            <div class='text-tictac-primary-blue grid grid-cols-[1fr_auto_1fr] gap-4'>
+        <div class="slider-inner-shadow relative overflow-hidden rounded-3xl bg-white clamp-[p,4,8]">
+            <div class='text-tictac-primary-blue grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-4'>
                 <div class="flex flex-col gap-4">
                     <div class="flex items-end">
                         <h2 class="text-center text-2xl">
@@ -169,9 +169,9 @@ new class extends Component
                     @endif
                 </div>
 
-                <div class="bg-tictac-primary-blue inline-block h-full min-h-[1em] w-0.5 self-stretch"></div>
+                <div class="bg-tictac-primary-blue inline-block h-full min-h-0.5 md:min-h-[1em] w-full md:w-0.5 self-stretch"></div>
 
-                <div class="flex flex-col gap-4">
+                <div class="flex flex-col clamp-[gap,2,4]">
                     <h2 class="text-center text-2xl">Login with</h2>
                     <div class="flex flex-col gap-2 rounded-lg bg-gray-100 p-4">
                         {{-- <a href="{{ route('login.auth', ['provider' => 'facebook']) }}">

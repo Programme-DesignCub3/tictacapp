@@ -1,6 +1,6 @@
 <x-layouts.app>
     @push('plugin-scripts')
-        @vite(['resources/js/home.js', 'resources/js/slider.js'])
+        @vite(['resources/js/home.js', 'resources/js/slider.js', 'resources/js/gsap.js'])
     @endpush
 
     <div class="max-lg:hidden">
@@ -118,68 +118,51 @@
                 </div>
             </div>
         </div>
+
         <div class="fixed right-[4%] top-[20%] w-[7vw]">
-            <div class="relative w-full">
-                <img class="cloud absolute h-auto w-auto" data-direction="left" data-speed="1"
-                    src="{{ asset('img/air_baloon.png') }}" alt="" style="width: 290px; height: auto;">
+            <div class="cloud relative w-full" data-direction="left" data-speed="1"">
+                <img class="z-0 h-auto w-auto" src="{{ asset('img/air_baloon_2.png') }}" alt=""
+                    style="width: 290px; height: auto;">
+
+                <div class="clamp-[gap,2,5] absolute left-[32%] top-1/2 my-2 flex flex-col justify-center">
+                    @php
+                        $socials = [
+                            [
+                                'name' => 'whatsaap',
+                                'image' => asset('img/social-icons/wa.svg'),
+                                'link' => 'https://www.whatsapp.com/',
+                            ],
+                            [
+                                'name' => 'tiktok',
+                                'image' => asset('img/social-icons/tiktok.svg'),
+                                'link' => 'tiktok.com',
+                            ],
+                            [
+                                'name' => 'instagram',
+                                'image' => asset('img/social-icons/ig.svg'),
+                                'link' => 'instagram.com',
+                            ],
+                            [
+                                'name' => 'youtube',
+                                'image' => asset('img/social-icons/yt.svg'),
+                                'link' => 'youtube.com',
+                            ],
+                        ];
+                    @endphp
+
+                    @foreach ($socials as $social)
+                        <a href="{{ $social['link'] }}" target="_blank">
+                            <img class="size-[1.5vw]" src="{{ $social['image'] }}" alt="">
+                        </a>
+                    @endforeach
+                </div>
+
+
             </div>
         </div>
 
-
-
-    </div>
-    <!-- Slider main container -->
-    <div class="relative">
-        <div class="swiper max-lg:hidden" id="home-mobile-slider">
-            <!-- Additional required wrapper -->
-            <div class="swiper-wrapper">
-                <!-- Slides -->
-                <div class="swiper-slide">Slide 1</div>
-                <div class="swiper-slide">Slide 2</div>
-                <div class="swiper-slide">Slide 3</div>
-            </div>
-            <!-- If we need pagination -->
-            <div class="swiper-pagination"></div>
-            <!-- If we need navigation buttons -->
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-        </div>
     </div>
 
-    @push('custom-scripts')
-        <script>
-            document.addEventListener("DOMContentLoaded", function() {
-                let homeSlider;
-                let isMobile;
-                const maxWidth = '64rem';
-                const initSlider = () => {
-                    homeSlider = new window.Swiper("#home-mobile-slider", {
-                        slidesPerView: 1,
-                    });
-                }
+    <x-home.slider.main />
 
-                if (window.matchMedia(`screen and (max-width: ${maxWidth})`).matches) {
-                    isMobile = true;
-                    initSlider();
-                }
-
-                const homeSliderResizeHandler = () => {
-                    if (window.matchMedia(`screen and (max-width: ${maxWidth})`).matches) {
-                        initSlider();
-                    } else {
-                        if (!isMobile) {
-                            if (homeSlider) {
-                                homeSlider.destroy();
-                                homeSlider = null;
-                            }
-                        }
-                    }
-                }
-
-                window.addEventListener('resize', homeSliderResizeHandler);
-
-
-            });
-        </script>
-    @endpush
 </x-layouts.app>

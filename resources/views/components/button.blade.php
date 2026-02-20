@@ -1,4 +1,7 @@
 @props(['selected' => false])
-<button @class(['font-cocogoose category-button', 'selected' => $selected]) {{ $attributes }}>
+<button @class([
+    'font-cocogoose category-button clamp-[text,sm,base]',
+    'selected' => $selected,
+]) {{ $attributes }}>
     {{ $slot }}
 </button>
