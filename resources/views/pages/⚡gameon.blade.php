@@ -43,7 +43,7 @@ new #[Layout('layouts::tictack', ['bg' => "before:bg-[url('../assets/bg/tictalks
 
     <div class="grid grid-cols-1 md:grid-cols-[auto_30%] px-4">
         <div wire:ignore id="game-wrapper" class="">
-            <iframe src="/storage/tictac-catch-new/index.html" frameborder="0" noresize="noresize"
+            <iframe src="/storage/games/tictac-catch-new/index.html" frameborder="0" noresize="noresize"
                 allow="geolocation 'self'; autoplay 'self'"
                 style="height: 100%; width: 100%; border: 0;"></iframe>
         </div>
