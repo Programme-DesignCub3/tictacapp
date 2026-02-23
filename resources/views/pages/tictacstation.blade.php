@@ -29,7 +29,7 @@
                         alt="Enjoy out tic-tac selections">
                 </div>
 
-                <div class="before:bg-(--title-bg-color) relative flex items-center justify-start overflow-x-hidden rounded-lg px-4 py-8 before:absolute before:-z-10 before:-ml-[10%] before:size-full before:w-[135%] before:rounded-2xl before:sm:-ml-[45%] before:lg:-ml-[45%]"
+                <div class="before:bg-(--title-bg-color) relative flex items-center justify-start rounded-lg px-4 py-8 before:absolute before:-z-10 before:-ml-[10%] before:size-full before:w-[135%] before:rounded-2xl before:sm:-ml-[45%] before:lg:-ml-[45%]"
                     :style="`--title-bg-color: ${currentProduct.color}`">
                     <div class="flex max-w-[90%] flex-col gap-y-2">
                         <h2 class="text-3xl font-bold" x-text="currentProduct.name"></h2>
