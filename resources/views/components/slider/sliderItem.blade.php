@@ -4,27 +4,22 @@
     <div class="slider-outer-shadow rounded-4xl bg-tictac-primary-blue relative mb-10 p-2">
         <div class="slider-inner-shadow overflow-clip rounded-3xl bg-white">
             <div class="aspect-6/4 overflow-hidden">
-                <img src="{{ $item->getFirstMediaUrl('thumbnail') ? $item->getFirstMediaUrl('thumbnail') : 'https://placehold.co/600x400' }}"
+                <img class="w-full"
+                    src="{{ $item->getFirstMediaUrl('thumbnail') ? $item->getFirstMediaUrl('thumbnail') : 'https://placehold.co/600x400' }}"
                     alt="">
             </div>
 
             <div class="flex flex-col gap-4 px-4 pb-10 pt-6 text-center">
                 <p class="text-sm font-bold tracking-widest text-orange-500 underline">
-                    {{ $item->category->name ?? 'Music' }}
+                    {{ $item->category->name ?? '' }}
                 </p>
 
                 <h3 class="text-tictac-primary-blue font-poppins text-lg font-bold md:text-2xl">
-                    {{ $item->title ?? 'Lorem ipsum dolor sit amet' }}
+                    {{ $item->title ?? '' }}
                 </h3>
 
                 <p class="text-xs">
-                    {{ Str::limit(
-                        $item->description
-                            ? $item->description
-                            : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos provident quod consequuntur ipsam quaerat sint officia enim tempora',
-                        150,
-                        '...',
-                    ) }}
+                    {{ Str::limit($item->description ? $item->description : '', 150, '...') }}
                 </p>
             </div>
         </div>
