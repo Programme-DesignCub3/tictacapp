@@ -11,6 +11,13 @@ class GameScore extends Model
     use HasFactory;
 
     /**
+     * The attributes that are mass assignable.
+     *
+     * @var array<string>
+     */
+    protected $fillable = ['score'];
+
+    /**
      * Get the user that owns the GameScore
      */
     public function user(): BelongsTo

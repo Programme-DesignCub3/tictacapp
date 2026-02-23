@@ -3,6 +3,7 @@
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\TictacstationController;
+use App\Http\Middleware\redirectToHomeIfNotAuth;
 use Illuminate\Support\Facades\Route;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
@@ -19,9 +20,9 @@ Route::group([
     Route::livewire('/tictalks', 'pages::tictalks')
         ->name('tictalks');
 
-    Route::get('/gameon', function () {
-        return view('pages.gameon');
-    })->name('gameon');
+    Route::livewire('/gameon', 'pages::gameon')
+        ->middleware(redirectToHomeIfNotAuth::class)
+        ->name('gameon');
 
     Route::get('/tictacstation', TictacstationController::class)
         ->name('tictacstation');

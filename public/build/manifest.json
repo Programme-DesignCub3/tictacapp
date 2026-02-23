@@ -29,10 +29,6 @@
     "file": "assets/tictalks-bg-island-CdlgICsZ.png",
     "src": "resources/assets/bg/tictalks-bg-island.png"
   },
-  "resources/assets/bg/tictalks-bg.png": {
-    "file": "assets/tictalks-bg-D3HzoZZv.png",
-    "src": "resources/assets/bg/tictalks-bg.png"
-  },
   "resources/assets/fonts/Cocogoose-Bold.woff": {
     "file": "assets/Cocogoose-Bold-FDNXZNXN.woff",
     "src": "resources/assets/fonts/Cocogoose-Bold.woff"
@@ -178,7 +174,7 @@
     "src": "resources/assets/fonts/SuperComic.woff2"
   },
   "resources/css/app.css": {
-    "file": "assets/app-DvmVe19o.css",
+    "file": "assets/app-CH3_aOt3.css",
     "src": "resources/css/app.css",
     "isEntry": true,
     "name": "app",

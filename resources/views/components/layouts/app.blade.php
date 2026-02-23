@@ -81,6 +81,7 @@
             Designed by Designcub3. 2025. Copyright to Tic Tac Dua Kelinci.
         </p>
     </footer>
+
     @stack('custom-scripts')
 
     @livewireScripts
