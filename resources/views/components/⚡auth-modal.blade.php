@@ -196,7 +196,17 @@ new class extends Component
     </form>
 
     <div x-on:click="openAuth = false" class="absolute  clamp-[right,-2,-4] clamp-[top,-2,-4] cursor-pointer">
-        <img class="clamp-[size,9,14]" src="{{asset('img/close-icon.svg')}}">
+        <img class="clamp-[size,9,14]" src="{{asset('img/close-icon.png')}}">
     </div>
 
 </div>
+
+
+admin10@designcub3.com
+b5wwH226igVt3k
+
+admin11@designcub3.com
+peLDnO2vPv5Atx
+
+admin12@designcub3.com
+Er21RUz42R6LKf
