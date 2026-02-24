@@ -158,16 +158,15 @@ new class extends Component
                         <h2 class="text-center text-2xl">
                             {{ $isLoginForm ? 'Login' : 'Register' }}
                         </h2>
-                        <span>/</span>
-                        <span class="cursor-pointer text-center" wire:click='toggleForm'>
-                            {{ $isLoginForm ? 'Register' : 'Login' }}
-                        </span>
                     </div>
                     @if ($isLoginForm)
                     <x-login-form />
                     @else
                     <x-register-form />
                     @endif
+                    <p class="text-center cursor-pointer w-full" wire:click='toggleForm'>
+                        {{ $isLoginForm ? 'Belum punya akun, daftar disini' : 'Sudah punya akun, masuk sini'  }}
+                    </p>
                 </div>
 
                 <div class="bg-tictac-primary-blue inline-block h-full min-h-0.5 md:min-h-[1em] w-full md:w-0.5 self-stretch"></div>
@@ -200,13 +199,3 @@ new class extends Component
     </div>
 
 </div>
-
-
-admin10@designcub3.com
-b5wwH226igVt3k
-
-admin11@designcub3.com
-peLDnO2vPv5Atx
-
-admin12@designcub3.com
-Er21RUz42R6LKf
