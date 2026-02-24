@@ -1,5 +1,5 @@
 @props(['scoreList' => []])
-<div class="leaderboard" wire:poll wire:transition>
+<div class="leaderboard" wire:transition>
     <h1 class="flex items-center gap-2">
         <svg class="ico-cup">
             <use xlink:href="#cup"></use>

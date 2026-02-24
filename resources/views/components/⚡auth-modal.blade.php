@@ -1,4 +1,5 @@
 <?php
+
 use App\Models\User;
 use Illuminate\Auth\Events\Lockout;
 use Illuminate\Support\Facades\Auth;
@@ -124,7 +125,7 @@ new class extends Component
 
     /**
      * Validate the given reCAPTCHA token.
-     *
+     * currently not used
      *
      * @throws \Illuminate\Validation\ValidationException
      */
@@ -148,7 +149,7 @@ new class extends Component
 };
 ?>
 
-<div class="slider-outer-shadow rounded-4xl bg-tictac-primary-blue relative w-[90vw] mb-10 md:w-[60vw] max-w-4xl p-2">
+<div class="slider-outer-shadow rounded-4xl bg-card-blue relative w-[90vw] mb-10 md:w-[60vw] max-w-4xl clamp-[p,2,3]">
     <form wire:submit="{{ $isLoginForm ? 'login' : 'register' }}">
         <div class="slider-inner-shadow relative overflow-hidden rounded-3xl bg-white clamp-[p,4,8]">
             <div class='text-tictac-primary-blue grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-4'>
@@ -163,9 +164,9 @@ new class extends Component
                         </span>
                     </div>
                     @if ($isLoginForm)
-                        <x-login-form />
+                    <x-login-form />
                     @else
-                        <x-register-form />
+                    <x-register-form />
                     @endif
                 </div>
 
@@ -175,7 +176,7 @@ new class extends Component
                     <h2 class="text-center text-2xl">Login with</h2>
                     <div class="flex flex-col gap-2 rounded-lg bg-gray-100 p-4">
                         {{-- <a href="{{ route('login.auth', ['provider' => 'facebook']) }}">
-                            <x-facebook-login-button />
+                        <x-facebook-login-button />
                         </a> --}}
                         <a href="{{ route('login.auth', ['provider' => 'google']) }}">
                             <x-google-login-button />
@@ -186,11 +187,16 @@ new class extends Component
         </div>
 
         <button
-            class="slider-outer-shadow font-super-comic bg-tictac-primary-blue absolute -bottom-4 left-1/2 block min-w-fit -translate-x-1/2 cursor-pointer overflow-clip rounded-full p-2 text-center"
+            class="slider-outer-shadow font-super-comic bg-card-blue absolute -bottom-4 left-1/2 block min-w-fit -translate-x-1/2 cursor-pointer overflow-clip rounded-full clamp-[p,2,3] text-center"
             type="submit">
             <span class="slider-inner-shadow bg-tictac-secondary-yellow relative block overflow-clip rounded-full">
-                <span class="text-tictac-primary-blue block size-full px-3 py-1 text-xs">Submit</span>
+                <span class="text-tictac-primary-blue block size-full px-3 py-1 clamp-[text,xs,xl]">Submit</span>
             </span>
         </button>
     </form>
+
+    <div x-on:click="openAuth = false" class="absolute  clamp-[right,-2,-4] clamp-[top,-2,-4] cursor-pointer">
+        <img class="clamp-[size,9,14]" src="{{asset('img/close-icon.svg')}}">
+    </div>
+
 </div>

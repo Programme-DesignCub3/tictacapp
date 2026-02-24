@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ config('app.name', 'Tictacapp') }}</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
     <!-- Add your CSS links here -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
@@ -21,12 +27,12 @@
 <body @class([
     'bg-linear-0 from-tictac-primary-blue to-tictac-primary-blue-light relative min-h-screen via-50% flex-1 flex flex-col',
 ])>
-    <header class="container relative z-10 mt-8 max-lg:mb-8" x-data="{ open: false }">
+    <header class="container relative z-10 mt-8 max-lg:mb-8" x-data="{ openAuth: false, openMobileNav: false }">
         <div
             class="lg:justify-end-safe clamp-[gap,2,4] relative flex content-center items-center justify-between text-white">
             <div class="lg:hidden">
                 <div class="relative left-0 top-0 z-50 flex w-full justify-between transition-all duration-300"
-                    @click="open = !open">
+                    @click="openMobileNav = !openMobileNav">
                     <x-lucide-menu class="size-8" />
                 </div>
 

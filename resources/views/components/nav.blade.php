@@ -23,7 +23,7 @@
             </filter>
         </svg>
 
-        <ul class="font-cocogoose flex flex-wrap items-center justify-between p-4 text-center text-xl">
+        <ul class="font-poppins flex flex-wrap items-center justify-between p-4 text-center text-xl font-bold">
             {{-- menulist --}}
             {{-- Crunch Selection, TicTacvity, Logo Image, TicTalks, Game On! --}}
             <li data-before-content="TicTacStation" @class([
@@ -53,7 +53,18 @@
             <li data-before-content="Game On!" @class([
                 'nav--item-outline' => request()->routeIs('gameon'),
             ])>
-                <a class="text-white" href="{{ route('gameon') }}">Game On!</a>
+                @auth('web')
+                    <a class="text-white" href="{{ route('gameon') }}">Game On!</a>
+                @endauth
+
+                @guest
+                    <p class="cursor-pointer text-white"
+                        @click="()=>{
+                        openAuth = !openAuth;
+                        openMobileNav = false;
+                    }">
+                        Game On!</p>
+                @endguest
             </li>
         </ul>
     </nav>
