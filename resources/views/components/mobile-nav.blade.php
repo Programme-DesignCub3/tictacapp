@@ -11,7 +11,7 @@
         <ul
             class="font-poppins flex flex-col flex-wrap items-center justify-between gap-4 p-4 text-center text-xl font-bold">
             {{-- menulist --}}
-            {{-- Crunch Selection, TicTacvity, Logo Image, TicTalks, Game On! --}}
+            {{-- Crunch Selection, TicTactivity, Logo Image, TicTalks, Game On! --}}
             <li data-before-content="TicTacapp">
                 <a class="flex items-center text-white" href="{{ route('home') }}">
                     <img class="h-auto w-60" src="{{ asset('img/logo.png') }}" alt="Logo" />
@@ -24,17 +24,17 @@
                 <a class="text-white" href="{{ route('tictacstation') }}">TicTacStation</a>
             </li>
 
-            <li data-before-content="TicTacvity" @class([
+            <li data-before-content="TicTactivity" @class([
                 'nav--item-outline' => request()->routeIs('tictactivity'),
             ])>
-                <a class="text-white" href="{{ route('tictactivity') }}">TicTacvity</a>
+                <a class="text-white" href="{{ route('tictactivity.index') }}">TicTactivity</a>
             </li>
 
 
             <li data-before-content="TicTalks" @class([
                 'nav--item-outline' => request()->routeIs('tictalks'),
             ])>
-                <a class="text-white" href="{{ route('tictalks') }}">TicTalks</a>
+                <a class="text-white" href="{{ route('tictalks.index') }}">TicTalks</a>
             </li>
 
             <li data-before-content="Game On!" @class([

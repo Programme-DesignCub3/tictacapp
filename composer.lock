@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e41f075a1832508b08e1945d52756476",
+    "content-hash": "09dbadf781195a07fddbbf67c93469a8",
     "packages": [
         {
             "name": "abdulmajeed-jamaan/filament-translatable-tabs",
@@ -1675,6 +1675,43 @@
             "time": "2026-02-10T13:16:48+00:00"
         },
         {
+            "name": "filament/spatie-laravel-tags-plugin",
+            "version": "v5.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/filamentphp/spatie-laravel-tags-plugin.git",
+                "reference": "087e1bfa621adaddd4dca1cd5f5908bcfb20c0e6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/filamentphp/spatie-laravel-tags-plugin/zipball/087e1bfa621adaddd4dca1cd5f5908bcfb20c0e6",
+                "reference": "087e1bfa621adaddd4dca1cd5f5908bcfb20c0e6",
+                "shasum": ""
+            },
+            "require": {
+                "filament/support": "self.version",
+                "php": "^8.2",
+                "spatie/laravel-tags": "^4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Filament\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Filament support for `spatie/laravel-tags`.",
+            "homepage": "https://github.com/filamentphp/filament",
+            "support": {
+                "issues": "https://github.com/filamentphp/filament/issues",
+                "source": "https://github.com/filamentphp/filament"
+            },
+            "time": "2026-01-29T20:50:19+00:00"
+        },
+        {
             "name": "filament/support",
             "version": "v5.2.1",
             "source": {
@@ -2428,6 +2465,87 @@
                 }
             ],
             "time": "2025-08-22T14:27:06+00:00"
+        },
+        {
+            "name": "honeystone/laravel-seo",
+            "version": "2.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Honeystone/laravel-seo.git",
+                "reference": "7a4677ef07517d4d1075b14088a262792f2d449a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Honeystone/laravel-seo/zipball/7a4677ef07517d4d1075b14088a262792f2d449a",
+                "reference": "7a4677ef07517d4d1075b14088a262792f2d449a",
+                "shasum": ""
+            },
+            "require": {
+                "ext-zip": "*",
+                "illuminate/contracts": "^10.0|^11.0|^12.0",
+                "php": "^8.2",
+                "spatie/laravel-package-tools": "^1.16.4"
+            },
+            "require-dev": {
+                "laradumps/laradumps-core": "^2.0",
+                "larastan/larastan": "^3.0",
+                "laravel/pint": "^1.21",
+                "nunomaduro/collision": "^8.0",
+                "orchestra/testbench": "^10.0",
+                "pestphp/pest": "^3.0",
+                "pestphp/pest-plugin-laravel": "^3.0",
+                "phpstan/extension-installer": "^1.4",
+                "phpstan/phpstan-deprecation-rules": "^2.0",
+                "phpstan/phpstan-phpunit": "^2.0",
+                "phpunit/phpunit": "^11.0",
+                "spatie/schema-org": "^3.23"
+            },
+            "suggest": {
+                "spatie/schema-org": "For generating JSON-LD schema using a fluent interface."
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Honeystone\\Seo\\Providers\\SeoServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/helpers.php"
+                ],
+                "psr-4": {
+                    "Honeystone\\Seo\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "George Palmer",
+                    "email": "george@honeystone.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "SEO metadata and JSON-LD package for Laravel.",
+            "homepage": "https://honeystone.com",
+            "keywords": [
+                "JSON-LD",
+                "honeystone",
+                "laravel",
+                "metadata",
+                "opengraph",
+                "seo",
+                "twitter"
+            ],
+            "support": {
+                "issues": "https://github.com/Honeystone/laravel-seo/issues",
+                "source": "https://github.com/Honeystone/laravel-seo/tree/2.0.1"
+            },
+            "time": "2025-07-09T12:19:25+00:00"
         },
         {
             "name": "kirschbaum-development/eloquent-power-joins",

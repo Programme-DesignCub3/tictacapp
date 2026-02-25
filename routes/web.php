@@ -3,6 +3,8 @@
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\TictacstationController;
+use App\Http\Controllers\TictactivityController;
+use App\Http\Controllers\TictalkController;
 use App\Http\Middleware\redirectToHomeIfNotAuth;
 use Illuminate\Support\Facades\Route;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
@@ -17,8 +19,16 @@ Route::group([
         return view('pages.welcome');
     })->name('home');
 
-    Route::livewire('/tictalks', 'pages::tictalks')
-        ->name('tictalks');
+    Route::group([
+        'prefix' => 'tictalks',
+        'as' => 'tictalks.',
+    ], function () {
+        Route::livewire('/', 'pages::tictalks')
+            ->name('index');
+
+        Route::get('/tictalks/{article}', [TictalkController::class, 'show'])
+            ->name('show');
+    });
 
     Route::livewire('/gameon', 'pages::gameon')
         ->middleware(redirectToHomeIfNotAuth::class)
@@ -27,8 +37,17 @@ Route::group([
     Route::get('/tictacstation', TictacstationController::class)
         ->name('tictacstation');
 
-    Route::livewire('/tictactivity', 'pages::tictactivity')
-        ->name('tictactivity');
+    Route::group([
+        'prefix' => 'tictactivity',
+        'as' => 'tictactivity.',
+    ], function () {
+        Route::livewire('/', 'pages::tictactivity')
+            ->name('index');
+
+        Route::get('/{article}', [TictactivityController::class, 'show'])
+            ->name('show');
+    });
+
 });
 
 /** OTHER PAGES THAT SHOULD NOT BE LOCALIZED **/

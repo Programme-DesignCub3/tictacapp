@@ -46,7 +46,6 @@ new #[Layout('layouts::tictack', ['bg' => "before:bg-[url('../assets/bg/tictacti
             }
         } else {
             $this->selectedCategory = 'all';
-
         }
         $this->resetPage();
 
@@ -67,9 +66,9 @@ new #[Layout('layouts::tictack', ['bg' => "before:bg-[url('../assets/bg/tictacti
     </div>
 
     <div class="clamp-[mb,12,28] flex flex-wrap justify-between gap-4">
-        <x-breadcrumb :links="[['label' => 'Tictactivity', 'url' => route('tictactivity')]]" />
+        <x-breadcrumb :links="[['label' => 'Tictactivity', 'url' => route('tictactivity.index')]]" />
 
-        <div class="flex flex-wrap items-center clamp-[gap,2,4] text-white" wire:transition>
+        <div class="clamp-[gap,2,4] flex flex-wrap items-center text-white" wire:transition>
 
             <x-button :selected="$selectedCategory === 'all'" wire:click="handleCategoryChange">Semua</x-button>
 
@@ -81,7 +80,7 @@ new #[Layout('layouts::tictack', ['bg' => "before:bg-[url('../assets/bg/tictacti
         </div>
     </div>
 
-    <x-slider.slider id="activitySlider" :items="$this->activities" />
+    <x-slider.slider id="activitySlider" :items="$this->activities" routeName="tictactivity"/>
 
     {{ $this->activities->links() }}
 

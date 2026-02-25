@@ -6,6 +6,7 @@ use Filament\Forms\Components\DateTimePicker;
 use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\SpatieMediaLibraryFileUpload;
+use Filament\Forms\Components\SpatieTagsInput;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Schemas\Components\Utilities\Get;
@@ -53,6 +54,7 @@ class ActivityForm
                     ->searchable(['name'])
                     ->preload()
                     ->required(),
+                SpatieTagsInput::make('tags'),
                 DateTimePicker::make('published_at')
                     ->default(now())
                     ->required(),

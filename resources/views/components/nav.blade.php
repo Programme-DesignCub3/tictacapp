@@ -25,17 +25,17 @@
 
         <ul class="font-poppins flex flex-wrap items-center justify-between p-4 text-center text-xl font-bold">
             {{-- menulist --}}
-            {{-- Crunch Selection, TicTacvity, Logo Image, TicTalks, Game On! --}}
+            {{-- Crunch Selection, TicTactivity, Logo Image, TicTalks, Game On! --}}
             <li data-before-content="TicTacStation" @class([
                 'nav--item-outline' => request()->routeIs('tictacstation'),
             ])>
                 <a class="text-white" href="{{ route('tictacstation') }}">TicTacStation</a>
             </li>
 
-            <li data-before-content="TicTacvity" @class([
+            <li data-before-content="TicTactivity" @class([
                 'nav--item-outline' => request()->routeIs('tictactivity'),
             ])>
-                <a class="text-white" href="{{ route('tictactivity') }}">TicTacvity</a>
+                <a class="text-white" href="{{ route('tictactivity.index') }}">TicTactivity</a>
             </li>
 
             <li data-before-content="TicTacapp">
@@ -47,7 +47,7 @@
             <li data-before-content="TicTalks" @class([
                 'nav--item-outline' => request()->routeIs('tictalks'),
             ])>
-                <a class="text-white" href="{{ route('tictalks') }}">TicTalks</a>
+                <a class="text-white" href="{{ route('tictalks.index') }}">TicTalks</a>
             </li>
 
             <li data-before-content="Game On!" @class([

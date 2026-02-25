@@ -6,19 +6,27 @@ use App\Models\Tictalk;
 
 class TictalkController extends Controller
 {
-    public function __invoke()
+    public function show(Tictalk $article)
     {
-        $activities = Tictalk::all();
+        seo()
+            ->title($article->title, 'Tictalk')
+            ->description($article->excerpt)
+            ->images(
+                $article->getFirstMediaUrl('thumbnail')
+            );
 
-        $categories = $activities->pluck('category')->unique();
+        $otherArticles = Tictalk::inRandomOrder()
+            ->where('id', '!=', $article->id)
+            ->limit(4)
+            ->get();
 
-        $activities = Tictalk::paginate(12);
-
-        return view('pages.tictactivity',
-            compact(
-                'activities',
-                'categories'
-            )
+        return view(
+            'pages.detail',
+            [
+                'type' => 'Tictalks',
+                'article' => $article,
+                'otherArticles' => $otherArticles,
+            ]
         );
     }
 }

@@ -27,14 +27,14 @@
                         'textImage' => asset('img/text/tictactivity.png'),
                         'text' => 'Click here to read more about our recent campaign >',
                         'classModifier' => '-ml-32 -mb-16 scale-125 mt-8',
-                        'link' => route('tictactivity'),
+                        'link' => route('tictactivity.index'),
                     ],
                     [
                         'islandImage' => asset('img/mobile/tictactalks.png'),
                         'textImage' => asset('img/text/tictactalks.png'),
                         'text' => 'Click here to read more about our intriguing articles >',
                         'classModifier' => '',
-                        'link' => route('tictalks'),
+                        'link' => route('tictalks.index'),
                     ],
                     [
                         'islandImage' => asset('img/mobile/gameon.png'),

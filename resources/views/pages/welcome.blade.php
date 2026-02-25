@@ -66,14 +66,14 @@
                         <br /> our product varieties >
                     </p>
                 </a>
-                <a class="absolute left-[13%] top-[45%]" href="{{ route('tictactivity') }}">
+                <a class="absolute left-[13%] top-[45%]" href="{{ route('tictactivity.index') }}">
                     <img class="text-image w-[20vw]" src="{{ asset('img/text/tictactivity.png') }}" alt="TicTacTivity"
                         title="TicTacTivity">
                     <p class="text-center text-white">Click here to read more about
                         <br /> our recent campaign >
                     </p>
                 </a>
-                <a class="absolute right-[10%] top-[59%]" href="{{ route('tictalks') }}">
+                <a class="absolute right-[10%] top-[59%]" href="{{ route('tictalks.index') }}">
                     <img class="text-image w-[20vw]" src="{{ asset('img/text/tictactalks.png') }}" alt="TicTacTalks"
                         title="TicTacTalks">
                     <p class="text-center text-white">Click here to read more about

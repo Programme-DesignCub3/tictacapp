@@ -56,7 +56,7 @@ new #[Layout('layouts::tictack', ['bg' => "before:bg-[url('../assets/bg/tictalks
 
 <div class="max-w-384 mx-auto px-4">
     @push('plugin-scripts')
-    @vite(['resources/js/slider.js','resources/js/gsap.js'])
+        @vite(['resources/js/slider.js', 'resources/js/gsap.js'])
     @endpush
     <div class="absolute left-[1%] top-[7%] z-0 w-[13vw] max-md:hidden">
         <div class="relative h-full w-full">
@@ -66,20 +66,21 @@ new #[Layout('layouts::tictack', ['bg' => "before:bg-[url('../assets/bg/tictalks
     </div>
 
     <div class="clamp-[mb,12,28] flex flex-wrap justify-between gap-4">
-        <x-breadcrumb :links="[['label' => 'Tictalks', 'url' => route('tictalks')]]" />
+        <x-breadcrumb :links="[['label' => 'Tictalks', 'url' => route('tictalks.index')]]" />
 
-        <div class="flex flex-wrap items-center clamp-[gap,2,4] text-white" wire:transition>
+        <div class="clamp-[gap,2,4] flex flex-wrap items-center text-white" wire:transition>
 
             <x-button :selected="$selectedCategory === 'all'" wire:click="handleCategoryChange">Semua</x-button>
 
             @foreach ($this->categories as $category)
-            <x-button :selected="$category->slug === $selectedCategory" wire:click="handleCategoryChange('{{ $category->slug }}')">{{ $category->name }}</x-button>
+                <x-button :selected="$category->slug === $selectedCategory"
+                    wire:click="handleCategoryChange('{{ $category->slug }}')">{{ $category->name }}</x-button>
             @endforeach
 
         </div>
     </div>
 
-    <x-slider.slider id="activitySlider" :items="$this->activities" />
+    <x-slider.slider id="activitySlider" :items="$this->activities" routeName="tictalks"/>
 
     {{ $this->activities->links() }}
 

@@ -1,4 +1,4 @@
-@props(['id', 'items' => []])
+@props(['id', 'items' => [], 'routeName' => null])
 
 <!-- Slider main container -->
 <div class="swiper pb-8! pr-4!" id="{{ $id }}" wire:key='{{ $id }}'>
@@ -8,7 +8,7 @@
 
         <!-- Slides -->
         @foreach ($items as $item)
-            <x-slider.sliderItem :item="$item" />
+            <x-slider.sliderItem :item="$item" :routeName="$routeName" />
         @endforeach
 
     </div>

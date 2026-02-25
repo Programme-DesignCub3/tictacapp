@@ -21,6 +21,10 @@
     "file": "assets/swiper-core-BitT4lrx.js",
     "name": "swiper-core"
   },
+  "resources/assets/bg/detail-bg-island.png": {
+    "file": "assets/detail-bg-island-B0VdS6qb.png",
+    "src": "resources/assets/bg/detail-bg-island.png"
+  },
   "resources/assets/bg/tictactivity-bg-island.png": {
     "file": "assets/tictactivity-bg-island-Djc8n6eK.png",
     "src": "resources/assets/bg/tictactivity-bg-island.png"
@@ -54,7 +58,7 @@
     "src": "resources/assets/fonts/SuperComic.woff2"
   },
   "resources/css/app.css": {
-    "file": "assets/app-BeSn_evZ.css",
+    "file": "assets/app-CSpvHHUc.css",
     "src": "resources/css/app.css",
     "isEntry": true,
     "name": "app",
