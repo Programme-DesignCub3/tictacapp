@@ -62,7 +62,7 @@
                 <a class="absolute right-[32%] top-[26%]" href="{{ route('tictacstation') }}">
                     <img class="text-image w-[20vw]" src="{{ asset('img/text/tictacstation.png') }}"
                         alt="tictacstation" title="tictacstation">
-                    <p class="w-3/4 text-pretty text-center text-white">
+                    <p class="text-pretty text-center text-white">
                         {!! __('home.tictacstation') !!}
                     </p>
                 </a>
