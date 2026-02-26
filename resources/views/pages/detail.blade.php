@@ -42,7 +42,7 @@
 
             <div class="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4">
                 @foreach ($otherArticles as $item)
-                    <x-slider.sliderItem :item="$item" routeName="" />
+                    <x-slider.sliderItem :item="$item" :routeName="strtolower($type)" />
                 @endforeach
             </div>
 
