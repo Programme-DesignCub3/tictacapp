@@ -9,7 +9,7 @@ class TictactivityController extends Controller
     public function show(Activity $article)
     {
         seo()
-            ->title($article->title, 'TicTactivity')
+            ->title((string) $article->title, 'TicTactivity')
             ->description($article->excerpt)
             ->images(
                 $article->getFirstMediaUrl('thumbnail')

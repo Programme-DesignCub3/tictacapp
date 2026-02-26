@@ -8,7 +8,7 @@ use Illuminate\Contracts\Auth\Factory as Auth;
 use Illuminate\Contracts\Auth\Middleware\AuthenticatesRequests;
 use Illuminate\Http\Request;
 
-class redirectToHomeIfNotAuth implements AuthenticatesRequests
+class RedirectToHomeIfNotAuth implements AuthenticatesRequests
 {
     /**
      * The authentication factory instance.

@@ -14,6 +14,14 @@ new #[Layout('layouts::tictack', ['bg' => "before:bg-[url('../assets/bg/tictalks
     #[Url('category', except: 'all')]
     public string $selectedCategory = 'all';
 
+    public function mount()
+    {
+        seo()
+            ->title('TicTalk')
+            // ->description('')
+            ->images();
+    }
+
     #[Computed]
     public function activities()
     {
@@ -70,7 +78,7 @@ new #[Layout('layouts::tictack', ['bg' => "before:bg-[url('../assets/bg/tictalks
 
         <div class="clamp-[gap,2,4] flex flex-wrap items-center text-white" wire:transition>
 
-            <x-button :selected="$selectedCategory === 'all'" wire:click="handleCategoryChange">Semua</x-button>
+            <x-button :selected="$selectedCategory === 'all'" wire:click="handleCategoryChange">{{__("global.all")}}</x-button>
 
             @foreach ($this->categories as $category)
                 <x-button :selected="$category->slug === $selectedCategory"

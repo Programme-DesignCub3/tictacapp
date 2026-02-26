@@ -62,29 +62,29 @@
                 <a class="absolute right-[32%] top-[26%]" href="{{ route('tictacstation') }}">
                     <img class="text-image w-[20vw]" src="{{ asset('img/text/tictacstation.png') }}"
                         alt="tictacstation" title="tictacstation">
-                    <p class="text-center text-white">Click here to read more about
-                        <br /> our product varieties >
+                    <p class="w-3/4 text-pretty text-center text-white">
+                        {!! __('home.tictacstation') !!}
                     </p>
                 </a>
                 <a class="absolute left-[13%] top-[45%]" href="{{ route('tictactivity.index') }}">
                     <img class="text-image w-[20vw]" src="{{ asset('img/text/tictactivity.png') }}" alt="TicTacTivity"
                         title="TicTacTivity">
-                    <p class="text-center text-white">Click here to read more about
-                        <br /> our recent campaign >
+                    <p class="text-center text-white">
+                        {!! __('home.tictactivity') !!}
                     </p>
                 </a>
                 <a class="absolute right-[10%] top-[59%]" href="{{ route('tictalks.index') }}">
                     <img class="text-image w-[20vw]" src="{{ asset('img/text/tictactalks.png') }}" alt="TicTacTalks"
                         title="TicTacTalks">
-                    <p class="text-center text-white">Click here to read more about
-                        <br /> our intriguing articles >
+                    <p class="text-center text-white">
+                        {!! __('home.tictalks') !!}
                     </p>
                 </a>
                 <a class="absolute left-[33%] top-[82%]" href="{{ route('gameon') }}">
                     <img class="text-image w-[15vw]" src="{{ asset('img/text/gameon.png') }}" alt="gameon"
                         title="gameon">
-                    <p class="text-center text-white">Click here to play some
-                        <br /> exciting games!s >
+                    <p class="text-center text-white">
+                        {!! __('home.gameon') !!}
                     </p>
                 </a>
                 {{-- character images --}}
@@ -120,11 +120,12 @@
         </div>
 
         <div class="fixed right-[4%] top-[20%] w-[7vw]">
-            <div class="cloud relative w-full" data-direction="left" data-speed="1"">
+            <div class="cloud relative w-full" data-direction="left" data-speed="1">
                 <img class="z-0 h-auto w-auto" src="{{ asset('img/air_baloon_2.png') }}" alt=""
                     style="width: 290px; height: auto;">
 
                 <div class="clamp-[gap,2,5] absolute left-[32%] top-1/2 my-2 flex flex-col justify-center">
+
                     @php
                         $socials = [
                             [
@@ -152,9 +153,10 @@
 
                     @foreach ($socials as $social)
                         <a href="{{ $social['link'] }}" target="_blank">
-                            <img class="size-[1.5vw]" src="{{ $social['image'] }}" alt="">
+                            <img class="size-[1.5vw]" src="{{ $social['image'] }}" alt="{{ $social['name'] }}">
                         </a>
                     @endforeach
+
                 </div>
 
 

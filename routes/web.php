@@ -5,7 +5,7 @@ use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\TictacstationController;
 use App\Http\Controllers\TictactivityController;
 use App\Http\Controllers\TictalkController;
-use App\Http\Middleware\redirectToHomeIfNotAuth;
+use App\Http\Middleware\RedirectToHomeIfNotAuth;
 use Illuminate\Support\Facades\Route;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
@@ -16,6 +16,11 @@ Route::group([
 
 ], function () {
     Route::get('/', function () {
+        seo()
+            ->title('TicTackLand', template: false)
+            // ->description('')
+            ->images();
+
         return view('pages.welcome');
     })->name('home');
 
@@ -31,7 +36,7 @@ Route::group([
     });
 
     Route::livewire('/gameon', 'pages::gameon')
-        ->middleware(redirectToHomeIfNotAuth::class)
+        ->middleware(RedirectToHomeIfNotAuth::class)
         ->name('gameon');
 
     Route::get('/tictacstation', TictacstationController::class)

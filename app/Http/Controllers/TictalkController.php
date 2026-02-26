@@ -9,7 +9,7 @@ class TictalkController extends Controller
     public function show(Tictalk $article)
     {
         seo()
-            ->title($article->title, 'Tictalk')
+            ->title((string) $article->title, 'Tictalk')
             ->description($article->excerpt)
             ->images(
                 $article->getFirstMediaUrl('thumbnail')

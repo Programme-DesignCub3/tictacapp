@@ -14,6 +14,14 @@ new #[Layout('layouts::tictack', ['bg' => "before:bg-[url('../assets/bg/tictacti
     #[Url('category', except: 'all')]
     public string $selectedCategory = 'all';
 
+    public function mount()
+    {
+        seo()
+            ->title('TicTacTivity')
+            // ->description('')
+            ->images();
+    }
+
     #[Computed]
     public function activities()
     {
@@ -47,16 +55,17 @@ new #[Layout('layouts::tictack', ['bg' => "before:bg-[url('../assets/bg/tictacti
         } else {
             $this->selectedCategory = 'all';
         }
-        $this->resetPage();
 
         $this->dispatch('content-changed');
+
+        $this->resetPage();
     }
 };
 ?>
 
 <div class="max-w-384 mx-auto px-4">
     @push('plugin-scripts')
-        @vite(['resources/js/slider.js', 'resources/js/gsap.js'])
+    @vite(['resources/js/slider.js', 'resources/js/gsap.js'])
     @endpush
     <div class="absolute left-[1%] top-[7%] z-0 w-[13vw] max-md:hidden">
         <div class="relative h-full w-full">
@@ -70,17 +79,17 @@ new #[Layout('layouts::tictack', ['bg' => "before:bg-[url('../assets/bg/tictacti
 
         <div class="clamp-[gap,2,4] flex flex-wrap items-center text-white" wire:transition>
 
-            <x-button :selected="$selectedCategory === 'all'" wire:click="handleCategoryChange">Semua</x-button>
+            <x-button :selected="$selectedCategory === 'all'" wire:click="handleCategoryChange">{{__("global.all")}}</x-button>
 
             @foreach ($this->categories as $category)
-                <x-button :selected="$category->slug === $selectedCategory"
-                    wire:click="handleCategoryChange('{{ $category->slug }}')">{{ $category->name }}</x-button>
+            <x-button :selected="$category->slug === $selectedCategory"
+                wire:click="handleCategoryChange('{{ $category->slug }}')">{{ $category->name }}</x-button>
             @endforeach
 
         </div>
     </div>
 
-    <x-slider.slider id="activitySlider" :items="$this->activities" routeName="tictactivity"/>
+    <x-slider.slider id="activitySlider" :items="$this->activities" routeName="tictactivity" />
 
     {{ $this->activities->links() }}
 
@@ -116,6 +125,9 @@ new #[Layout('layouts::tictack', ['bg' => "before:bg-[url('../assets/bg/tictacti
                 snapOnRelease: true,
             },
         });
+
+        console.log(activitySlider);
+
     }
 
     initSlider();

@@ -14,6 +14,14 @@ new #[Layout('layouts::tictack', ['bg' => "before:bg-[url('../assets/bg/tictalks
         return GameScore::with('user')->orderBy('score', 'desc')->take(5)->get();
     }
 
+    public function mount()
+    {
+        seo()
+            ->title('Gameon')
+            // ->description('')
+            ->images();
+    }
+
     #[On('game-end')]
     public function updateScore(int $score)
     {
