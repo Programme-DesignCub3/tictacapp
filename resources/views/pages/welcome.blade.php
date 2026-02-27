@@ -94,7 +94,7 @@
                 </div>
                 {{-- bush --}}
                 <div class="absolute right-[29.6%] top-[18.7%]">
-                    <img class="w-[17.3vw]" src="{{ asset('img/bush.png') }}" alt="bush" title="bush">
+                    <img class="w-[17.1vw]" src="{{ asset('img/bush-2.png') }}" alt="bush" title="bush">
                 </div>
                 <div class="absolute right-[33%] top-[36%]">
                     <img class="text-image w-[13vw]" src="{{ asset('img/char/cow.gif') }}" alt="TicTacTivity"
