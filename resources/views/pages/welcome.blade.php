@@ -80,13 +80,29 @@
                         {!! __('home.tictalks') !!}
                     </p>
                 </a>
-                <a class="absolute left-[33%] top-[82%]" href="{{ route('gameon') }}">
-                    <img class="text-image w-[15vw]" src="{{ asset('img/text/gameon.png') }}" alt="gameon"
-                        title="gameon">
-                    <p class="text-center text-white">
-                        {!! __('home.gameon') !!}
-                    </p>
-                </a>
+
+                @guest
+                    <div class="absolute left-[33%] top-[82%] cursor-pointer"
+                        @click="()=>{
+                    openAuth = !openAuth;
+                    openMobileNav = false;
+                }">
+                    @endguest
+                    @auth('web')
+                        <a class="absolute left-[33%] top-[82%]" href="{{ route('gameon') }}">
+                        @endauth
+
+                        <img class="text-image w-[15vw]" src="{{ asset('img/text/gameon.png') }}" alt="gameon"
+                            title="gameon">
+                        <p class="text-center text-white">
+                            {!! __('home.gameon') !!}
+                        </p>
+                        @auth('web')
+                        </a>
+                    @endauth
+                    @guest
+                    </div>
+                @endguest
                 {{-- character images --}}
                 <div class="absolute right-[26.5%] top-[17.7%]">
                     <img class="text-image w-[13vw]" src="{{ asset('img/char/original.gif') }}" alt="original"
@@ -131,22 +147,22 @@
                             [
                                 'name' => 'whatsaap',
                                 'image' => asset('img/social-icons/wa.svg'),
-                                'link' => 'https://www.whatsapp.com/',
+                                'link' => $settings->social_network['whatsapp'],
                             ],
                             [
                                 'name' => 'tiktok',
                                 'image' => asset('img/social-icons/tiktok.svg'),
-                                'link' => 'tiktok.com',
+                                'link' => $settings->social_network['tiktok'],
                             ],
                             [
                                 'name' => 'instagram',
                                 'image' => asset('img/social-icons/ig.svg'),
-                                'link' => 'instagram.com',
+                                'link' => $settings->social_network['instagram'],
                             ],
                             [
                                 'name' => 'youtube',
                                 'image' => asset('img/social-icons/yt.svg'),
-                                'link' => 'youtube.com',
+                                'link' => $settings->social_network['youtube'],
                             ],
                         ];
                     @endphp

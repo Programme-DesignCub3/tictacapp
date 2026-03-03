@@ -32,10 +32,10 @@
 
 </head>
 
-<body @class([
+<body x-data="{ openAuth: false, openMobileNav: false }" @class([
     'bg-linear-0 from-tictac-primary-blue to-tictac-primary-blue-light relative min-h-screen via-50% flex-1 flex flex-col',
 ])>
-    <header class="container relative z-10 mt-8 max-lg:mb-8" x-data="{ openAuth: false, openMobileNav: false }">
+    <header class="container relative z-10 mt-8 max-lg:mb-8">
         <div
             class="lg:justify-end-safe clamp-[gap,2,4] relative flex content-center items-center justify-between text-white">
             <div class="lg:hidden">
