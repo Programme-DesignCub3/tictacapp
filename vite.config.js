@@ -9,6 +9,7 @@ export default defineConfig({
                 "resources/css/app.css",
                 "resources/js/app.js",
                 "resources/js/home.js",
+                "resources/js/detail.js",
                 "resources/js/product.js",
                 "resources/js/gsap.js",
                 "resources/js/slider.js",

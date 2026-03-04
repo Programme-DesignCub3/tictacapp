@@ -6,4 +6,8 @@
             class="before:bg-linear-to-t before:from-tictac-primary-blue before:bg-bottom-right before:fixed before:left-0 before:top-0 before:-z-10 before:inline-block before:h-full before:w-full before:to-transparent before:to-50%">
             {{ $slot }}</div>
     </div>
+
+    @push('plugin-scripts')
+        @vite(['resources/js/detail.js'])
+    @endpush
 </x-layouts.app>

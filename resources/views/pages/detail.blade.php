@@ -1,4 +1,9 @@
+@use('Filament\Forms\Components\RichEditor\RichContentRenderer')
+@use('App\Filament\Forms\Components\RichEditor\RichContentCustomBlocks\YoutubeBlock')
+
 <x-layouts.tictack class="before:bg-[url('../assets/bg/detail-bg-island.png')]">
+
+
     <div class="max-w-384 mx-auto">
         <x-breadcrumb :links="[
             [
@@ -20,8 +25,9 @@
                 <img class="w-full" src="{{ $article->getFirstMediaUrl('thumbnail') }}" alt="">
             </div>
 
-            <div class="prose text-white">
-                {!! $article->content !!}
+            <div class="prose max-w-none text-white">
+                {{-- {!! RichContentRenderer::make($article->content)->customBlocks([YoutubeBlock::class])->toHtml() !!} --}}
+                {!! $article->renderRichContent('content') !!}
             </div>
 
             <div class="flex flex-wrap items-center gap-4 text-white">

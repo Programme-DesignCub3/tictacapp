@@ -58,7 +58,7 @@
     "src": "resources/assets/fonts/SuperComic.woff2"
   },
   "resources/css/app.css": {
-    "file": "assets/app-BoO2IO-s.css",
+    "file": "assets/app-6lNKTw2L.css",
     "src": "resources/css/app.css",
     "isEntry": true,
     "name": "app",
@@ -67,7 +67,7 @@
     ]
   },
   "resources/css/filament/admin/theme.css": {
-    "file": "assets/theme--EXwmFYY.css",
+    "file": "assets/theme-DfyYOsDb.css",
     "src": "resources/css/filament/admin/theme.css",
     "isEntry": true,
     "name": "theme",
@@ -79,6 +79,12 @@
     "file": "assets/app-CKl8NZMC.js",
     "name": "app",
     "src": "resources/js/app.js",
+    "isEntry": true
+  },
+  "resources/js/detail.js": {
+    "file": "assets/detail-CblALmGA.js",
+    "name": "detail",
+    "src": "resources/js/detail.js",
     "isEntry": true
   },
   "resources/js/gsap.js": {

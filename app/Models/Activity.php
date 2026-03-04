@@ -2,6 +2,9 @@
 
 namespace App\Models;
 
+use App\Filament\Forms\Components\RichEditor\RichContentCustomBlocks\YoutubeBlock;
+use Filament\Forms\Components\RichEditor\Models\Concerns\InteractsWithRichContent;
+use Filament\Forms\Components\RichEditor\Models\Contracts\HasRichContent;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -13,9 +16,9 @@ use Spatie\Sluggable\SlugOptions;
 use Spatie\Tags\HasTags;
 use Spatie\Translatable\HasTranslations;
 
-class Activity extends Model implements HasMedia
+class Activity extends Model implements HasMedia, HasRichContent
 {
-    use HasSlug, HasTags, HasTranslations, InteractsWithMedia;
+    use HasSlug, HasTags, HasTranslations, InteractsWithMedia, InteractsWithRichContent;
 
     /**
      * The attributes that aren't mass assignable.
@@ -23,6 +26,15 @@ class Activity extends Model implements HasMedia
      * @var array<string>
      */
     protected $guarded = [];
+
+    /**
+     * The attributes that should be cast.
+     *
+     * @var array
+     */
+    protected $casts = [
+        'content' => 'array',
+    ];
 
     public array $translatable = ['title', 'description', 'content'];
 
@@ -104,5 +116,12 @@ class Activity extends Model implements HasMedia
         }
 
         return true;
+    }
+
+    protected function setUpRichContent(): void
+    {
+        $this->registerRichContent('content')->customBlocks([
+            YoutubeBlock::class,
+        ]);
     }
 }

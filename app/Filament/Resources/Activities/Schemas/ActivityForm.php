@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources\Activities\Schemas;
 
+use App\Filament\Forms\Components\RichEditor\RichContentCustomBlocks\YoutubeBlock;
 use Filament\Forms\Components\DateTimePicker;
 use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\Select;
@@ -38,7 +39,11 @@ class ActivityForm
                     ->validationMessages([
                         'required' => 'Required in Indonesia.',
                     ])
+                    ->customBlocks([
+                        YoutubeBlock::class,
+                    ])
                     ->translatableTabs(),
+
                 Select::make('activity_category_id')
                     ->relationship(
                         name: 'category',
