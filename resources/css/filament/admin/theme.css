@@ -1,5 +1,7 @@
 @import "../../../../vendor/filament/filament/resources/css/theme.css";
+@import "../../../../vendor/awcodes/richer-editor/resources/css/index.css";
 
 @source '../../../../app/Filament/**/*';
 @source '../../../../resources/views/filament/**/*';
 @source '../../../../vendor/bezhansalleh/filament-language-switch/resources/views/**/*.blade.php';
+@source '../../../../vendor/awcodes/richer-editor/resources/views/**/*.blade.php';

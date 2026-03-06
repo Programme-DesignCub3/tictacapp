@@ -7,7 +7,6 @@ use App\Http\Controllers\TictactivityController;
 use App\Http\Controllers\TictalkController;
 use App\Http\Middleware\RedirectToHomeIfNotAuth;
 use Illuminate\Support\Facades\Route;
-use Joaopaulolndev\FilamentGeneralSettings\Services\GeneralSettingsService;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
 /** ADD ALL LOCALIZED ROUTES INSIDE THIS GROUP **/
@@ -16,16 +15,14 @@ Route::group([
     'middleware' => ['localeSessionRedirect', 'localizationRedirect', 'localeViewPath'],
 
 ], function () {
-    Route::get('/', function (GeneralSettingsService $settings) {
-
-        $settings = app(\Joaopaulolndev\FilamentGeneralSettings\Services\GeneralSettingsService::class)->get();
+    Route::get('/', function () {
 
         seo()
             ->title('TicTackLand', template: false)
-            // ->description('')
+            // ->description()
             ->images();
 
-        return view('pages.welcome', compact('settings'));
+        return view('pages.welcome');
     })->name('home');
 
     Route::group([

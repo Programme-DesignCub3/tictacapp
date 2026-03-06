@@ -26,7 +26,7 @@
                         'islandImage' => asset('img/mobile/tictactivity.png'),
                         'textImage' => asset('img/text/tictactivity.png'),
                         'text' => 'Click here to read more about our recent campaign >',
-                        'classModifier' => '-ml-32 -mb-16 scale-125 mt-8',
+                        'classModifier' => '-ml-32 scale-125 mt-8',
                         'link' => route('tictactivity.index'),
                     ],
                     [
@@ -57,7 +57,7 @@
         <div class="swiper-button-next"></div>
     </div>
 
-    <div class="my-2 flex flex-wrap justify-center gap-8">
+    <div class="my-2 flex flex-wrap justify-center gap-8 pt-8">
         @php
             $socials = [
                 [

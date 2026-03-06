@@ -58,7 +58,7 @@
     "src": "resources/assets/fonts/SuperComic.woff2"
   },
   "resources/css/app.css": {
-    "file": "assets/app-6lNKTw2L.css",
+    "file": "assets/app-TRHRkQry.css",
     "src": "resources/css/app.css",
     "isEntry": true,
     "name": "app",
@@ -67,7 +67,7 @@
     ]
   },
   "resources/css/filament/admin/theme.css": {
-    "file": "assets/theme-DfyYOsDb.css",
+    "file": "assets/theme-Cpcs6Iap.css",
     "src": "resources/css/filament/admin/theme.css",
     "isEntry": true,
     "name": "theme",

@@ -2,7 +2,7 @@
 
 namespace App\Filament\Resources\Activities\Schemas;
 
-use App\Filament\Forms\Components\RichEditor\RichContentCustomBlocks\YoutubeBlock;
+use Awcodes\RicherEditor\Plugins\EmbedPlugin;
 use Filament\Forms\Components\DateTimePicker;
 use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\Select;
@@ -39,8 +39,16 @@ class ActivityForm
                     ->validationMessages([
                         'required' => 'Required in Indonesia.',
                     ])
-                    ->customBlocks([
-                        YoutubeBlock::class,
+                    ->plugins([
+                        EmbedPlugin::make(),
+                    ])
+                    ->toolbarButtons([
+                        ['bold', 'italic', 'underline', 'strike', 'subscript', 'superscript', 'link'],
+                        ['h2', 'h3', 'alignStart', 'alignCenter', 'alignEnd'],
+                        ['blockquote', 'codeBlock', 'bulletList', 'orderedList'],
+                        ['table', 'attachFiles'], // The `customBlocks` and `mergeTags` tools are also added here if those features are used.
+                        ['embed'],
+                        ['undo', 'redo'],
                     ])
                     ->translatableTabs(),
 

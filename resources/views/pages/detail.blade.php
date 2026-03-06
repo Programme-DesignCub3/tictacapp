@@ -27,7 +27,8 @@
 
             <div class="prose max-w-none text-white">
                 {{-- {!! RichContentRenderer::make($article->content)->customBlocks([YoutubeBlock::class])->toHtml() !!} --}}
-                {!! $article->renderRichContent('content') !!}
+                {!! $article->content !!}
+                {{-- {!! $article->renderRichContent('content') !!} --}}
             </div>
 
             <div class="flex flex-wrap items-center gap-4 text-white">

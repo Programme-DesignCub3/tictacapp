@@ -147,22 +147,22 @@
                             [
                                 'name' => 'whatsaap',
                                 'image' => asset('img/social-icons/wa.svg'),
-                                'link' => $settings->social_network['whatsapp'],
+                                'link' => db_config('social.whatsapp', '#'),
                             ],
                             [
                                 'name' => 'tiktok',
                                 'image' => asset('img/social-icons/tiktok.svg'),
-                                'link' => $settings->social_network['tiktok'],
+                                'link' => db_config('social.tiktok', '#'),
                             ],
                             [
                                 'name' => 'instagram',
                                 'image' => asset('img/social-icons/ig.svg'),
-                                'link' => $settings->social_network['instagram'],
+                                'link' => db_config('social.instagram', '#'),
                             ],
                             [
                                 'name' => 'youtube',
                                 'image' => asset('img/social-icons/yt.svg'),
-                                'link' => $settings->social_network['youtube'],
+                                'link' => db_config('social.youtube', '#'),
                             ],
                         ];
                     @endphp

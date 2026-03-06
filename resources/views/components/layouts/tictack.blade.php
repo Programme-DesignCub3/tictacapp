@@ -7,7 +7,5 @@
             {{ $slot }}</div>
     </div>
 
-    @push('plugin-scripts')
-        @vite(['resources/js/detail.js'])
-    @endpush
+
 </x-layouts.app>

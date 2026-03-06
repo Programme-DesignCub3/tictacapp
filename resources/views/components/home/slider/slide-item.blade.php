@@ -9,9 +9,34 @@
             <img src="{{ $item['textImage'] }}" alt="">
         </div>
 
-        <a class="max-w-3/4 clamp-[text,sm,xl] clamp-[mt,6,20] text-pretty text-center font-bold text-white"
-            data-swiper-parallax="-400" href="{{ $item['link'] }}">
-            {{ $item['text'] }}
-        </a>
+        @if ($item['link'] === route('gameon'))
+            @guest
+                <p class="max-w-3/4 clamp-[text,sm,xl] clamp-[mt,6,20] text-pretty text-center font-bold text-white"
+                    data-swiper-parallax="-400"
+                    @click="()=>{
+                    openAuth = !openAuth;
+                    openMobileNav = false;
+                }">
+                @endguest
+                @auth('web')
+                    <a class="max-w-3/4 clamp-[text,sm,xl] clamp-[mt,6,20] text-pretty text-center font-bold text-white"
+                        data-swiper-parallax="-400" href="{{ $item['link'] }}">
+                    @endauth
+
+                    {{ $item['text'] }}
+
+                    @auth('web')
+                    </a>
+                @endauth
+
+                @guest
+                </p>
+            @endguest
+        @else
+            <a class="max-w-3/4 clamp-[text,sm,xl] clamp-[mt,6,20] text-pretty text-center font-bold text-white"
+                data-swiper-parallax="-400" href="{{ $item['link'] }}">
+                {{ $item['text'] }}
+            </a>
+        @endif
     </div>
 </div>

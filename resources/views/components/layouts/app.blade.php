@@ -32,7 +32,7 @@
 
 </head>
 
-<body x-data="{ openAuth: false, openMobileNav: false }" @class([
+<body x-data="{ openAuth: false, openPopUp: true, openMobileNav: false }" @class([
     'bg-linear-0 from-tictac-primary-blue to-tictac-primary-blue-light relative min-h-screen via-50% flex-1 flex flex-col',
 ])>
     <header class="container relative z-10 mt-8 max-lg:mb-8">
@@ -53,7 +53,7 @@
                 <div class="inline-block h-full min-h-[1em] w-0.5 bg-white"></div>
 
                 @guest
-                    <x-modal>
+                    <x-modal model="openAuth">
                         <x-slot:trigger>
                             <div class="flex cursor-pointer items-center gap-2">
                                 <x-lucide-lock class="size-8" />
@@ -88,6 +88,11 @@
 
     <main class="font-poppins max-w-dvw inline-flex w-full flex-1 flex-col" id="main-content">
         {{ $slot }}
+
+        @if (db_config('pop-up.enable', false))
+            <x-pop-up />
+        @endif
+
     </main>
 
     <footer class="px-4">
