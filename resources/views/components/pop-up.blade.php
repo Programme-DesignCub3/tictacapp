@@ -17,7 +17,8 @@
                      <img @class([
                          'mx-auto object-contain rounded-xl',
                          'block h-full max-h-[83dvh]',
-                     ]) src="{{ asset(db_config('pop-up.image')) }}" alt="">
+                     ]) src="{{ asset('storage/' . db_config('pop-up.image')) }}"
+                         alt="">
                      @if (db_config('pop-up.url'))
                          </a>
                      @endif
