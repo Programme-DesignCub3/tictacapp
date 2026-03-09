@@ -1,11 +1,4 @@
  <x-modal model="openPopUp">
-     <x-slot:trigger>
-         <div class="flex cursor-pointer items-center gap-2">
-             <x-lucide-lock class="size-8" />
-             <span class="">Login</span>
-         </div>
-     </x-slot:trigger>
-
      <div class="mx-auto max-h-[90dvh] w-max">
          <div class="slider-outer-shadow rounded-4xl bg-card-blue clamp-[p,2,3] relative mb-10 w-fit max-w-4xl">
              <div
@@ -16,7 +9,7 @@
                      @endif
                      <img @class([
                          'mx-auto object-contain rounded-xl',
-                         'block h-full max-h-[83dvh]',
+                         'block max-w-[90vw] h-full max-h-[83dvh]',
                      ]) src="{{ asset('storage/' . db_config('pop-up.image')) }}"
                          alt="">
                      @if (db_config('pop-up.url'))

@@ -1,9 +1,12 @@
 @props(['model'])
 <div class="flex justify-center">
     <!-- Trigger -->
-    <span x-on:click="{{ $model }} = true">
-        {{ $trigger }}
-    </span>
+
+    @if ($trigger)
+        <span x-on:click="{{ $model }} = true">
+            {{ $trigger }}
+        </span>
+    @endif
 
     <!-- Modal -->
     <div class="fixed inset-0 z-10 overflow-y-auto" x-show="{{ $model }}" style="display: none"
