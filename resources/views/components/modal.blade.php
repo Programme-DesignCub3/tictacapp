@@ -2,7 +2,7 @@
 <div class="flex justify-center">
     <!-- Trigger -->
 
-    @if ($trigger)
+    @if (isset($trigger))
         <span x-on:click="{{ $model }} = true">
             {{ $trigger }}
         </span>
