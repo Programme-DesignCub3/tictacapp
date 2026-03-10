@@ -18,9 +18,9 @@ Route::group([
     Route::get('/', function () {
 
         seo()
-            ->title('TicTackLand', template: false)
-            // ->description()
-            ->images();
+            ->title('TicTackLand', template: false);
+        // ->description()
+        // ->images()
 
         return view('pages.welcome');
     })->name('home');

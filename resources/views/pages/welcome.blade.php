@@ -181,6 +181,12 @@
 
     </div>
 
+
+    @if (db_config('pop-up.enable', false))
+        <x-pop-up />
+    @endif
+
+
     <x-home.slider.main />
 
 </x-layouts.app>

@@ -88,11 +88,6 @@
 
     <main class="font-poppins max-w-dvw inline-flex w-full flex-1 flex-col" id="main-content">
         {{ $slot }}
-
-        @if (db_config('pop-up.enable', false))
-            <x-pop-up />
-        @endif
-
     </main>
 
     <footer class="px-4">

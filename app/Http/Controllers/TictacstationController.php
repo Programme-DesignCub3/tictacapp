@@ -8,6 +8,11 @@ class TictacstationController extends Controller
 {
     public function __invoke()
     {
+
+        seo()
+            ->title('Tictacstation', 'TicTactivity')
+            ->description('Produk TicTac');
+
         $products = Product::all()->map(function ($product) {
             return [
                 'id' => $product->id,
