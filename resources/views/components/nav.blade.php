@@ -33,7 +33,7 @@
             </li>
 
             <li data-before-content="TicTactivity" @class([
-                'nav--item-outline' => request()->routeIs('tictactivity'),
+                'nav--item-outline' => request()->routeIs('tictactivity.*'),
             ])>
                 <a class="text-white" href="{{ route('tictactivity.index') }}">TicTactivity</a>
             </li>
@@ -45,7 +45,7 @@
             </li>
 
             <li data-before-content="TicTalks" @class([
-                'nav--item-outline' => request()->routeIs('tictalks'),
+                'nav--item-outline' => request()->routeIs('tictalks.*'),
             ])>
                 <a class="text-white" href="{{ route('tictalks.index') }}">TicTalks</a>
             </li>
