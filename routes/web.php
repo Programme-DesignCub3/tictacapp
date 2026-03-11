@@ -16,11 +16,22 @@ Route::group([
 
 ], function () {
     Route::get('/', function () {
+        $meta = [
+            'en' => [
+                'title' => 'TicTacLand | Your Ultimate Crunchy Snack Destination',
+                'description' => 'More than just a snack. Join the fun at TicTacLand! Explore our bold flavors, join exciting TicTactivity, and get your daily crunch fix of Tic Tac Pilus.',
+            ],
+            'id' => [
+                'title' => 'Jelajahi Dunia Seru TicTacLand | Pilus TicTac Dua Kelinci',
+                'description' => 'Bikin hari-harimu makin kriuk di TicTacLand! Pusat informasi snack pilus favorit, event TicTactivity, hingga update TicTalks yang seru. Masuk sekarang!',
+            ],
+        ];
+        
+        $locale = LaravelLocalization::getLocale();
 
         seo()
-            ->title('Jelajahi Dunia Seru TicTacLand | Pilus Tic Tac Dua Kelinci', template: false)
-            ->description('Bikin hari-harimu makin kriuk di TicTacLand! Pusat informasi snack pilus favorit, event TicTactivity, hingga update TicTalks yang seru. Masuk sekarang!');
-        // ->images()
+            ->title($meta[$locale]['title'], template: false)
+            ->description($meta[$locale]['description']);
 
         return view('pages.welcome');
     })->name('home');
