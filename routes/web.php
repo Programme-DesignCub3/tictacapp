@@ -32,7 +32,7 @@ Route::group([
         Route::livewire('/', 'pages::tictalks')
             ->name('index');
 
-        Route::get('/tictalks/{article}', [TictalkController::class, 'show'])
+        Route::get('/{article}', [TictalkController::class, 'show'])
             ->name('show');
     });
 
