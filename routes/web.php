@@ -19,7 +19,7 @@ Route::group([
 
         seo()
             ->title('Jelajahi Dunia Seru TicTacLand | Pilus Tic Tac Dua Kelinci', template: false)
-            ->description('Bikin hari-harimu makin kriuk di TicTacLand! Pusat informasi snack pilus favorit, event TicTactivity, hingga update TicTalks yang seru. Masuk sekarang!')
+            ->description('Bikin hari-harimu makin kriuk di TicTacLand! Pusat informasi snack pilus favorit, event TicTactivity, hingga update TicTalks yang seru. Masuk sekarang!');
         // ->images()
 
         return view('pages.welcome');
