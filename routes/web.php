@@ -19,7 +19,7 @@ Route::group([
         $meta = [
             'en' => [
                 'title' => 'TicTacLand | Your Ultimate Crunchy Snack Destination',
-                'description' => 'More than just a snack. Join the fun at TicTacLand! Explore our bold flavors, join exciting TicTactivity, and get your daily crunch fix of Tic Tac Pilus.',
+                'description' => 'More than just a snack. Join the fun at TicTacLand! Explore our bold flavors, join exciting TicTactivity, and get your daily crunch fix of TicTac Pilus.',
             ],
             'id' => [
                 'title' => 'Jelajahi Dunia Seru TicTacLand | Pilus TicTac Dua Kelinci',
