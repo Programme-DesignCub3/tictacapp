@@ -27,7 +27,7 @@ Route::group([
             ],
         ];
         
-        $locale = LaravelLocalization::getLocale();
+        $locale = LaravelLocalization::getCurrentLocale();
 
         seo()
             ->title($meta[$locale]['title'], template: false)
