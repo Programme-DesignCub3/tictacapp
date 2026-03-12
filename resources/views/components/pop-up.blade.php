@@ -6,6 +6,7 @@
                  'pop-up.enable_container'),
          ])>
              <div @class([
+                 'focus-visible:outline-0 outline-0',
                  'slider-inner-shadow clamp-[px,1,2] clamp-[py,2,3] relative max-h-[90dvh] w-fit max-w-[90vw] overflow-hidden rounded-3xl bg-white' => db_config(
                      'pop-up.enable_container'),
              ])>
