@@ -1,7 +1,7 @@
  <x-modal model="openPopUp">
-     <div class="mx-auto max-h-[90dvh] w-max">
+     <div class="mx-auto max-h-[90dvh] w-max outline-0 focus-visible:outline-0">
          <div @class([
-             'max-w-4xl',
+             'max-w-4xl focus-visible:outline-0 outline-0',
              'slider-outer-shadow rounded-4xl bg-card-blue clamp-[p,2,3] relative mb-10 w-fit' => db_config(
                  'pop-up.enable_container'),
          ])>
@@ -12,10 +12,11 @@
              ])>
                  @if (db_config('pop-up.image'))
                      @if (db_config('pop-up.url', null))
-                         <a target="_blank" href="{{ db_config('pop-up.url', null) }}">
+                         <a class="outline-0 focus-visible:outline-0" target="_blank"
+                             href="{{ db_config('pop-up.url', null) }}">
                      @endif
                      <img @class([
-                         'mx-auto object-contain rounded-xl',
+                         'mx-auto object-contain rounded-xl focus-visible:outline-0 outline-0',
                          'block  h-full max-h-[83dvh]',
                      ]) src="{{ asset('storage/' . db_config('pop-up.image')) }}"
                          alt="">
