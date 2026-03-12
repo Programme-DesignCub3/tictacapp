@@ -154,9 +154,9 @@ new class extends Component
         <div class="slider-inner-shadow relative overflow-hidden rounded-3xl bg-white clamp-[p,4,8]">
             <div class='text-tictac-primary-blue grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-4'>
                 <div class="flex flex-col gap-4 font ">
-                    <h2 class="text-center font-poppins font-bold text-2xl w-full">
+                    <p class="text-center font-poppins font-bold text-2xl w-full">
                         {{ $isLoginForm ? 'Login' : __('auth.register_title') }}
-                    </h2>
+                    </p>
                     @if ($isLoginForm)
                     <x-login-form />
                     @else
@@ -170,7 +170,7 @@ new class extends Component
                 <div class="bg-tictac-primary-blue inline-block h-full min-h-0.5 md:min-h-[1em] w-full md:w-0.5 self-stretch"></div>
 
                 <div class="flex flex-col clamp-[gap,2,4]">
-                    <h2 class="text-center text-2xl font-poppins font-bold">{{__('auth.login_with')}}</h2>
+                    <p class="text-center text-2xl font-poppins font-bold">{{__('auth.login_with')}}</p>
                     <div class="flex flex-col gap-2 rounded-lg bg-gray-100 p-4">
                         {{-- <a href="{{ route('login.auth', ['provider' => 'facebook']) }}">
                         <x-facebook-login-button />
