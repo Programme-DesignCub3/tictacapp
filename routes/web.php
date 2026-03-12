@@ -25,7 +25,7 @@ Route::group([
     })->name('home');
 
     Route::group([
-        'prefix' => 'tictalks',
+        'prefix' => 'blog-tictalks',
         'as' => 'tictalks.',
     ], function () {
         Route::livewire('/', 'pages::tictalks')
@@ -39,11 +39,11 @@ Route::group([
         ->middleware(RedirectToHomeIfNotAuth::class)
         ->name('gameon');
 
-    Route::get('/tictacstation', TictacstationController::class)
+    Route::get('/tictac-station', TictacstationController::class)
         ->name('tictacstation');
 
     Route::group([
-        'prefix' => 'tictactivity',
+        'prefix' => 'event-tictactivity',
         'as' => 'tictactivity.',
     ], function () {
         Route::livewire('/', 'pages::tictactivity')
