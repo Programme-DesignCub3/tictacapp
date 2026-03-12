@@ -46,6 +46,7 @@ class PopUpSettings extends AbstractPageSettings
             ->components([
                 Toggle::make('enable')
                     ->live(),
+                Toggle::make('enable_container'),
                 FileUpload::make('image')
                     ->required(fn (Get $get) => $get('enable'))
                     ->image()

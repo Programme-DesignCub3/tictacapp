@@ -1,8 +1,14 @@
  <x-modal model="openPopUp">
      <div class="mx-auto max-h-[90dvh] w-max">
-         <div class="slider-outer-shadow rounded-4xl bg-card-blue clamp-[p,2,3] relative mb-10 w-fit max-w-4xl">
-             <div
-                 class="slider-inner-shadow clamp-[px,1,2] clamp-[py,2,3] relative max-h-[90dvh] w-fit max-w-[90vw] overflow-hidden rounded-3xl bg-white">
+         <div @class([
+             'max-w-4xl',
+             'slider-outer-shadow rounded-4xl bg-card-blue clamp-[p,2,3] relative mb-10 w-fit' => db_config(
+                 'pop-up.enable_container'),
+         ])>
+             <div @class([
+                 'slider-inner-shadow clamp-[px,1,2] clamp-[py,2,3] relative max-h-[90dvh] w-fit max-w-[90vw] overflow-hidden rounded-3xl bg-white' => db_config(
+                     'pop-up.enable_container'),
+             ])>
                  @if (db_config('pop-up.image'))
                      @if (db_config('pop-up.url', null))
                          <a target="_blank" href="{{ db_config('pop-up.url', null) }}">

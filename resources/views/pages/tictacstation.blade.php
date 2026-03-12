@@ -21,7 +21,6 @@
             }
         }">
 
-
             <div class="z-1 flex flex-col gap-y-8 text-white">
 
                 <div>
