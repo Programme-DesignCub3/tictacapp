@@ -12,7 +12,7 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 /** ADD ALL LOCALIZED ROUTES INSIDE THIS GROUP **/
 Route::group([
     'prefix' => LaravelLocalization::setLocale(),
-    'middleware' => ['localeSessionRedirect', 'localizationRedirect', 'localeViewPath'],
+    'middleware' => ['localize', 'localizationRedirect'],
 
 ], function () {
     Route::get('/', function () {

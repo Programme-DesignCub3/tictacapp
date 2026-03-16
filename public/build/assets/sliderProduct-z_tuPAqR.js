@@ -1,1 +1,0 @@
-import"./swiper-bundle-ch-kbeBt.js";import{S as e}from"./swiper-core-BitT4lrx.js";const i=new e("#productSlider",{slidesPerView:1,navigation:{nextEl:".swiper-button-next",prevEl:".swiper-button-prev"}});window.productSlide=i;
