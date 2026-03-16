@@ -6,6 +6,15 @@ use App\Models\Tictalk;
 
 class TictalkController extends Controller
 {
+    public function index()
+    {
+
+
+
+        return view('pages::tictalks');
+
+    }
+
     public function show(Tictalk $article)
     {
         seo()
@@ -17,7 +26,7 @@ class TictalkController extends Controller
 
         $otherArticles = Tictalk::inRandomOrder()
             ->where('id', '!=', $article->id)
-            ->limit(4)
+            ->limit(3)
             ->get();
 
         return view(
