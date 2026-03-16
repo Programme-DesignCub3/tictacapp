@@ -4,7 +4,7 @@
 <x-layouts.tictack class="before:bg-[url('../assets/bg/detail-bg-island.png')]">
 
 
-    <div class="max-w-384 mx-auto">
+    <div class="container mx-auto">
         <x-breadcrumb :links="[
             [
                 'label' => $type,
@@ -16,28 +16,32 @@
             ],
         ]" />
 
-        <section class="clamp-[gap,4,8] clamp-[mt,4,8] mx-4 flex flex-col">
-            <h1 class="clamp-[text,xl,3xl] font-poppins font-bold text-[#1e246f]">
-                {{ $article->title }}
-            </h1>
+        <section class="clamp-[gap,4,8] clamp-[mt,4,8] mx-4">
+            <div class="bg-white rounded-xl">
+                <div class="md:p-12 p-6 gap-8 flex flex-col">
+                    <h1 class="clamp-[text,xl,3xl] font-poppins font-bold text-[#1e246f]">
+                        {{ $article->title }}
+                    </h1>
 
-            <div class='overflow-hidden'>
-                <img class="w-full" src="{{ $article->getFirstMediaUrl('thumbnail') }}" alt="">
-            </div>
-
-            <div class="prose max-w-none text-white">
-                {{-- {!! RichContentRenderer::make($article->content)->customBlocks([YoutubeBlock::class])->toHtml() !!} --}}
-                {!! $article->content !!}
-                {{-- {!! $article->renderRichContent('content') !!} --}}
-            </div>
-
-            <div class="flex flex-wrap items-center gap-4 text-white">
-                <p>Tags:</p>
-                @foreach ($article->tags()->get() as $tag)
-                    <div class="bg-card-shadow inline-block w-fit rounded-full px-6 py-1 text-white">
-                        {{ $tag->name }}
+                    <div class='overflow-hidden'>
+                        <img class="w-full" src="{{ $article->getFirstMediaUrl('thumbnail') }}" alt="">
                     </div>
-                @endforeach
+
+                    <div class="prose max-w-none text-black">
+                        {{-- {!! RichContentRenderer::make($article->content)->customBlocks([YoutubeBlock::class])->toHtml() !!} --}}
+                        {!! $article->content !!}
+                        {{-- {!! $article->renderRichContent('content') !!} --}}
+                    </div>
+
+                    <div class="flex flex-wrap items-center gap-4 text-black">
+                        <p>Tags:</p>
+                        @foreach ($article->tags()->get() as $tag)
+                            <div class="bg-card-shadow inline-block w-fit rounded-full px-6 py-1 text-white">
+                                {{ $tag->name }}
+                            </div>
+                        @endforeach
+                    </div>
+                </div>
             </div>
         </section>
 

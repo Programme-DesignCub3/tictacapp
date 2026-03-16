@@ -86,7 +86,7 @@
         <x-nav />
     </header>
 
-    <main class="font-poppins max-w-dvw inline-flex w-full flex-1 flex-col" id="main-content">
+    <main class="font-poppins max-w-dvw flex w-full flex-1 flex-col" id="main-content">
         {{ $slot }}
     </main>
 

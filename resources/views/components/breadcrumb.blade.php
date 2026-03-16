@@ -7,7 +7,7 @@
     <ol class="flex items-center gap-2 text-white" role="list">
         <li>
             <div>
-                <a class="ml-4 text-sm font-bold" href="{{ $home }}">
+                <a class="ml-4 text-sm" href="{{ $home }}">
                     HOME
                 </a>
             </div>
@@ -23,7 +23,8 @@
                             clip-rule="evenodd" />
                     </svg>
 
-                    <a class="ml-1 text-sm font-medium" href="{{ $link['url'] ?? '#' }}"
+                    <a class="ml-1 text-sm {{ $loop->last ? 'font-bold' : '' }}"
+                        href="{{ $link['url'] ?? '#' }}"
                         @if ($loop->last) aria-current="page" @endif>
                         {{ $link['label'] }}
                     </a>
