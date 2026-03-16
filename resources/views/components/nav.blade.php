@@ -1,5 +1,5 @@
 <div class="max-lg:hidden">
-    <nav class="container mx-auto text-white">
+    <nav class="mx-auto text-white container">
         <svg style="position: absolute; width: 0; height: 0;" aria-hidden="true">
             <filter id="smooth-sticker">
                 <feMorphology operator="dilate" radius="3" in="SourceAlpha" result="thicken" />
@@ -23,47 +23,40 @@
             </filter>
         </svg>
 
-        <ul class="font-poppins flex flex-wrap items-center justify-between p-4 text-center text-xl font-bold">
+        <ul class="flex flex-wrap justify-between items-center p-4">
             {{-- menulist --}}
             {{-- Crunch Selection, TicTactivity, Logo Image, TicTalks, Game On! --}}
-            <li data-before-content="TicTacStation" @class([
-                'nav--item-outline' => request()->routeIs('tictacstation'),
-            ])>
-                <a class="text-white" href="{{ route('tictacstation') }}">TicTacStation</a>
+            <li class="nav-link {{ active_class(Route::is('tictacstation*'), 'active-nav') }}">
+                <a href="{{ route('tictacstation') }}">TicTacStation</a>
             </li>
 
-            <li data-before-content="TicTactivity" @class([
-                'nav--item-outline' => request()->routeIs('tictactivity.*'),
-            ])>
-                <a class="text-white" href="{{ route('tictactivity.index') }}">TicTactivity</a>
+            <li class="nav-link {{ active_class(Route::is('tictactivity*'), 'active-nav') }}">
+                <a href="{{ route('tictactivity.index') }}">TicTactivity</a>
             </li>
 
-            <li data-before-content="TicTacapp">
+            <li>
                 <a class="flex items-center text-white" href="{{ route('home') }}">
-                    <img class="h-auto w-60" src="{{ asset('img/logo.png') }}" alt="Logo" />
+                    <img class="w-60 h-auto" width="240" height="127" src="{{ asset('img/logo.png') }}" alt="Logo" />
                 </a>
             </li>
 
-            <li data-before-content="TicTalks" @class([
-                'nav--item-outline' => request()->routeIs('tictalks.*'),
-            ])>
-                <a class="text-white" href="{{ route('tictalks.index') }}">TicTalks</a>
+            <li class="nav-link {{ active_class(Route::is('tictalks*'), 'active-nav') }}">
+                <a href="{{ route('tictalks.index') }}">TicTalks</a>
             </li>
 
-            <li data-before-content="Game On!" @class([
-                'nav--item-outline' => request()->routeIs('gameon'),
-            ])>
+            <li class="nav-link {{ active_class(Route::is('gameon*'), 'active-nav') }}">
                 @auth('web')
-                    <a class="text-white" href="{{ route('gameon') }}">Game On!</a>
+                    <a href="{{ route('gameon') }}">Game On!</a>
                 @endauth
 
                 @guest
-                    <p class="cursor-pointer text-white"
-                        @click="()=>{
-                        openAuth = !openAuth;
-                        openMobileNav = false;
-                    }">
-                        Game On!</p>
+                    <a href="#"
+                        @click="(e)=>{
+                            e.preventDefault();
+                            openAuth = !openAuth;
+                            openMobileNav = false;
+                        }">
+                        Game On!</a>
                 @endguest
             </li>
         </ul>

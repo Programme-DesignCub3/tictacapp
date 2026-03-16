@@ -3,7 +3,7 @@
 @plugin '@tailwindcss/typography';
 
 @import "./__cloud.css";
-@import "./fonts.css";
+/* @import "./fonts.css"; */
 
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 @source '../../storage/framework/views/*.php';
@@ -11,12 +11,13 @@
 @source '../**/*.js';
 @theme {
     --font-sans:
-        "Instrument Sans", ui-sans-serif, system-ui, sans-serif,
+        "Poppins", ui-sans-serif, system-ui, sans-serif,
         "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
         "Noto Color Emoji";
-    --font-cooper: "Cooper", sans-serif;
+    /* --font-cooper: "Cooper", sans-serif; */
     --font-poppins: "Poppins", sans-serif;
-    --font-super-comic: "Super Comic", sans-serif;
+    /* --font-super-comic: "Super Comic", sans-serif; */
+    --font-winky: "Winky Sans", sans-serif;
 
     --color-tictac-primary-blue: #0076c9;
     --color-tictac-primary-blue-light: #00bcf1;
@@ -85,6 +86,24 @@
         @apply hover:scale-105 transition-transform;
     }
 
+    .nav-link a{
+        @apply tracking-wider bg-transparent hover:bg-tictac-primary-blue-light/80 hover:shadow hover:shadow-tictac-primary-blue-light/50 px-4 py-2 rounded-full font-winky font-extrabold text-white text-xl text-center transition-all duration-300 ease-in-out;
+    }
+
+    .nav-link.active-nav a{
+        @apply bg-tictac-primary-blue-light shadow;
+    }
+
+    .breadcrumb-link{
+        @apply ml-1 max-w-lg overflow-hidden font-semibold text-white hover:text-slate-500 text-base hover:underline truncate text-ellipsis;
+    }
+
+    .breadcrumb-link.current{
+        @apply font-bold text-white hover:text-slate-500;
+    }
+
+
+
     @supports not (
         (-webkit-text-stroke: 1px black) or (text-stroke: 1px black)
     ) {
@@ -112,7 +131,7 @@
 
     @supports ((-webkit-text-stroke: 1px black) or (text-stroke: 1px black)) {
         .nav--item-outline {
-            -webkit-text-stroke: 1px var(--color-nav-selected);
+            /* -webkit-text-stroke: 1px var(--color-nav-selected); */
             color: white;
 
             text-shadow:
@@ -184,7 +203,7 @@
                     var(--color-nav-selected-before) 3.44477px -2.03312px 0px,
                     var(--color-nav-selected-before) 3.84068px -1.11766px 0px,
                     var(--color-nav-selected-before) 3.9978px -0.132717px 0px;
-                @apply absolute left-1 top-1 -z-10 text-nowrap;
+                @apply top-1 left-1 -z-10 absolute text-nowrap;
             }
         }
     }
@@ -237,14 +256,14 @@
     }
 
     .category-button {
-        @apply bg-tictac-primary-orange cursor-pointer rounded-full border-2 clamp-[px,4,8] clamp-[py,1,2] duration-[1500] before:-z-10 before:size-full before:rounded-full before:border before:border-white;
+        @apply before:-z-10 bg-tictac-primary-orange before:border border-2 before:border-white rounded-full before:rounded-full before:size-full duration-[1500] cursor-pointer clamp-[px,4,8] clamp-[py,1,2];
 
         &:not(.selected) {
-            @apply hover:border-tictac-primary-orange hover:text-tictac-primary-orange before:bg-tictac-primary-orange-dark border-white relative ease-in-out before:absolute before:bottom-0 before:right-0 before:transition-[bottom,right] hover:bg-white hover:before:-bottom-2 hover:before:-right-1.5;
+            @apply before:right-0 hover:before:-right-1.5 before:bottom-0 hover:before:-bottom-2 before:absolute relative before:bg-tictac-primary-orange-dark hover:bg-white border-white hover:border-tictac-primary-orange hover:text-tictac-primary-orange before:transition-[bottom,right] ease-in-out;
         }
 
         &.selected {
-            @apply text-tictac-primary-orange before:bg-tictac-primary-orange-dark relative before:absolute before:-z-10 before:transition-[bottom,right] bg-white before:-bottom-2 before:-right-1.5 border-tictac-primary-orange;
+            @apply before:-right-1.5 before:-bottom-2 before:-z-10 before:absolute relative bg-white before:bg-tictac-primary-orange-dark border-tictac-primary-orange text-tictac-primary-orange before:transition-[bottom,right];
         }
     }
 

@@ -10,8 +10,8 @@ class TictacstationController extends Controller
     {
 
         seo()
-            ->title('Tictacstation', 'TicTactivity')
-            ->description('Produk TicTac');
+            ->title(__('seo.product.title'), template: false)
+            ->description(__('seo.product.description'));
 
         $products = Product::all()->map(function ($product) {
             return [
