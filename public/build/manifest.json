@@ -3,22 +3,22 @@
     "file": "assets/index-DDlvirwQ.js",
     "name": "index"
   },
-  "_swiper-bundle-Cnw9ticf.css": {
-    "file": "assets/swiper-bundle-Cnw9ticf.css",
-    "src": "_swiper-bundle-Cnw9ticf.css"
-  },
-  "_swiper-bundle-ch-kbeBt.js": {
-    "file": "assets/swiper-bundle-ch-kbeBt.js",
+  "_swiper-bundle-BGP4y3Xy.js": {
+    "file": "assets/swiper-bundle-BGP4y3Xy.js",
     "name": "swiper-bundle",
     "imports": [
-      "_swiper-core-BitT4lrx.js"
+      "_swiper-core-CHAZRZXF.js"
     ],
     "css": [
       "assets/swiper-bundle-Cnw9ticf.css"
     ]
   },
-  "_swiper-core-BitT4lrx.js": {
-    "file": "assets/swiper-core-BitT4lrx.js",
+  "_swiper-bundle-Cnw9ticf.css": {
+    "file": "assets/swiper-bundle-Cnw9ticf.css",
+    "src": "_swiper-bundle-Cnw9ticf.css"
+  },
+  "_swiper-core-CHAZRZXF.js": {
+    "file": "assets/swiper-core-CHAZRZXF.js",
     "name": "swiper-core"
   },
   "resources/assets/bg/detail-bg-island.png": {
@@ -33,32 +33,8 @@
     "file": "assets/tictalks-bg-island-CdlgICsZ.png",
     "src": "resources/assets/bg/tictalks-bg-island.png"
   },
-  "resources/assets/fonts/CooperBlack.woff": {
-    "file": "assets/CooperBlack-B8n78_BM.woff",
-    "src": "resources/assets/fonts/CooperBlack.woff"
-  },
-  "resources/assets/fonts/CooperBlack.woff2": {
-    "file": "assets/CooperBlack-DCTJVvXO.woff2",
-    "src": "resources/assets/fonts/CooperBlack.woff2"
-  },
-  "resources/assets/fonts/Poppins-Regular.woff": {
-    "file": "assets/Poppins-Regular-D1uVZrgl.woff",
-    "src": "resources/assets/fonts/Poppins-Regular.woff"
-  },
-  "resources/assets/fonts/Poppins-Regular.woff2": {
-    "file": "assets/Poppins-Regular-Cuo6fK1n.woff2",
-    "src": "resources/assets/fonts/Poppins-Regular.woff2"
-  },
-  "resources/assets/fonts/SuperComic.woff": {
-    "file": "assets/SuperComic-DKLdN-4z.woff",
-    "src": "resources/assets/fonts/SuperComic.woff"
-  },
-  "resources/assets/fonts/SuperComic.woff2": {
-    "file": "assets/SuperComic-boMExNgx.woff2",
-    "src": "resources/assets/fonts/SuperComic.woff2"
-  },
   "resources/css/app.css": {
-    "file": "assets/app-CnEVlLRQ.css",
+    "file": "assets/app-DhszryFe.css",
     "src": "resources/css/app.css",
     "isEntry": true,
     "name": "app",
@@ -67,7 +43,7 @@
     ]
   },
   "resources/css/filament/admin/theme.css": {
-    "file": "assets/theme-Cpcs6Iap.css",
+    "file": "assets/theme-BSR9WkmO.css",
     "src": "resources/css/filament/admin/theme.css",
     "isEntry": true,
     "name": "theme",
@@ -76,7 +52,7 @@
     ]
   },
   "resources/js/app.js": {
-    "file": "assets/app-CKl8NZMC.js",
+    "file": "assets/app-BuG9aa18.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true
@@ -97,13 +73,13 @@
     ]
   },
   "resources/js/home.js": {
-    "file": "assets/home-CRI6CwrP.js",
+    "file": "assets/home-BV8Y8sjW.js",
     "name": "home",
     "src": "resources/js/home.js",
     "isEntry": true,
     "imports": [
       "_index-DDlvirwQ.js",
-      "_swiper-core-BitT4lrx.js"
+      "_swiper-core-CHAZRZXF.js"
     ]
   },
   "resources/js/product.js": {
@@ -116,23 +92,23 @@
     ]
   },
   "resources/js/slider.js": {
-    "file": "assets/slider-twPQIIG_.js",
+    "file": "assets/slider-DUFVB55c.js",
     "name": "slider",
     "src": "resources/js/slider.js",
     "isEntry": true,
     "imports": [
-      "_swiper-bundle-ch-kbeBt.js",
-      "_swiper-core-BitT4lrx.js"
+      "_swiper-bundle-BGP4y3Xy.js",
+      "_swiper-core-CHAZRZXF.js"
     ]
   },
   "resources/js/sliderProduct.js": {
-    "file": "assets/sliderProduct-z_tuPAqR.js",
+    "file": "assets/sliderProduct-Cb40VxPM.js",
     "name": "sliderProduct",
     "src": "resources/js/sliderProduct.js",
     "isEntry": true,
     "imports": [
-      "_swiper-bundle-ch-kbeBt.js",
-      "_swiper-core-BitT4lrx.js"
+      "_swiper-bundle-BGP4y3Xy.js",
+      "_swiper-core-CHAZRZXF.js"
     ]
   }
 }

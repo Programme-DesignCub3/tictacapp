@@ -1,16 +1,16 @@
 @props(['id', 'items' => []])
 
 <!-- Slider main container -->
-<div class="grid-overlay grid content-center items-center justify-center justify-items-center">
+<div class="justify-center justify-items-center items-center content-center grid grid-overlay">
     <div class="relative sm:-ml-40">
-        <img class="cloud absolute left-[15%] top-0 h-[25%]" data-direction="right" data-speed="1"
+        <img class="top-0 left-[15%] absolute h-[25%] cloud" data-direction="right" data-speed="1"
             src="{{ asset('img/cloud.png') }}" alt="" />
-        <img class="cloud absolute right-[5%] top-1/4 h-[10%]" data-direction="left" data-speed="1"
+        <img class="top-1/4 right-[5%] absolute h-[10%] cloud" data-direction="left" data-speed="1"
             src="{{ asset('img/cloud.png') }}" alt="" />
         <img src="{{ asset('img/product-item-bg.png') }}" alt="" />
     </div>
 
-    <div class="swiper max-w-full" id="{{ $id }}">
+    <div class="max-w-full swiper" id="{{ $id }}">
 
         <!-- Additional required wrapper -->
         <div class="swiper-wrapper">
@@ -19,7 +19,10 @@
             @foreach ($items as $item)
                 <div class="swiper-slide"
                     @if (isset($item['key']) || isset($item['id'])) wire:key="{{ isset($item['key']) ? $item['key'] : $item['id'] }}" @endif>
-                    <x-slider.sliderProductItem :productImage="$item['packaging']" :mascotImage="$item['mascot']" />
+                    <x-slider.sliderProductItem
+                        :title="$item['name']"
+                        :productImage="$item['packaging']"
+                        :mascotImage="$item['mascot']" />
                 </div>
             @endforeach
 

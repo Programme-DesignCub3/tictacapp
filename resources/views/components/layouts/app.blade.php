@@ -1,9 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ html_lang() }}">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    @php
+        $alternateLangs = get_alternate_lang_properties();
+    @endphp
+
+    @if (count($alternateLangs) > 0)
+        @foreach ($alternateLangs as $item)
+            <link rel="alternate" hreflang="{{ $item['code'] }}" href="{{ $item['href'] }}"/>
+        @endforeach
+    @endif
 
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -17,8 +27,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
-
-
+    <link href="https://fonts.googleapis.com/css2?family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
 
     <!-- Add your CSS links here -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
@@ -35,11 +44,11 @@
 <body x-data="{ openAuth: false, openPopUp: true, openMobileNav: false }" @class([
     'bg-linear-0 from-tictac-primary-blue to-tictac-primary-blue-light relative min-h-screen via-50% flex-1 flex flex-col',
 ])>
-    <header class="container relative z-10 mt-8 max-lg:mb-8">
+    <header class="z-10 relative mt-8 max-lg:mb-8 container">
         <div
-            class="lg:justify-end-safe clamp-[gap,2,4] relative flex content-center items-center justify-between text-white">
+            class="relative flex justify-between lg:justify-end-safe items-center content-center text-white clamp-[gap,2,4]">
             <div class="lg:hidden">
-                <div class="relative left-0 top-0 z-50 flex w-full justify-between transition-all duration-300"
+                <div class="top-0 left-0 z-50 relative flex justify-between w-full transition-all duration-300"
                     @click="openMobileNav = !openMobileNav">
                     <x-lucide-menu class="size-8" />
                 </div>
@@ -47,15 +56,15 @@
                 <x-mobile-nav />
             </div>
 
-            <div class="clamp-[gap,2,4] flex content-center items-center justify-between">
+            <div class="flex justify-between items-center content-center clamp-[gap,2,4]">
                 <x-locale-toggler />
 
-                <div class="inline-block h-full min-h-[1em] w-0.5 bg-white"></div>
+                <div class="inline-block bg-white w-0.5 h-full min-h-[1em]"></div>
 
                 @guest
                     <x-modal model="openAuth">
                         <x-slot:trigger>
-                            <div class="flex cursor-pointer items-center gap-2">
+                            <div class="flex items-center gap-2 cursor-pointer">
                                 <x-lucide-lock class="size-8" />
                                 <span class="">Login</span>
                             </div>
@@ -86,12 +95,12 @@
         <x-nav />
     </header>
 
-    <main class="font-poppins max-w-dvw inline-flex w-full flex-1 flex-col" id="main-content">
+    <main class="inline-flex flex-col flex-1 w-full max-w-dvw font-poppins" id="main-content">
         {{ $slot }}
     </main>
 
     <footer class="px-4">
-        <p class="clamp-[text,sm,lg] my-8 text-center text-white">
+        <p class="my-8 text-white text-center clamp-[text,sm,lg]">
             Designed by Designcub3. 2025. Copyright to Tic Tac Dua Kelinci.
         </p>
     </footer>
