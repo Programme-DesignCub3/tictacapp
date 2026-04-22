@@ -1,7 +1,4 @@
 <!-- Menu Mobile -->
-
-
-
 <nav class="lg:hidden" x-cloak>
     <div class="md:hidden top-0 left-0 z-40 fixed flex flex-col justify-center items-center bg-linear-to-b from-tictac-secondary-blue to-tictac-primary-blue w-full min-h-screen text-white"
         x-show="openMobileNav" x-transition:enter="transform transition duration-500 ease-in-out"
