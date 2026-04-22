@@ -1,7 +1,4 @@
 <!-- Menu Mobile -->
-
-
-
 <nav class="lg:hidden" x-cloak>
     <div class="md:hidden top-0 left-0 z-40 fixed flex flex-col justify-center items-center bg-linear-to-b from-tictac-secondary-blue to-tictac-primary-blue w-full min-h-screen text-white"
         x-show="openMobileNav" x-transition:enter="transform transition duration-500 ease-in-out"
@@ -27,14 +24,16 @@
             <li data-before-content="TicTactivity" @class([
                 'nav--item-outline' => request()->routeIs('tictactivity.*'),
             ])>
-                <a class="text-white" href="{{ route('tictactivity.index') }}">TicTactivity</a>
+                {{-- <a class="text-white" href="{{ route('tictactivity.index') }}">TicTactivity</a> --}}
+                <a class="text-gray-500 cursor-not-allowed" href="#">TicTactivity</a>
             </li>
 
 
             <li data-before-content="TicTalks" @class([
                 'nav--item-outline' => request()->routeIs('tictalks.*'),
             ])>
-                <a class="text-white" href="{{ route('tictalks.index') }}">TicTalks</a>
+                {{-- <a class="text-white" href="{{ route('tictalks.index') }}">TicTalks</a> --}}
+                <a class="text-gray-500 cursor-not-allowed" href="#">TicTalks</a>
             </li>
 
             <li data-before-content="Game On!" @class([

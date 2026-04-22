@@ -5,6 +5,7 @@ namespace App\Providers;
 use AbdulmajeedJamaan\FilamentTranslatableTabs\TranslatableTabs;
 use BezhanSalleh\LanguageSwitch\LanguageSwitch;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider;
+use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
 use Mcamara\LaravelLocalization\Traits\LoadsTranslatedCachedRoutes;
 use Spatie\Translatable\Facades\Translatable;
@@ -26,6 +27,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
+        Schema::defaultStringLength(191);
+
         RouteServiceProvider::loadCachedRoutesUsing(fn () => $this->loadCachedRoutes());
 
         if ($this->app->runningInConsole()) {
