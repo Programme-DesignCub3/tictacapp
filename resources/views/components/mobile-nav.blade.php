@@ -27,14 +27,16 @@
             <li data-before-content="TicTactivity" @class([
                 'nav--item-outline' => request()->routeIs('tictactivity.*'),
             ])>
-                <a class="text-white" href="{{ route('tictactivity.index') }}">TicTactivity</a>
+                {{-- <a class="text-white" href="{{ route('tictactivity.index') }}">TicTactivity</a> --}}
+                <a class="text-gray-500 cursor-not-allowed" href="#">TicTactivity</a>
             </li>
 
 
             <li data-before-content="TicTalks" @class([
                 'nav--item-outline' => request()->routeIs('tictalks.*'),
             ])>
-                <a class="text-white" href="{{ route('tictalks.index') }}">TicTalks</a>
+                {{-- <a class="text-white" href="{{ route('tictalks.index') }}">TicTalks</a> --}}
+                <a class="text-gray-500 cursor-not-allowed" href="#">TicTalks</a>
             </li>
 
             <li data-before-content="Game On!" @class([

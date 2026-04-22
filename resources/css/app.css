@@ -90,6 +90,10 @@
         @apply tracking-wider bg-transparent hover:bg-tictac-primary-blue-light/80 hover:shadow hover:shadow-tictac-primary-blue-light/50 px-4 py-2 rounded-full font-winky font-extrabold text-white text-xl text-center transition-all duration-300 ease-in-out;
     }
 
+    .nav-link.disabled a{
+        @apply hover:bg-transparent opacity-50 hover:shadow-none cursor-not-allowed;
+    }
+
     .nav-link.active-nav a{
         @apply bg-tictac-primary-blue-light shadow;
     }

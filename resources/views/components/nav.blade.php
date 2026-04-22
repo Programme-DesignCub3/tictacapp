@@ -30,7 +30,7 @@
                 <a href="{{ route('tictacstation') }}">TicTacStation</a>
             </li>
 
-            <li class="nav-link {{ active_class(Route::is('tictactivity*'), 'active-nav') }}">
+            <li class="nav-link disabled {{ active_class(Route::is('tictactivity*'), 'active-nav') }}">
                 <a href="{{ route('tictactivity.index') }}">TicTactivity</a>
             </li>
 
@@ -40,7 +40,7 @@
                 </a>
             </li>
 
-            <li class="nav-link {{ active_class(Route::is('tictalks*'), 'active-nav') }}">
+            <li class="nav-link disabled {{ active_class(Route::is('tictalks*'), 'active-nav') }}">
                 <a href="{{ route('tictalks.index') }}">TicTalks</a>
             </li>
 
