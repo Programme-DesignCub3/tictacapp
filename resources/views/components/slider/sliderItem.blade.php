@@ -14,20 +14,20 @@
                     {{ $item->category->name ?? '' }}
                 </p>
 
-                <h3 class="font-poppins font-bold text-tictac-primary-blue text-lg md:text-2xl">
+                <h3 class="font-sans font-bold text-tictac-primary-blue text-lg md:text-2xl">
                     {{ $item->title ?? '' }}
                 </h3>
 
-                <p class="text-xs">
+                <p class="text-base">
                     {{ Str::limit($item->description ? $item->description : '', 150, '...') }}
                 </p>
             </div>
         </div>
 
-        <a class="block -bottom-4 left-1/2 absolute bg-tictac-primary-blue slider-outer-shadow p-2 rounded-full w-1/2 min-w-fit overflow-clip font-super-comic text-center -translate-x-1/2"
+        <a class="block -bottom-4 left-1/2 absolute bg-tictac-primary-blue slider-outer-shadow p-2 rounded-full overflow-clip font-passion font-semibold text-center -translate-x-1/2"
             {{-- href="{{ $link }}" --}} href="{{ $routeName ? route($routeName . '.show', $item->slug) : '#' }}">
-            <span class="block relative bg-tictac-secondary-yellow slider-inner-shadow rounded-full overflow-clip">
-                <span class="block px-3 py-1 size-full text-tictac-primary-blue text-xs">Read more</span>
+            <span class="block relative bg-tictac-secondary-yellow slider-inner-shadow py-2 rounded-full overflow-clip">
+                <span class="block px-3 py-1 size-full text-tictac-primary-blue text-base">@lang('global.read_more')</span>
             </span>
         </a>
     </div>

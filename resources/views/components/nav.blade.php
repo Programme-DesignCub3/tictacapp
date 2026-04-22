@@ -1,5 +1,5 @@
 <div class="max-lg:hidden">
-    <nav class="mx-auto text-white container">
+    <nav class="text-white">
         <svg style="position: absolute; width: 0; height: 0;" aria-hidden="true">
             <filter id="smooth-sticker">
                 <feMorphology operator="dilate" radius="3" in="SourceAlpha" result="thicken" />
@@ -23,14 +23,14 @@
             </filter>
         </svg>
 
-        <ul class="flex flex-wrap justify-between items-center p-4">
+        <ul class="flex flex-wrap justify-between items-center">
             {{-- menulist --}}
             {{-- Crunch Selection, TicTactivity, Logo Image, TicTalks, Game On! --}}
-            <li class="nav-link {{ active_class(Route::is('tictacstation*'), 'active-nav') }}">
+            <li class="font-passion font-semibold navigation-button {{ active_class(Route::is('tictacstation*'), 'selected') }}">
                 <a href="{{ route('tictacstation') }}">TicTacStation</a>
             </li>
 
-            <li class="nav-link {{ active_class(Route::is('tictactivity*'), 'active-nav') }}">
+            <li class="font-passion font-semibold navigation-button {{ active_class(Route::is('tictactivity*'), 'selected') }}">
                 <a href="{{ route('tictactivity.index') }}">TicTactivity</a>
             </li>
 
@@ -40,11 +40,11 @@
                 </a>
             </li>
 
-            <li class="nav-link {{ active_class(Route::is('tictalks*'), 'active-nav') }}">
+            <li class="font-passion font-semibold navigation-button {{ active_class(Route::is('tictalks*'), 'selected') }}">
                 <a href="{{ route('tictalks.index') }}">TicTalks</a>
             </li>
 
-            <li class="nav-link {{ active_class(Route::is('gameon*'), 'active-nav') }}">
+            <li class="font-passion font-semibold navigation-button {{ active_class(Route::is('gameon*'), 'selected') }}">
                 @auth('web')
                     <a href="{{ route('gameon') }}">Game On!</a>
                 @endauth

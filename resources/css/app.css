@@ -5,19 +5,19 @@
 @import "./__cloud.css";
 /* @import "./fonts.css"; */
 
-@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
-@source '../../storage/framework/views/*.php';
+@source "../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php";
+@source "../../storage/framework/views/*.php";
 @source '../**/*.blade.php';
 @source '../**/*.js';
+
 @theme {
     --font-sans:
-        "Poppins", ui-sans-serif, system-ui, sans-serif,
+        "Roboto", ui-sans-serif, system-ui, sans-serif,
         "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
         "Noto Color Emoji";
-    /* --font-cooper: "Cooper", sans-serif; */
-    --font-poppins: "Poppins", sans-serif;
-    /* --font-super-comic: "Super Comic", sans-serif; */
-    --font-winky: "Winky Sans", sans-serif;
+    --font-passion: "Bangers", system-ui;
+    --font-passion: "Comic Neue", cursive, sans-serif;
+    --font-passion: "Passion One", cursive, sans-serif;
 
     --color-tictac-primary-blue: #0076c9;
     --color-tictac-primary-blue-light: #00bcf1;
@@ -87,15 +87,15 @@
     }
 
     .nav-link a{
-        @apply tracking-wider bg-transparent hover:bg-tictac-primary-blue-light/80 hover:shadow hover:shadow-tictac-primary-blue-light/50 px-4 py-2 rounded-full font-winky font-extrabold text-white text-xl text-center transition-all duration-300 ease-in-out;
+        @apply bg-transparent px-3 py-1.5 rounded-full font-passion font-bold text-white text-xl text-center tracking-normal transition-[transform,background-color] duration-500 ease-linear hover:button-gradient transform;
     }
 
     .nav-link.active-nav a{
-        @apply bg-tictac-primary-blue-light shadow;
+        @apply shadow border border-white translate-y-0.5 button-gradient;
     }
 
     .breadcrumb-link{
-        @apply ml-1 max-w-lg overflow-hidden font-semibold text-white hover:text-slate-500 text-base hover:underline truncate text-ellipsis;
+        @apply ml-1 max-w-lg overflow-hidden font-passion font-semibold text-white hover:text-slate-500 text-base hover:underline truncate text-ellipsis;
     }
 
     .breadcrumb-link.current{
@@ -255,7 +255,8 @@
         }
     }
 
-    .category-button {
+    .category-button,
+    .navigation-button {
         @apply before:-z-10 bg-tictac-primary-orange before:border border-2 before:border-white rounded-full before:rounded-full before:size-full duration-[1500] cursor-pointer clamp-[px,4,8] clamp-[py,1,2];
 
         &:not(.selected) {
@@ -480,6 +481,10 @@
 @utility container {
     margin-inline: auto;
     padding-inline: 1rem;
+}
+
+@utility button-gradient{
+    @apply bg-radial-[at_5%_90%] from-tictac-primary-orange to-tictac-secondary-orange;
 }
 
 ::view-transition-old(auth) {

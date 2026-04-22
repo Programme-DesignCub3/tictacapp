@@ -28,6 +28,7 @@ new #[Layout('layouts::tictack', ['bg' => "before:bg-[url('../assets/bg/tictalks
             ->when($this->selectedCategory !== 'all', function ($query) {
                 return $query->whereRelation('category', 'slug', '=', $this->selectedCategory);
             })
+            ->latest()
             ->paginate(8);
     }
 
@@ -110,11 +111,6 @@ new #[Layout('layouts::tictack', ['bg' => "before:bg-[url('../assets/bg/tictalks
                 720: {
                     slidesPerView: 3,
                     spaceBetween: 30,
-                },
-                // when window width is >= 640px
-                1240: {
-                    slidesPerView: 4,
-                    spaceBetween: 40,
                 },
             },
             scrollbar: {

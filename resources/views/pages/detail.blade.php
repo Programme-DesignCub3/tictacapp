@@ -16,7 +16,7 @@
         ]" />
 
         <section class="flex flex-col mx-4 clamp-[gap,4,8] clamp-[my,4,8]">
-            <h1 class="font-poppins font-bold text-[#1e246f] clamp-[text,xl,3xl]">
+            <h1 class="font-sans font-bold text-[#1e246f] clamp-[text,xl,3xl]">
                 {{ $article->title }}
             </h1>
 
@@ -41,7 +41,7 @@
         </section>
 
         <div>
-            <h2 class="font-poppins font-bold text-[#1e246f] text-center clamp-[text,xl,2xl] clamp-[mb,2,4] my">Cek
+            <h2 class="font-sans font-bold text-[#1e246f] text-center clamp-[text,xl,2xl] clamp-[mb,2,4] my">Cek
                 Artikel Lainnya</h2>
 
             <div class="gap-4 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3">

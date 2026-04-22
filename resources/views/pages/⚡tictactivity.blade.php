@@ -112,11 +112,6 @@ new #[Layout('layouts::tictack', ['bg' => "before:bg-[url('../assets/bg/tictacti
                     slidesPerView: 3,
                     spaceBetween: 30,
                 },
-                // when window width is >= 640px
-                1240: {
-                    slidesPerView: 4,
-                    spaceBetween: 40,
-                },
             },
             scrollbar: {
                 el: ".swiper-scrollbar",
@@ -124,8 +119,6 @@ new #[Layout('layouts::tictack', ['bg' => "before:bg-[url('../assets/bg/tictacti
                 snapOnRelease: true,
             },
         });
-
-        console.log(activitySlider);
 
     }
 

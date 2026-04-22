@@ -9,7 +9,7 @@
         x-transition:leave="transform transition duration-500 ease-in-out"
         x-transition:leave-start="translate-y-0 opacity-100" x-transition:leave-end="-translate-y-full opacity-0">
         <ul
-            class="flex flex-col flex-wrap justify-between items-center gap-4 p-4 font-poppins font-bold text-xl text-center">
+            class="flex flex-col flex-wrap justify-between items-center gap-4 p-4 font-sans font-bold text-xl text-center">
             {{-- menulist --}}
             {{-- Crunch Selection, TicTactivity, Logo Image, TicTalks, Game On! --}}
             <li data-before-content="TicTacapp">
