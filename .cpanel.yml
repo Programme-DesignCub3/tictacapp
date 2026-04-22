@@ -12,6 +12,7 @@ deployment:
     - /bin/rm -rf .vscode
     - /bin/rm -rf .cpanel.yml
     - /bin/ln -s $DEPLOYPATH/public/index.php $PUBLIC_HTML_PATH/index.php
+    - /bin/ln -s $DEPLOYPATH/storage/app/public $PUBLIC_HTML_PATH/storage
     - $PHP_PATH artisan config:cache
     - $PHP_PATH artisan route:cache
     - $PHP_PATH artisan view:cache
