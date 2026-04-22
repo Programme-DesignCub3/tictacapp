@@ -187,7 +187,7 @@ new class extends Component
             class="block -bottom-4 left-1/2 absolute bg-card-blue slider-outer-shadow rounded-full min-w-fit overflow-clip font-super-comic text-center -translate-x-1/2 cursor-pointer clamp-[p,2,3]"
             type="submit">
             <span class="block relative bg-tictac-secondary-yellow slider-inner-shadow rounded-full overflow-clip">
-                <span class="block px-3 py-1 size-full text-tictac-primary-blue clamp-[text,xs,xl]">Submit</span>
+                <span class="block px-3 py-1 size-full font-winky-sans font-bold text-tictac-primary-blue clamp-[text,xs,xl]">Submit</span>
             </span>
         </button>
     </form>

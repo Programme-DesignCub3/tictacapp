@@ -26,11 +26,11 @@
         <ul class="flex flex-wrap justify-between items-center">
             {{-- menulist --}}
             {{-- Crunch Selection, TicTactivity, Logo Image, TicTalks, Game On! --}}
-            <li class="font-passion font-semibold navigation-button {{ active_class(Route::is('tictacstation*'), 'selected') }}">
+            <li class="font-winky-sans font-semibold nav-link {{ active_class(Route::is('tictacstation*'), 'selected') }}">
                 <a href="{{ route('tictacstation') }}">TicTacStation</a>
             </li>
 
-            <li class="font-passion font-semibold navigation-button {{ active_class(Route::is('tictactivity*'), 'selected') }}">
+            <li class="font-winky-sans font-semibold nav-link {{ active_class(Route::is('tictactivity*'), 'selected') }}">
                 <a href="{{ route('tictactivity.index') }}">TicTactivity</a>
             </li>
 
@@ -40,11 +40,11 @@
                 </a>
             </li>
 
-            <li class="font-passion font-semibold navigation-button {{ active_class(Route::is('tictalks*'), 'selected') }}">
+            <li class="font-winky-sans font-semibold nav-link {{ active_class(Route::is('tictalks*'), 'selected') }}">
                 <a href="{{ route('tictalks.index') }}">TicTalks</a>
             </li>
 
-            <li class="font-passion font-semibold navigation-button {{ active_class(Route::is('gameon*'), 'selected') }}">
+            <li class="font-winky-sans font-semibold nav-link {{ active_class(Route::is('gameon*'), 'selected') }}">
                 @auth('web')
                     <a href="{{ route('gameon') }}">Game On!</a>
                 @endauth

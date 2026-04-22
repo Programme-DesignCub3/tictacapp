@@ -24,7 +24,7 @@
             </div>
         </div>
 
-        <a class="block -bottom-4 left-1/2 absolute bg-tictac-primary-blue slider-outer-shadow p-2 rounded-full overflow-clip font-passion font-semibold text-center -translate-x-1/2"
+        <a class="block -bottom-4 left-1/2 absolute bg-tictac-primary-blue slider-outer-shadow p-2 rounded-full overflow-clip font-winky-sans font-semibold text-center -translate-x-1/2"
             {{-- href="{{ $link }}" --}} href="{{ $routeName ? route($routeName . '.show', $item->slug) : '#' }}">
             <span class="block relative bg-tictac-secondary-yellow slider-inner-shadow py-2 rounded-full overflow-clip">
                 <span class="block px-3 py-1 size-full text-tictac-primary-blue text-base">@lang('global.read_more')</span>

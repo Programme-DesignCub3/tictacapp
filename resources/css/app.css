@@ -15,9 +15,10 @@
         "Roboto", ui-sans-serif, system-ui, sans-serif,
         "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
         "Noto Color Emoji";
-    --font-passion: "Bangers", system-ui;
+    /* --font-passion: "Bangers", system-ui;
     --font-passion: "Comic Neue", cursive, sans-serif;
-    --font-passion: "Passion One", cursive, sans-serif;
+    --font-passion: "Passion One", cursive, sans-serif; */
+    --font-winky-sans: "Winky Sans", cursive, sans-serif;
 
     --color-tictac-primary-blue: #0076c9;
     --color-tictac-primary-blue-light: #00bcf1;
@@ -87,7 +88,7 @@
     }
 
     .nav-link a{
-        @apply bg-transparent px-3 py-1.5 rounded-full font-passion font-bold text-white text-xl text-center tracking-normal transition-[transform,background-color] duration-500 ease-linear hover:button-gradient transform;
+        @apply bg-transparent px-3 py-1.5 rounded-full font-winky-sans font-bold text-white text-xl text-center tracking-normal transition-[transform,background-color] duration-500 ease-linear hover:button-gradient transform;
     }
 
     .nav-link.disabled a{
@@ -99,7 +100,7 @@
     }
 
     .breadcrumb-link{
-        @apply ml-1 max-w-lg overflow-hidden font-passion font-semibold text-white hover:text-slate-500 text-base hover:underline truncate text-ellipsis;
+        @apply ml-1 max-w-lg overflow-hidden font-winky-sans font-semibold text-white hover:text-slate-500 text-base hover:underline truncate text-ellipsis;
     }
 
     .breadcrumb-link.current{
