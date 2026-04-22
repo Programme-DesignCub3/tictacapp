@@ -149,12 +149,12 @@ new class extends Component
 };
 ?>
 
-<div class="slider-outer-shadow rounded-4xl bg-card-blue relative w-[90vw] mb-10 md:w-[60vw] max-w-4xl clamp-[p,2,3]">
+<div class="relative bg-card-blue slider-outer-shadow mb-10 rounded-4xl w-[90vw] md:w-[60vw] max-w-4xl clamp-[p,2,3]">
     <form wire:submit="{{ $isLoginForm ? 'login' : 'register' }}">
-        <div class="slider-inner-shadow relative overflow-hidden rounded-3xl bg-white clamp-[p,4,8]">
-            <div class='text-tictac-primary-blue grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-4'>
-                <div class="flex flex-col gap-4 font ">
-                    <p class="text-center font-poppins font-bold text-2xl w-full">
+        <div class="relative bg-white slider-inner-shadow rounded-3xl overflow-hidden clamp-[p,4,8]">
+            <div class='gap-4 grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] text-tictac-primary-blue'>
+                <div class="flex flex-col gap-4 font">
+                    <p class="w-full font-sans font-bold text-2xl text-center">
                         {{ $isLoginForm ? 'Login' : __('auth.register_title') }}
                     </p>
                     @if ($isLoginForm)
@@ -162,16 +162,16 @@ new class extends Component
                     @else
                     <x-register-form />
                     @endif
-                    <p class="text-center cursor-pointer w-full" wire:click='toggleForm'>
+                    <p class="w-full text-center cursor-pointer" wire:click='toggleForm'>
                         {{ $isLoginForm ? __('auth.no_account_yet') : __('auth.have_account')  }}
                     </p>
                 </div>
 
-                <div class="bg-tictac-primary-blue inline-block h-full min-h-0.5 md:min-h-[1em] w-full md:w-0.5 self-stretch"></div>
+                <div class="inline-block self-stretch bg-tictac-primary-blue w-full md:w-0.5 h-full min-h-0.5 md:min-h-[1em]"></div>
 
                 <div class="flex flex-col clamp-[gap,2,4]">
-                    <p class="text-center text-2xl font-poppins font-bold">{{__('auth.login_with')}}</p>
-                    <div class="flex flex-col gap-2 rounded-lg bg-gray-100 p-4">
+                    <p class="font-sans font-bold text-2xl text-center">{{__('auth.login_with')}}</p>
+                    <div class="flex flex-col gap-2 bg-gray-100 p-4 rounded-lg">
                         {{-- <a href="{{ route('login.auth', ['provider' => 'facebook']) }}">
                         <x-facebook-login-button />
                         </a> --}}
@@ -184,15 +184,15 @@ new class extends Component
         </div>
 
         <button
-            class="slider-outer-shadow font-super-comic bg-card-blue absolute -bottom-4 left-1/2 block min-w-fit -translate-x-1/2 cursor-pointer overflow-clip rounded-full clamp-[p,2,3] text-center"
+            class="block -bottom-4 left-1/2 absolute bg-card-blue slider-outer-shadow rounded-full min-w-fit overflow-clip font-super-comic text-center -translate-x-1/2 cursor-pointer clamp-[p,2,3]"
             type="submit">
-            <span class="slider-inner-shadow bg-tictac-secondary-yellow relative block overflow-clip rounded-full">
-                <span class="text-tictac-primary-blue block size-full px-3 py-1 clamp-[text,xs,xl]">Submit</span>
+            <span class="block relative bg-tictac-secondary-yellow slider-inner-shadow rounded-full overflow-clip">
+                <span class="block px-3 py-1 size-full font-winky-sans font-bold text-tictac-primary-blue clamp-[text,xs,xl]">Submit</span>
             </span>
         </button>
     </form>
 
-    <div x-on:click="openAuth = false" class="absolute  clamp-[right,-2,-4] clamp-[top,-2,-4] cursor-pointer">
+    <div x-on:click="openAuth = false" class="absolute cursor-pointer clamp-[right,-2,-4] clamp-[top,-2,-4]">
         <img class="clamp-[size,9,14]" src="{{asset('img/close-icon.png')}}">
     </div>
 

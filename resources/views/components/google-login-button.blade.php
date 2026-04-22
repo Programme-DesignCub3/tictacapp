@@ -1,7 +1,7 @@
-<div class="border-button-border-light flex w-full items-center gap-3 rounded-md border bg-white p-0.5 px-4 py-2 pr-3"
+<div class="flex items-center gap-3 bg-white p-0.5 px-4 py-2 pr-3 border border-button-border-light rounded-md w-full"
     aria-label="Sign in with Google">
-    <div class="flex h-9 w-9 items-center justify-center rounded-l bg-white">
-        <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <div class="flex justify-center items-center bg-white rounded-l w-9 h-9">
+        <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
             <title>Sign in with Google</title>
             <desc>Google G Logo</desc>
             <path class="fill-google-logo-blue"
@@ -18,5 +18,5 @@
             </path>
         </svg>
     </div>
-    <span class="text-google-text-gray text-sm tracking-wider">Sign in with Google</span>
+    <span class="font-winky-sans text-google-text-gray text-base tracking-wider">Sign in with Google</span>
 </div>

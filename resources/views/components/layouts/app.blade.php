@@ -24,11 +24,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
     <!-- Add your CSS links here -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
@@ -78,7 +74,7 @@
                         <x-slot:trigger>
                             <div class="flex items-center gap-2 cursor-pointer">
                                 <x-lucide-lock class="size-8" />
-                                <span class="">Login</span>
+                                <span class="font-winky-sans">Login</span>
                             </div>
                         </x-slot:trigger>
 
@@ -90,10 +86,10 @@
 
                 @auth('web')
                     <div class="flex items-center gap-2">
-                        <span class="text-white">Logged in as {{ explode(' ', auth('web')->user()->name)[0] }}</span>
+                        <span class="font-winky-sans text-white">Logged in as {{ explode(' ', auth('web')->user()->name)[0] }}</span>
                         <form method="POST" action="{{ route('logout') }}">
                             @csrf
-                            <button class="text-tictac-secondary-yellow hover:text-tictac-primary-blue cursor-pointer"
+                            <button class="font-winky-sans text-tictac-secondary-yellow hover:text-tictac-primary-blue cursor-pointer"
                                 type="submit">
                                 Logout
                             </button>
@@ -107,7 +103,7 @@
         <x-nav />
     </header>
 
-    <main class="inline-flex flex-col flex-1 w-full max-w-dvw font-poppins" id="main-content">
+    <main class="inline-flex flex-col flex-1 w-full max-w-dvw font-sans" id="main-content">
         {{ $slot }}
     </main>
 

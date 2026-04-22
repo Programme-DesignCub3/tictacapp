@@ -6,7 +6,10 @@ use AbdulmajeedJamaan\FilamentTranslatableTabs\TranslatableTabs;
 use BezhanSalleh\LanguageSwitch\LanguageSwitch;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
+use Livewire\Livewire;
+use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 use Mcamara\LaravelLocalization\Traits\LoadsTranslatedCachedRoutes;
 use Spatie\Translatable\Facades\Translatable;
 
@@ -57,6 +60,12 @@ class AppServiceProvider extends ServiceProvider
                 ])
                 // default locales
                 ->locales(['id', 'en']);
+        });
+
+        Livewire::setUpdateRoute(function ($handle) {
+            return Route::post('/livewire/update', $handle)
+                ->middleware('web')
+                ->prefix(LaravelLocalization::setLocale());
         });
     }
 }
