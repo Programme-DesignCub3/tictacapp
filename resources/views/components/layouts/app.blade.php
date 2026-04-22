@@ -35,6 +35,18 @@
     @stack('custom-css')
     @livewireStyles
 
+    @if (app()->environment('production'))
+        <!-- Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-06NNYPZ0KQ"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-06NNYPZ0KQ');
+        </script>
+    @endif
+
 </head>
 
 <body x-data="{ openAuth: false, openPopUp: true, openMobileNav: false }" @class([
