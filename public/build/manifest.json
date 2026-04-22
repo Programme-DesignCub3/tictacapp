@@ -1,24 +1,24 @@
 {
-  "_index-DDlvirwQ.js": {
-    "file": "assets/index-DDlvirwQ.js",
+  "_index-xgxdCp6f.js": {
+    "file": "assets/index-xgxdCp6f.js",
     "name": "index"
   },
-  "_swiper-bundle-BGP4y3Xy.js": {
-    "file": "assets/swiper-bundle-BGP4y3Xy.js",
+  "_swiper-bundle-C0eBKbXH.js": {
+    "file": "assets/swiper-bundle-C0eBKbXH.js",
     "name": "swiper-bundle",
     "imports": [
-      "_swiper-core-CHAZRZXF.js"
+      "_swiper-core--7BNUnhW.js"
     ],
     "css": [
-      "assets/swiper-bundle-Cnw9ticf.css"
+      "assets/swiper-bundle-CXe816k3.css"
     ]
   },
-  "_swiper-bundle-Cnw9ticf.css": {
-    "file": "assets/swiper-bundle-Cnw9ticf.css",
-    "src": "_swiper-bundle-Cnw9ticf.css"
+  "_swiper-bundle-CXe816k3.css": {
+    "file": "assets/swiper-bundle-CXe816k3.css",
+    "src": "_swiper-bundle-CXe816k3.css"
   },
-  "_swiper-core-CHAZRZXF.js": {
-    "file": "assets/swiper-core-CHAZRZXF.js",
+  "_swiper-core--7BNUnhW.js": {
+    "file": "assets/swiper-core--7BNUnhW.js",
     "name": "swiper-core"
   },
   "resources/assets/bg/detail-bg-island.png": {
@@ -34,7 +34,7 @@
     "src": "resources/assets/bg/tictalks-bg-island.png"
   },
   "resources/css/app.css": {
-    "file": "assets/app-DhszryFe.css",
+    "file": "assets/app-DpzC_5Kq.css",
     "src": "resources/css/app.css",
     "isEntry": true,
     "name": "app",
@@ -43,7 +43,7 @@
     ]
   },
   "resources/css/filament/admin/theme.css": {
-    "file": "assets/theme-BSR9WkmO.css",
+    "file": "assets/theme-ECh7zpMI.css",
     "src": "resources/css/filament/admin/theme.css",
     "isEntry": true,
     "name": "theme",
@@ -52,7 +52,7 @@
     ]
   },
   "resources/js/app.js": {
-    "file": "assets/app-BuG9aa18.js",
+    "file": "assets/app-BbzB21r_.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true
@@ -64,51 +64,51 @@
     "isEntry": true
   },
   "resources/js/gsap.js": {
-    "file": "assets/gsap-GrBcCN4u.js",
+    "file": "assets/gsap-Cw3afXIZ.js",
     "name": "gsap",
     "src": "resources/js/gsap.js",
     "isEntry": true,
     "imports": [
-      "_index-DDlvirwQ.js"
+      "_index-xgxdCp6f.js"
     ]
   },
   "resources/js/home.js": {
-    "file": "assets/home-BV8Y8sjW.js",
+    "file": "assets/home-Buw0nfAy.js",
     "name": "home",
     "src": "resources/js/home.js",
     "isEntry": true,
     "imports": [
-      "_index-DDlvirwQ.js",
-      "_swiper-core-CHAZRZXF.js"
+      "_index-xgxdCp6f.js",
+      "_swiper-core--7BNUnhW.js"
     ]
   },
   "resources/js/product.js": {
-    "file": "assets/product-aE4A3iLv.js",
+    "file": "assets/product-CZZtkgRi.js",
     "name": "product",
     "src": "resources/js/product.js",
     "isEntry": true,
     "imports": [
-      "_index-DDlvirwQ.js"
+      "_index-xgxdCp6f.js"
     ]
   },
   "resources/js/slider.js": {
-    "file": "assets/slider-DUFVB55c.js",
+    "file": "assets/slider-K_lz_Fvo.js",
     "name": "slider",
     "src": "resources/js/slider.js",
     "isEntry": true,
     "imports": [
-      "_swiper-bundle-BGP4y3Xy.js",
-      "_swiper-core-CHAZRZXF.js"
+      "_swiper-bundle-C0eBKbXH.js",
+      "_swiper-core--7BNUnhW.js"
     ]
   },
   "resources/js/sliderProduct.js": {
-    "file": "assets/sliderProduct-Cb40VxPM.js",
+    "file": "assets/sliderProduct-COgC310u.js",
     "name": "sliderProduct",
     "src": "resources/js/sliderProduct.js",
     "isEntry": true,
     "imports": [
-      "_swiper-bundle-BGP4y3Xy.js",
-      "_swiper-core-CHAZRZXF.js"
+      "_swiper-bundle-C0eBKbXH.js",
+      "_swiper-core--7BNUnhW.js"
     ]
   }
 }

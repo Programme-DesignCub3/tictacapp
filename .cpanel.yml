@@ -3,6 +3,7 @@ deployment:
   tasks:
     - export DEPLOYPATH=/home/tictacla/web_folder
     - export PUBLIC_HTML_PATH=/home/tictacla/public_html
+    - export PHP_PATH=/usr/local/bin/ea-php83
     - /bin/mkdir -p $DEPLOYPATH
     - /bin/cp -a * $DEPLOYPATH
     - cd $DEPLOYPATH
@@ -10,6 +11,9 @@ deployment:
     - /bin/rm -rf .github
     - /bin/rm -rf .vscode
     - /bin/rm -rf .cpanel.yml
-    - /bin/cp public $PUBLIC_HTML_PATH -r
-    - /bin/cp storage/index.stub $PUBLIC_HTML_PATH/index.php
-    - /bin/ln -s $DEPLOYPATH/storage/app/public $PUBLIC_HTML_PATH/storage
+    - /bin/ln -s $DEPLOYPATH/public/index.php $PUBLIC_HTML_PATH/index.php
+    - $PHP_PATH artisan config:cache
+    - $PHP_PATH artisan route:cache
+    - $PHP_PATH artisan view:cache
+    - $PHP_PATH artisan optimize:clear
+    - $PHP_PATH artisan storage:link
