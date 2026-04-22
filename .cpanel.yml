@@ -1,0 +1,15 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/tictacla/web_folder
+    - export PUBLIC_HTML_PATH=/home/tictacla/public_html
+    - /bin/mkdir -p $DEPLOYPATH
+    - /bin/cp -a * $DEPLOYPATH
+    - cd $DEPLOYPATH
+    - /bin/rm -rf .git
+    - /bin/rm -rf .github
+    - /bin/rm -rf .vscode
+    - /bin/rm -rf .cpanel.yml
+    - /bin/cp public $PUBLIC_HTML_PATH -r
+    - /bin/cp storage/index.stub $PUBLIC_HTML_PATH/index.php
+    - /bin/ln -s $DEPLOYPATH/storage/app/public $PUBLIC_HTML_PATH/storage
