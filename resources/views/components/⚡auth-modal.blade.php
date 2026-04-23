@@ -175,9 +175,10 @@ new class extends Component
                         {{-- <a href="{{ route('login.auth', ['provider' => 'facebook']) }}">
                         <x-facebook-login-button />
                         </a> --}}
-                        <a href="{{ route('login.auth', ['provider' => 'google']) }}">
+
+                        {{-- <a href="{{ route('login.auth', ['provider' => 'google']) }}">
                             <x-google-login-button />
-                        </a>
+                        </a> --}}
                     </div>
                 </div>
             </div>

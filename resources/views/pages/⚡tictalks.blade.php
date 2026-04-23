@@ -7,8 +7,7 @@ use Livewire\Attributes\Url;
 use Livewire\Component;
 use Livewire\WithPagination;
 
-new #[Layout('layouts::tictack', ['bg' => "before:bg-[url('../assets/bg/tictalks-bg-island.png')]"])] class extends Component
-{
+new #[Layout('layouts::tictack', ['bg' => "before:bg-[url('../assets/bg/tictalks-bg-island.png')]"])] class extends Component {
     use WithPagination;
 
     #[Url('category', except: 'all')]
@@ -16,9 +15,7 @@ new #[Layout('layouts::tictack', ['bg' => "before:bg-[url('../assets/bg/tictalks
 
     public function mount()
     {
-        seo()
-            ->title(__('seo.blog.title'), false)
-            ->description(__('seo.blog.description'));
+        seo()->title(__('seo.blog.title'), false)->description(__('seo.blog.description'));
     }
 
     #[Computed]
@@ -40,7 +37,7 @@ new #[Layout('layouts::tictack', ['bg' => "before:bg-[url('../assets/bg/tictalks
 
     public function handleCategoryChange(?string $slug = null)
     {
-        if ($this->selectedCategory === 'all' && ($slug === 'all' || ! $slug)) {
+        if ($this->selectedCategory === 'all' && ($slug === 'all' || !$slug)) {
             $this->skipRender();
 
             return;
@@ -62,23 +59,23 @@ new #[Layout('layouts::tictack', ['bg' => "before:bg-[url('../assets/bg/tictalks
 };
 ?>
 
-<div class="mx-auto px-4 max-w-384">
+<div class="max-w-384 mx-auto px-4">
     @push('plugin-scripts')
         @vite(['resources/js/slider.js', 'resources/js/gsap.js'])
     @endpush
-    <div class="max-md:hidden top-[7%] left-[1%] z-0 absolute w-[13vw]">
-        <div class="relative w-full h-full">
-            <img class="absolute w-auto h-auto cloud" data-direction="right" data-speed="1"
+    <div class="absolute left-[1%] top-[7%] z-0 w-[13vw] max-md:hidden">
+        <div class="relative h-full w-full">
+            <img class="cloud absolute h-auto w-auto" data-direction="right" data-speed="1"
                 src="{{ asset('img/cloud.png') }}" alt="" style="width: 290px; height: auto;">
         </div>
     </div>
 
-    <div class="flex flex-wrap justify-between gap-4 clamp-[mb,12,28]">
+    <div class="clamp-[mb,12,28] flex flex-wrap justify-between gap-4">
         <x-breadcrumb :links="[['label' => 'Tictalks', 'url' => route('tictalks.index')]]" />
 
-        <div class="flex flex-wrap items-center text-white clamp-[gap,2,4]" wire:transition>
+        <div class="clamp-[gap,2,4] flex flex-wrap items-center text-white" wire:transition>
 
-            <x-button :selected="$selectedCategory === 'all'" wire:click="handleCategoryChange">{{__("global.all")}}</x-button>
+            <x-button :selected="$selectedCategory === 'all'" wire:click="handleCategoryChange">{{ __('global.all') }}</x-button>
 
             @foreach ($this->categories as $category)
                 <x-button :selected="$category->slug === $selectedCategory"
@@ -88,7 +85,7 @@ new #[Layout('layouts::tictack', ['bg' => "before:bg-[url('../assets/bg/tictalks
         </div>
     </div>
 
-    <x-slider.slider id="activitySlider" :items="$this->activities" routeName="tictalks"/>
+    <x-slider.slider id="activitySlider" :items="$this->activities" routeName="tictalks" />
 
     {{ $this->activities->links() }}
 
