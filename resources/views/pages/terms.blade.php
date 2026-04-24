@@ -2,16 +2,16 @@
     <div class="flex flex-col items-center justify-center px-4 py-12 gap-8">
         <div class="relative bg-card-blue slider-outer-shadow rounded-4xl w-full max-w-4xl clamp-[p,2,3]">
             <div class="relative bg-white slider-inner-shadow rounded-3xl clamp-[p,4,8] text-tictac-primary-blue flex flex-col gap-4">
-                <h2 class="font-bold text-2xl text-center">
+                <h1 class="font-bold text-2xl text-center">
                     {{ __('terms.title') }}
-                </h2>
+                </h1>
                 <p>
                     {!! __('terms.welcome', [
                         'site' => '<a href="https://tictacland.com" target="_blank"><b>tictacland.com</b></a>'
                     ]) !!}
                 </p>
                 <div>
-                    <h3 class="font-bold">{{ __('terms.usage_title') }}</h3>
+                    <h2 class="font-bold">{{ __('terms.usage_title') }}</h2>
                     <ul class="list-disc ml-5">
                         <li>{{ __('terms.usage_1') }}</li>
                         <li>{{ __('terms.usage_2') }}</li>
@@ -19,14 +19,14 @@
                     </ul>
                 </div>
                 <div>
-                    <h3 class="font-bold">{{ __('terms.account_title') }}</h3>
+                    <h2 class="font-bold">{{ __('terms.account_title') }}</h2>
                     <ul class="list-disc ml-5">
                         <li>{{ __('terms.account_1') }}</li>
                         <li>{{ __('terms.account_2') }}</li>
                     </ul>
                 </div>
                 <div>
-                    <h3 class="font-bold">{{ __('terms.ip_title') }}</h3>
+                    <h2 class="font-bold">{{ __('terms.ip_title') }}</h2>
                     <p>
                         {!! __('terms.ip_desc', [
                             'site' => '<a href="https://tictacland.com" target="_blank"><b>tictacland.com</b></a>'
@@ -34,7 +34,7 @@
                     </p>
                 </div>
                 <div>
-                    <h3 class="font-bold">{{ __('terms.liability_title') }}</h3>
+                    <h2 class="font-bold">{{ __('terms.liability_title') }}</h2>
                     <p>
                         {!! __('terms.liability_desc', [
                             'site' => '<a href="https://tictacland.com" target="_blank"><b>tictacland.com</b></a>'
