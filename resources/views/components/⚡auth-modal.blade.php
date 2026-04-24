@@ -165,6 +165,20 @@ new class extends Component
                     <p class="w-full text-center cursor-pointer" wire:click='toggleForm'>
                         {{ $isLoginForm ? __('auth.no_account_yet') : __('auth.have_account')  }}
                     </p>
+
+                    <div class="text-center text-xs mt-2 text-gray-500">
+                        <a href="{{ route('terms') }}" 
+                            class="cursor-pointer underline"
+                        >
+                            {{ __('auth.Terms_Conditions') }}
+                        </a> 
+                        |
+                        <a href="{{ route('privacy') }}" 
+                            class="cursor-pointer underline"
+                        >
+                            {{ __('auth.privacy_policy') }}
+                        </a>
+                    </div>
                 </div>
 
                 <div class="inline-block self-stretch bg-tictac-primary-blue w-full md:w-0.5 h-full min-h-0.5 md:min-h-[1em]"></div>
