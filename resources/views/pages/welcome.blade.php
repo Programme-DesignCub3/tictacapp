@@ -138,7 +138,7 @@
         <div class="fixed right-[4%] top-[20%] w-[7vw]">
             <div class="cloud relative w-full" data-direction="left" data-speed="1">
                 <img class="z-0 h-auto w-auto" src="{{ asset('img/air_baloon_2.png') }}" alt=""
-                    style="width: 290px; height: auto;">
+                    style="width: 310px; height: auto;">
 
                 <div class="clamp-[gap,2,5] absolute left-[32%] top-1/2 my-2 flex flex-col justify-center">
 
@@ -147,24 +147,31 @@
                             [
                                 'name' => 'whatsaap',
                                 'image' => asset('img/social-icons/wa.svg'),
-                                'link' => db_config('social.whatsapp', '#'),
+                                'link' => db_config('social.whatsapp'),
+                            ],
+                            [
+                                'name' => 'facebook',
+                                'image' => asset('img/social-icons/fb.svg'),
+                                'link' => db_config('social.facebook'),
                             ],
                             [
                                 'name' => 'tiktok',
                                 'image' => asset('img/social-icons/tiktok.svg'),
-                                'link' => db_config('social.tiktok', '#'),
+                                'link' => db_config('social.tiktok'),
                             ],
                             [
                                 'name' => 'instagram',
                                 'image' => asset('img/social-icons/ig.svg'),
-                                'link' => db_config('social.instagram', '#'),
+                                'link' => db_config('social.instagram'),
                             ],
                             [
                                 'name' => 'youtube',
                                 'image' => asset('img/social-icons/yt.svg'),
-                                'link' => db_config('social.youtube', '#'),
+                                'link' => db_config('social.youtube'),
                             ],
                         ];
+
+                        $socials = array_filter($socials, fn($s) => !empty($s['link']));
                     @endphp
 
                     @foreach ($socials as $social)
@@ -172,10 +179,7 @@
                             <img class="size-[1.5vw]" src="{{ $social['image'] }}" alt="{{ $social['name'] }}">
                         </a>
                     @endforeach
-
                 </div>
-
-
             </div>
         </div>
 
