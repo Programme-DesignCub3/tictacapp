@@ -9,7 +9,7 @@
         display: flex;
     }
 </style>
-<div class="swiper-slide h-auto flex"
+<div class="swiper-slide h-auto flex mb-10"
     @if (isset($item->key) || isset($item->id)) wire:key="{{ isset($item->key) ? $item->key : $item->id }}" @endif>
     <div class="relative bg-tictac-primary-blue slider-outer-shadow mb-10 p-2 rounded-4xl h-full w-full flex flex-col">
         <div class="bg-white slider-inner-shadow rounded-3xl overflow-clip flex flex-col h-full">
