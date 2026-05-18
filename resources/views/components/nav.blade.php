@@ -44,13 +44,13 @@
                 </a>
             </li>
 
-            {{-- <li class="font-winky-sans font-semibold nav-link {{ active_class(Route::is('tictalks*'), 'selected') }}">
+            <li class="font-winky-sans font-semibold nav-link {{ active_class(Route::is('tictalks*'), 'selected') }}">
                 <a href="{{ route('tictalks.index') }}">TicTalks</a>
-            </li> --}}
-
-            <li class="font-winky-sans font-semibold nav-link">
-                <span class="text-gray-400 cursor-not-allowed">TicTalks</span>
             </li>
+
+            {{-- <li class="font-winky-sans font-semibold nav-link">
+                <span class="text-gray-400 cursor-not-allowed">TicTalks</span>
+            </li> --}}
 
             <li class="font-winky-sans font-semibold nav-link {{ active_class(Route::is('gameon*'), 'selected') }}">
                 @auth('web')

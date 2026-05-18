@@ -24,7 +24,7 @@
                 <img class="rounded-lg w-full" src="{{ $article->getFirstMediaUrl('thumbnail') }}" alt="">
             </div>
 
-            <div class="prose">
+            <div class="prose max-w-none">
                 {{-- {!! RichContentRenderer::make($article->content)->customBlocks([YoutubeBlock::class])->toHtml() !!} --}}
                 {!! $article->content !!}
                 {{-- {!! $article->renderRichContent('content') !!} --}}
