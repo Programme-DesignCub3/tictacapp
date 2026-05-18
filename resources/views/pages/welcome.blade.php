@@ -66,7 +66,8 @@
                         {!! __('home.tictacstation') !!}
                     </p>
                 </a>
-                <a class="absolute left-[13%] top-[45%]" href="{{ route('tictactivity.index') }}">
+                {{-- <a class="absolute left-[13%] top-[45%]" href="{{ route('tictactivity.index') }}"> --}}
+                <a class="absolute left-[13%] top-[45%]" href="#">
                     <img class="text-image w-[20vw]" src="{{ asset('img/text/tictactivity.png') }}" alt="TicTacTivity"
                         title="TicTacTivity">
                     <p class="text-center text-white">
