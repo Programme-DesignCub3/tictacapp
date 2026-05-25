@@ -78,7 +78,7 @@ class Tictalk extends Model implements HasMedia
     public function registerMediaConversions(?Media $media = null): void
     {
         $this->addMediaConversion('webp')
-            ->width(800)
+            ->width(1024)
             ->format('webp')
             ->performOnCollections('thumbnail')
             ->nonQueued();
