@@ -9,14 +9,14 @@
         display: flex;
     }
 </style>
-<div class="swiper-slide h-auto flex mb-10"
+<div class="flex mb-10 h-auto swiper-slide"
     @if (isset($item->key) || isset($item->id)) wire:key="{{ isset($item->key) ? $item->key : $item->id }}" @endif>
-    <div class="relative bg-tictac-primary-blue slider-outer-shadow mb-10 p-2 rounded-4xl h-full w-full flex flex-col">
-        <div class="bg-white slider-inner-shadow rounded-3xl overflow-clip flex flex-col h-full">
+    <div class="relative flex flex-col bg-tictac-primary-blue slider-outer-shadow mb-10 p-2 rounded-4xl w-full h-full">
+        <div class="flex flex-col bg-white slider-inner-shadow rounded-3xl h-full overflow-clip">
             <div class="aspect-6/4 overflow-hidden">
                 <img
                     class="w-full h-full object-cover"
-                    src="{{ $item->getFirstMediaUrl('thumbnail') ? $item->getFirstMediaUrl('thumbnail') : 'https://placehold.co/600x400' }}"
+                    src="{{ $item->getFirstMediaUrl('thumbnail', 'webp_small') ? $item->getFirstMediaUrl('thumbnail', 'webp_small') : 'https://placehold.co/600x400' }}"
                     alt="{{ $item->title ?? '' }}">
             </div>
 

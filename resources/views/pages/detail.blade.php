@@ -21,10 +21,10 @@
             </h1>
 
             <div class='overflow-hidden'>
-                <img class="rounded-lg w-full" src="{{ $article->getFirstMediaUrl('thumbnail') }}" alt="">
+                <img class="rounded-lg w-full" src="{{ $article->getFirstMediaUrl('thumbnail', 'webp') }}" alt="{{ $article->title }}" />
             </div>
 
-            <div class="prose max-w-none">
+            <div class="max-w-none prose">
                 {{-- {!! RichContentRenderer::make($article->content)->customBlocks([YoutubeBlock::class])->toHtml() !!} --}}
                 {!! $article->content !!}
                 {{-- {!! $article->renderRichContent('content') !!} --}}
