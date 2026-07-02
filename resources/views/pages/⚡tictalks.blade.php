@@ -59,21 +59,21 @@ new #[Layout('layouts::tictack', ['bg' => "before:bg-[url('../assets/bg/tictalks
 };
 ?>
 
-<div class="max-w-384 mx-auto px-4">
+<div class="mx-auto px-4 max-w-384">
     @push('plugin-scripts')
         @vite(['resources/js/slider.js', 'resources/js/gsap.js'])
     @endpush
-    <div class="absolute left-[1%] top-[7%] z-0 w-[13vw] max-md:hidden">
-        <div class="relative h-full w-full">
-            <img class="cloud absolute h-auto w-auto" data-direction="right" data-speed="1"
+    <div class="max-md:hidden top-[7%] left-[1%] z-0 absolute w-[13vw]">
+        <div class="relative w-full h-full">
+            <img class="absolute w-auto h-auto cloud" data-direction="right" data-speed="1"
                 src="{{ asset('img/cloud.png') }}" alt="" style="width: 290px; height: auto;">
         </div>
     </div>
 
-    <div class="clamp-[mb,12,28] flex flex-wrap justify-between gap-4">
+    <div class="flex flex-wrap justify-between gap-4 clamp-[mb,12,28]">
         <x-breadcrumb :links="[['label' => 'Tictalks', 'url' => route('tictalks.index')]]" />
 
-        <div class="clamp-[gap,2,4] flex flex-wrap items-center text-white" wire:transition>
+        <div class="flex flex-wrap items-center text-white clamp-[gap,2,4]" wire:transition>
 
             <x-button :selected="$selectedCategory === 'all'" wire:click="handleCategoryChange">{{ __('global.all') }}</x-button>
 
@@ -99,16 +99,19 @@ new #[Layout('layouts::tictack', ['bg' => "before:bg-[url('../assets/bg/tictalks
             slidesPerView: 1,
             spaceBetween: 20,
             breakpoints: {
-                // when window width is >= 320px
                 425: {
-                    slidesPerView: 2,
+                    slidesPerView: 1,
                     spaceBetween: 20,
                 },
-                // when window width is >= 480px
                 720: {
+                    slidesPerView: 2,
+                    spaceBetween: 30,
+                },
+                1024: {
                     slidesPerView: 3,
                     spaceBetween: 30,
                 },
+
             },
             scrollbar: {
                 el: ".swiper-scrollbar",
