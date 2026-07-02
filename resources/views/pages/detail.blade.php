@@ -20,11 +20,32 @@
                 {{ $article->title }}
             </h1>
 
-            <div class='overflow-hidden'>
-                <img class="rounded-lg w-full" src="{{ $article->getFirstMediaUrl('thumbnail') }}" alt="">
+            <div class="relative">
+                <img
+                    class="rounded-lg w-full"
+                    src="{{ $article->getFirstMediaUrl('thumbnail') }}"
+                    alt="{{ $article->title }}"
+                >
+
+                @if ($article->category?->slug === 'tictac-bites')
+                    <div class="absolute
+                            top-0 right-0
+                            translate-x-1/3 -translate-y-1/3
+                            w-20 h-20 md:w-32 md:h-32
+                            rounded-full bg-white
+                            shadow-2xl
+                            flex items-center justify-center
+                            z-20">
+                        <img
+                            src="{{ asset('img/tictac-bites.png') }}"
+                            alt="Tictac Bites"
+                            class="w-[92%] h-[92%] object-contain"
+                        >
+                    </div>
+                @endif
             </div>
 
-            <div class="prose max-w-none">
+            <div class="prose max-w-none [&_h2]:text-[1.3rem] md:[&_h2]:text-2xl">
                 {{-- {!! RichContentRenderer::make($article->content)->customBlocks([YoutubeBlock::class])->toHtml() !!} --}}
                 {!! $article->content !!}
                 {{-- {!! $article->renderRichContent('content') !!} --}}
