@@ -3,7 +3,7 @@
 
 <x-layouts.tictack class="before:bg-[url('../assets/bg/detail-bg-island.png')]">
 
-    <div class="bg-white/95 mx-6 sm:mx-auto px-4 py-6 rounded-2xl max-w-6xl tictalks">
+    <div class="bg-white/95 mx-4 sm:mx-auto px-4 py-6 rounded-2xl max-w-6xl tictalks">
         <x-breadcrumb :links="[
             [
                 'label' => $type,
