@@ -12,12 +12,14 @@ use Illuminate\Support\Str;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
+use Spatie\Sitemap\Contracts\Sitemapable;
+use Spatie\Sitemap\Tags\Url;
 use Spatie\Sluggable\HasSlug;
 use Spatie\Sluggable\SlugOptions;
 use Spatie\Tags\HasTags;
 use Spatie\Translatable\HasTranslations;
 
-class Activity extends Model implements HasMedia, HasRichContent
+class Activity extends Model implements HasMedia, HasRichContent, Sitemapable
 {
     use HasSlug, HasTags, HasTranslations, InteractsWithMedia, InteractsWithRichContent;
 
@@ -99,6 +101,14 @@ class Activity extends Model implements HasMedia, HasRichContent
             ->performOnCollections('thumbnail')
             ->format('webp')
             ->nonQueued();
+    }
+
+    public function toSitemapTag(): Url | string | array
+    {
+        return Url::create(route('tictactivity.show', ['article' => $this->slug]))
+            ->setLastModificationDate($this->updated_at)
+            ->setChangeFrequency(Url::CHANGE_FREQUENCY_WEEKLY)
+            ->setPriority(0.8);
     }
 
     /**

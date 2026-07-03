@@ -7,7 +7,8 @@ use Livewire\Attributes\Url;
 use Livewire\Component;
 use Livewire\WithPagination;
 
-new #[Layout('layouts::tictack', ['bg' => "before:bg-[url('../assets/bg/tictalks-bg-island.png')]"])] class extends Component {
+new #[Layout('layouts::tictack', ['bg' => "before:bg-[url('../assets/bg/tictalks-bg-island.png')]"])] class extends Component
+{
     use WithPagination;
 
     #[Url('category', except: 'all')]

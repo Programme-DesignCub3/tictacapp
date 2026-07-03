@@ -6,8 +6,11 @@ use App\Http\Controllers\TictacstationController;
 use App\Http\Controllers\TictactivityController;
 use App\Http\Controllers\TictalkController;
 use App\Http\Middleware\RedirectToHomeIfNotAuth;
+use App\Models\Tictalk;
 use Illuminate\Support\Facades\Route;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
+use Spatie\Sitemap\Sitemap;
+use Spatie\Sitemap\Tags\Url;
 
 /** ADD ALL LOCALIZED ROUTES INSIDE THIS GROUP **/
 Route::group([
@@ -85,3 +88,56 @@ Route::group(
 
 Route::post('/logout', LogoutController::class)
     ->name('logout');
+
+
+// Sitemap URLs
+Route::get('/sitemap.xml', function () {
+
+    $tictalks = Tictalk::all();
+
+    $sitemap = Sitemap::create()
+        ->add(Url::create(route('home', [], true))
+            ->setLastModificationDate(now())
+            ->setChangeFrequency(Url::CHANGE_FREQUENCY_DAILY)
+            ->setPriority(1.0)
+            ->addAlternate(LaravelLocalization::localizeUrl(route('home', [], true), 'id'), 'id')
+            ->addAlternate(LaravelLocalization::localizeUrl(route('home', [], true), 'en'), 'en')
+        )
+        ->add(Url::create(route('tictacstation', [], true))
+            ->setLastModificationDate(now())
+            ->setChangeFrequency(Url::CHANGE_FREQUENCY_DAILY)
+            ->setPriority(1.0)
+            ->addAlternate(LaravelLocalization::localizeUrl(route('tictacstation', [], true), 'id'), 'id')
+            ->addAlternate(LaravelLocalization::localizeUrl(route('tictacstation', [], true), 'en'), 'en')
+        )
+        ->add(Url::create(route('gameon', [], true))
+            ->setLastModificationDate(now())
+            ->setChangeFrequency(Url::CHANGE_FREQUENCY_DAILY)
+            ->setPriority(1.0)
+            ->addAlternate(LaravelLocalization::localizeUrl(route('gameon', [], true), 'id'), 'id')
+            ->addAlternate(LaravelLocalization::localizeUrl(route('gameon', [], true), 'en'), 'en')
+        )
+        ->add(Url::create(route('tictalks.index', [], true))
+            ->setLastModificationDate(now())
+            ->setChangeFrequency(Url::CHANGE_FREQUENCY_DAILY)
+            ->setPriority(1.0)
+            ->addAlternate(LaravelLocalization::localizeUrl(route('tictalks.index', [], true), 'id'), 'id')
+            ->addAlternate(LaravelLocalization::localizeUrl(route('tictalks.index', [], true), 'en'), 'en')
+        )
+        ->add(Url::create(route('tictactivity.index', [], true))
+            ->setLastModificationDate(now())
+            ->setChangeFrequency(Url::CHANGE_FREQUENCY_DAILY)
+            ->setPriority(1.0)
+            ->addAlternate(LaravelLocalization::localizeUrl(route('tictactivity.index', [], true), 'id'), 'id')
+            ->addAlternate(LaravelLocalization::localizeUrl(route('tictactivity.index', [], true), 'en'), 'en')
+        );
+
+    foreach ($tictalks as $tictalk) {
+        $sitemap->add(Url::create(route('tictalks.show', ['article' => $tictalk->slug], true))
+            ->addAlternate( LaravelLocalization::localizeUrl(route('tictalks.show', ['article' => $tictalk->slug], true), 'id'), 'id')
+            ->addAlternate( LaravelLocalization::localizeUrl(route('tictalks.show', ['article' => $tictalk->slug], true), 'en'), 'en')
+        );
+    }
+
+    return $sitemap;
+});
