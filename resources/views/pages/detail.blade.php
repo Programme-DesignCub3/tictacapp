@@ -35,7 +35,7 @@
                             rounded-full bg-white
                             shadow-2xl
                             flex items-center justify-center
-                            z-20">
+                            z-0">
                         <img
                             src="{{ asset('img/tictac-bites.png') }}"
                             alt="Tictac Bites"
