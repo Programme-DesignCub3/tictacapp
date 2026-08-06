@@ -114,6 +114,10 @@ new #[Layout('layouts::tictack', ['bg' => "before:bg-[url('../assets/bg/tictalks
                 },
 
             },
+            mousewheel: {
+                forceToAxis: false,
+                invert: false,
+            },
             scrollbar: {
                 el: ".swiper-scrollbar",
                 draggable: true,
