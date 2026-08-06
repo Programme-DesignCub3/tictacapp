@@ -6,6 +6,7 @@ use App\Http\Controllers\TictacstationController;
 use App\Http\Controllers\TictactivityController;
 use App\Http\Controllers\TictalkController;
 use App\Http\Middleware\RedirectToHomeIfNotAuth;
+use App\Models\Product;
 use App\Models\Tictalk;
 use Illuminate\Support\Facades\Route;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
@@ -93,7 +94,11 @@ Route::post('/logout', LogoutController::class)
 // Sitemap URLs
 Route::get('/sitemap.xml', function () {
 
+    // Tictalk Query
     $tictalks = Tictalk::all();
+
+    // Product Query
+    $products = Product::all();
 
     $sitemap = Sitemap::create()
         ->add(Url::create(route('home', [], true))
@@ -102,13 +107,6 @@ Route::get('/sitemap.xml', function () {
             ->setPriority(1.0)
             ->addAlternate(LaravelLocalization::localizeUrl(route('home', [], true), 'id'), 'id')
             ->addAlternate(LaravelLocalization::localizeUrl(route('home', [], true), 'en'), 'en')
-        )
-        ->add(Url::create(route('tictacstation', [], true))
-            ->setLastModificationDate(now())
-            ->setChangeFrequency(Url::CHANGE_FREQUENCY_DAILY)
-            ->setPriority(1.0)
-            ->addAlternate(LaravelLocalization::localizeUrl(route('tictacstation', [], true), 'id'), 'id')
-            ->addAlternate(LaravelLocalization::localizeUrl(route('tictacstation', [], true), 'en'), 'en')
         )
         ->add(Url::create(route('gameon', [], true))
             ->setLastModificationDate(now())
@@ -136,6 +134,13 @@ Route::get('/sitemap.xml', function () {
         $sitemap->add(Url::create(route('tictalks.show', ['article' => $tictalk->slug], true))
             ->addAlternate( LaravelLocalization::localizeUrl(route('tictalks.show', ['article' => $tictalk->slug], true), 'id'), 'id')
             ->addAlternate( LaravelLocalization::localizeUrl(route('tictalks.show', ['article' => $tictalk->slug], true), 'en'), 'en')
+        );
+    }
+
+    foreach ($products as $product) {
+        $sitemap->add(Url::create(route('tictacstation') . '?product=' . $product->slug)
+            ->addAlternate( LaravelLocalization::localizeUrl(route('tictacstation') . '?product=' . $product->slug, 'id'), 'id')
+            ->addAlternate( LaravelLocalization::localizeUrl(route('tictacstation') . '?product=' . $product->slug, 'en'), 'en')
         );
     }
 
