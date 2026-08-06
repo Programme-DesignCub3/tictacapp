@@ -26,13 +26,16 @@
                     const product = this.productList.find(product => product.slug === this.query);
                     if (product) {
                         this.handleProductChange(product.id);
+                        productSlide.slideTo(this.productList.indexOf(product));
                     } else {
                         let firstProduct = this.productList[0];
                         this.handleProductChange(firstProduct.id);
+                        productSlide.slideTo(this.productList.indexOf(firstProduct));
                     }
                 } else {
                     let firstProduct = this.productList[0];
                     this.handleProductChange(firstProduct.id);
+                    productSlide.slideTo(this.productList.indexOf(firstProduct));
                 }
             },
             setQuery(slug) {
@@ -42,7 +45,6 @@
             },
             init() {
                 this.readQuery();
-                this.handleProductChange(1);
                 productSlide.on('transitionEnd', () => { this.handleProductChange(productSlide.realIndex + 1) });
             }
         }">
