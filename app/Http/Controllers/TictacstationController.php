@@ -16,6 +16,7 @@ class TictacstationController extends Controller
         $products = Product::all()->map(function ($product) {
             return [
                 'id' => $product->id,
+                'slug' => $product->slug,
                 'name' => $product->name,
                 'specifications' => $product->specifications,
                 'description' => $product->description,

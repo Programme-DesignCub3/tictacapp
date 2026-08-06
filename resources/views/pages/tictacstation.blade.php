@@ -11,11 +11,36 @@
         <div class="grid grid-cols-1 sm:grid-cols-2" x-data="{
             productList: {{ json_encode($products) }},
             currentProduct: null,
+            currentProductSlug: null,
+            query: '',
             handleProductChange(id) {
                 const product = this.productList.find(product => product.id === id);
                 this.currentProduct = product ? product : this.productList[0];
+                this.currentProductSlug = this.currentProduct.slug;
+                this.setQuery(this.currentProductSlug);
+            },
+            readQuery() {
+                const urlParams = new URLSearchParams(window.location.search);
+                this.query = urlParams.get('product') || '';
+                if (this.query) {
+                    const product = this.productList.find(product => product.slug === this.query);
+                    if (product) {
+                        this.currentProduct = product;
+                        this.currentProductSlug = product.slug;
+                    } else {
+                        this.handleProductChange(1);
+                    }
+                } else {
+                    this.handleProductChange(1);
+                }
+            },
+            setQuery(slug) {
+                const url = new URL(window.location);
+                url.searchParams.set('product', slug);
+                window.history.pushState({}, '', url);
             },
             init() {
+                this.readQuery();
                 this.handleProductChange(1);
                 productSlide.on('transitionEnd', () => { this.handleProductChange(productSlide.realIndex + 1) });
             }
