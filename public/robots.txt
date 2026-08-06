@@ -1,2 +1,6 @@
 User-agent: *
 Disallow:
+Disallow: /cgi-bin/
+Disallow: /login/auth/twitter
+Disallow: /login/auth/facebook
+Disallow: /login/auth/google
