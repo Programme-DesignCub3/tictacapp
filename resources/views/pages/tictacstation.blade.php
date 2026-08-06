@@ -25,13 +25,14 @@
                 if (this.query) {
                     const product = this.productList.find(product => product.slug === this.query);
                     if (product) {
-                        this.currentProduct = product;
-                        this.currentProductSlug = product.slug;
+                        this.handleProductChange(product.id);
                     } else {
-                        this.handleProductChange(1);
+                        let firstProduct = this.productList[0];
+                        this.handleProductChange(firstProduct.id);
                     }
                 } else {
-                    this.handleProductChange(1);
+                    let firstProduct = this.productList[0];
+                    this.handleProductChange(firstProduct.id);
                 }
             },
             setQuery(slug) {
