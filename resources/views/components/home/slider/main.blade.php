@@ -1,15 +1,15 @@
-<div class="relative lg:hidden">
+<div class="lg:hidden relative">
 
     <div class="z-0 size-full">
-        <img class="cloud-slider absolute left-[15%] top-0 h-[15%]" data-direction="right" data-speed="1"
+        <img class="top-0 left-[15%] absolute h-[15%] cloud-slider" data-direction="right" data-speed="1"
             src="{{ asset('img/cloud.png') }}" alt="" />
-        <img class="cloud-slider absolute right-[5%] top-1/4 h-[10%]" data-direction="left" data-speed="1"
+        <img class="top-1/4 right-[5%] absolute h-[10%] cloud-slider" data-direction="left" data-speed="1"
             src="{{ asset('img/cloud.png') }}" alt="" />
 
     </div>
 
     <!-- Slider main container -->
-    <div class="swiper px-8! flex! min-h-[50dvh] items-center justify-center max-lg:hidden" id="home-mobile-slider">
+    <div class="max-lg:hidden justify-center items-center px-8! min-h-[50dvh] swiper flex!" id="home-mobile-slider">
         <!-- Additional required wrapper -->
         <div class="swiper-wrapper">
             <!-- Slides -->
@@ -18,28 +18,28 @@
                     [
                         'islandImage' => asset('img/mobile/tictacstation.png'),
                         'textImage' => asset('img/text/tictacstation.png'),
-                        'text' => 'Click here to read more about our product varieties >',
+                        'text' => __('title.slider.tictacstation'),
                         'classModifier' => '',
                         'link' => route('tictacstation'),
                     ],
                     [
                         'islandImage' => asset('img/mobile/tictactivity.png'),
                         'textImage' => asset('img/text/tictactivity.png'),
-                        'text' => 'Click here to read more about our recent campaign >',
+                        'text' => __('title.slider.tictactivity'),
                         'classModifier' => '-ml-32 scale-125 mt-8',
                         'link' => route('tictactivity.index'),
                     ],
                     [
                         'islandImage' => asset('img/mobile/tictactalks.png'),
                         'textImage' => asset('img/text/tictactalks.png'),
-                        'text' => 'Click here to read more about our intriguing articles >',
+                        'text' => __('title.slider.tictalks'),
                         'classModifier' => '',
                         'link' => route('tictalks.index'),
                     ],
                     [
                         'islandImage' => asset('img/mobile/gameon.png'),
                         'textImage' => asset('img/text/gameon.png'),
-                        'text' => 'Click here to play some exciting games >',
+                        'text' => __('title.slider.gameon'),
                         'classModifier' => '-ml-32 -mb-8 scale-110',
                         'link' => route('gameon'),
                     ],
@@ -57,7 +57,7 @@
         <div class="swiper-button-next"></div>
     </div>
 
-    <div class="my-2 flex flex-wrap justify-center gap-8 pt-8">
+    <div class="flex flex-wrap justify-center gap-8 my-2 pt-8">
         @php
             $socials = [
                 [

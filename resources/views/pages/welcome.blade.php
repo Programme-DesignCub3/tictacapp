@@ -11,50 +11,74 @@
                 {{-- Cloud images --}}
                 <div class="absolute right-[16%] top-[14%] w-[10vw]">
                     <div class="relative h-full w-full">
-                        <img class="cloud absolute h-auto w-auto" data-direction="right" data-speed="1"
-                            src="{{ asset('img/cloud.png') }}" alt="" style="width: 290px; height: auto;">
+                        <picture>
+                            <source srcset="{{ asset('img/cloud.webp') }}" type="image/webp">
+                            <img class="cloud absolute h-auto w-auto" data-direction="right" data-speed="1"
+                                src="{{ asset('img/cloud.png') }}" alt="" style="width: 290px; height: auto;">
+                        </picture>
                     </div>
                 </div>
                 <div class="absolute right-[15%] top-[19%] w-[10vw]">
                     <div class="relative h-full w-full">
-                        <img class="cloud absolute h-auto w-auto" data-direction="right" data-speed="1"
-                            src="{{ asset('img/cloud.png') }}" alt="" style="width: 100px; height: auto;">
+                        <picture>
+                            <source srcset="{{ asset('img/cloud.webp') }}" type="image/webp">
+                            <img class="cloud absolute h-auto w-auto" data-direction="right" data-speed="1"
+                                src="{{ asset('img/cloud.png') }}" alt="" style="width: 100px; height: auto;">
+                        </picture>
                     </div>
                 </div>
                 <div class="absolute left-[20%] top-[30%] w-[10vw]">
                     <div class="relative h-full w-full">
-                        <img class="cloud absolute h-auto w-auto" data-direction="right" data-speed="1"
-                            src="{{ asset('img/cloud.png') }}" alt="" style="width: 300px; height: auto;">
+                        <picture>
+                            <source srcset="{{ asset('img/cloud.webp') }}" type="image/webp">
+                            <img class="cloud absolute h-auto w-auto" data-direction="right" data-speed="1"
+                                src="{{ asset('img/cloud.png') }}" alt="" style="width: 300px; height: auto;">
+                        </picture>
                     </div>
                 </div>
                 <div class="absolute left-[60%] top-[66%] w-[10vw]">
                     <div class="relative h-full w-full">
-                        <img class="cloud absolute h-auto w-auto" data-direction="left" data-speed="1"
-                            src="{{ asset('img/cloud.png') }}" alt="" style="width: 150px; height: auto;">
+                        <picture>
+                            <source srcset="{{ asset('img/cloud.webp') }}" type="image/webp">
+                            <img class="cloud absolute h-auto w-auto" data-direction="left" data-speed="1"
+                                src="{{ asset('img/cloud.png') }}" alt="" style="width: 150px; height: auto;">
+                        </picture>
                     </div>
                 </div>
                 <div class="absolute left-[10%] top-[70.8%] w-[10vw]">
                     <div class="relative h-full w-full">
-                        <img class="cloud absolute h-auto w-auto" data-direction="left" data-speed="1"
-                            src="{{ asset('img/cloud.png') }}" alt="" style="width: 240px; height: auto;">
+                        <picture>
+                            <source srcset="{{ asset('img/cloud.webp') }}" type="image/webp">
+                            <img class="cloud absolute h-auto w-auto" data-direction="left" data-speed="1"
+                                src="{{ asset('img/cloud.png') }}" alt="" style="width: 240px; height: auto;">
+                        </picture>
                     </div>
                 </div>
                 <div class="absolute left-[10%] top-[76%] w-[10vw]">
                     <div class="relative h-full w-full">
-                        <img class="cloud absolute h-auto w-auto" data-direction="left" data-speed="1"
-                            src="{{ asset('img/cloud.png') }}" alt="" style="width: 90px; height: auto;">
+                        <picture>
+                            <source srcset="{{ asset('img/cloud.webp') }}" type="image/webp">
+                            <img class="cloud absolute h-auto w-auto" data-direction="left" data-speed="1"
+                                src="{{ asset('img/cloud.png') }}" alt="" style="width: 90px; height: auto;">
+                        </picture>
                     </div>
                 </div>
                 <div class="absolute right-[28%] top-[84%] w-[10vw]">
                     <div class="relative h-full w-full">
-                        <img class="cloud absolute h-auto w-auto" data-direction="right" data-speed="1"
-                            src="{{ asset('img/cloud.png') }}" alt="" style="width: 360px; height: auto;">
+                        <picture>
+                            <source srcset="{{ asset('img/cloud.webp') }}" type="image/webp">
+                            <img class="cloud absolute h-auto w-auto" data-direction="right" data-speed="1"
+                                src="{{ asset('img/cloud.png') }}" alt="" style="width: 360px; height: auto;">
+                        </picture>
                     </div>
                 </div>
                 <div class="absolute right-[20%] top-[88%] w-[10vw]">
                     <div class="relative h-full w-full">
-                        <img class="cloud absolute h-auto w-auto" data-direction="right" data-speed="1"
-                            src="{{ asset('img/cloud.png') }}" alt="" style="width: 100px; height: auto;">
+                        <picture>
+                            <source srcset="{{ asset('img/cloud.webp') }}" type="image/webp">
+                            <img class="cloud absolute h-auto w-auto" data-direction="right" data-speed="1"
+                                src="{{ asset('img/cloud.png') }}" alt="" style="width: 100px; height: auto;">
+                        </picture>
                     </div>
                 </div>
                 {{-- End of Cloud images --}}
