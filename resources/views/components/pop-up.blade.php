@@ -12,11 +12,26 @@
                     @if (db_config('pop-up.url'))
                         <a href="{{ db_config('pop-up.url') }}" target="_blank">
                     @endif
-                    <img
-                        src="{{ asset('storage/' . db_config('pop-up.image')) }}"
-                        alt=""
-                        class="block mx-auto w-auto h-auto max-w-[90vw] md:max-w-[80vw] lg:max-w-[900px] max-h-[75vh] md:max-h-[85vh] object-contain rounded-xl"
-                    >
+                    <picture>
+                        <source
+                            srcset="{{ asset('storage/' . pathinfo(db_config('pop-up.image'), PATHINFO_FILENAME) . '-mobile.webp') }}"
+                            media="(max-width: 767px)"
+                            type="image/webp"
+                        >
+                        <source
+                            srcset="{{ asset('storage/' . pathinfo(db_config('pop-up.image'), PATHINFO_FILENAME) . '-mobile.' . pathinfo(db_config('pop-up.image'), PATHINFO_EXTENSION)) }}"
+                            media="(max-width: 767px)"
+                        >
+                        <source
+                            srcset="{{ asset('storage/' . pathinfo(db_config('pop-up.image'), PATHINFO_FILENAME) . '.webp') }}"
+                            type="image/webp"
+                        >
+                        <img
+                            src="{{ asset('storage/' . db_config('pop-up.image')) }}"
+                            alt=""
+                            class="block mx-auto w-auto h-auto max-w-[90vw] md:max-w-[80vw] lg:max-w-[900px] max-h-[75vh] md:max-h-[85vh] object-contain rounded-xl"
+                        >
+                    </picture>
                     @if (db_config('pop-up.url'))
                         </a>
                     @endif
