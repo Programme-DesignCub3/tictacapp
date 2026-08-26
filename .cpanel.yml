@@ -22,4 +22,3 @@ deployment:
     - $PHP_PATH artisan route:cache
     - $PHP_PATH artisan view:cache
     - $PHP_PATH artisan optimize:clear
-    - $PHP_PATH artisan storage:link

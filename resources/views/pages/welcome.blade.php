@@ -3,6 +3,13 @@
         @vite(['resources/js/home.js', 'resources/js/slider.js', 'resources/js/gsap.js'])
     @endpush
 
+    @push('custom-css')
+        <link rel="preload" as="style" href="{{ Vite::asset('resources/css/swiper.css') }}" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript>
+            <link rel="stylesheet" href="{{ Vite::asset('resources/css/swiper.css') }}">
+        </noscript>
+    @endpush
+
     <div class="max-lg:hidden">
         <div class="-mt-72" id="smooth-wrapper">
             <div class="relative" id="smooth-content">

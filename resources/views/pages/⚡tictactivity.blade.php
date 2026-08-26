@@ -66,6 +66,14 @@ new #[Layout('layouts::tictack', ['bg' => "before:bg-[url('../assets/bg/tictacti
     @push('plugin-scripts')
     @vite(['resources/js/slider.js', 'resources/js/gsap.js'])
     @endpush
+
+    @push('custom-css')
+        <link rel="preload" as="style" href="{{ Vite::asset('resources/css/swiper.css') }}" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript>
+            <link rel="stylesheet" href="{{ Vite::asset('resources/css/swiper.css') }}">
+        </noscript>
+    @endpush
+
     <div class="max-md:hidden top-[7%] left-[1%] z-0 absolute w-[13vw]">
         <div class="relative w-full h-full">
             <img class="absolute w-auto h-auto cloud" data-direction="right" data-speed="1"

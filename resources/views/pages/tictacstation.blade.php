@@ -3,6 +3,13 @@
         @vite(['resources/js/product.js', 'resources/js/sliderProduct.js'])
     @endpush
 
+    @push('custom-css')
+        <link rel="preload" as="style" href="{{ Vite::asset('resources/css/swiper.css') }}" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript>
+            <link rel="stylesheet" href="{{ Vite::asset('resources/css/swiper.css') }}">
+        </noscript>
+    @endpush
+
     <section class="mx-auto container">
         <div class="mb-28">
             <x-breadcrumb :links="[['label' => 'TicTacStation', 'url' => route('tictacstation')]]" />

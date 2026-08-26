@@ -7,6 +7,7 @@ export default defineConfig({
         laravel({
             input: [
                 "resources/css/app.css",
+                "resources/css/swiper.css",
                 "resources/js/app.js",
                 "resources/js/home.js",
                 "resources/js/detail.js",

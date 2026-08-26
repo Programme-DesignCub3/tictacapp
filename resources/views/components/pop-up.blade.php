@@ -27,6 +27,7 @@
                             type="image/webp"
                         >
                         <img
+                            loading="lazy"
                             src="{{ asset('storage/' . pathinfo(db_config('pop-up.image'), PATHINFO_DIRNAME) . '/' . pathinfo(db_config('pop-up.image'), PATHINFO_BASENAME)) }}"
                             alt=""
                             class="block mx-auto rounded-xl w-auto max-w-[90vw] md:max-w-[80vw] lg:max-w-[900px] h-auto max-h-[75vh] md:max-h-[85vh] object-contain"
