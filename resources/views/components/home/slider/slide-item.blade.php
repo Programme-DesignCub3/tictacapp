@@ -1,12 +1,19 @@
 @props(['item'])
 <div class="swiper-slide">
     <div class="flex flex-col items-center">
-        <img data-swiper-parallax="-700"
-            {{ $attributes->merge(['class' => 'max-h-[50dvh] w-auto shrink basis-1/2 object-contain']) }}
-            src="{{ $item['islandImage'] }}" alt="">
+        <picture>
+            <source type="image/webp" srcset="{{ $item['islandImageWebp'] }}">
+            <img data-swiper-parallax="-700"
+                {{ $attributes->merge(['class' => 'max-h-[50dvh] w-auto shrink basis-1/2 object-contain']) }}
+                src="{{ $item['islandImage'] }}" alt="">
+        </picture>
 
         <div class="flex justify-center items-center -mt-8 w-[50dvw] max-w-lg" data-swiper-parallax="-500">
-            <img src="{{ $item['textImage'] }}" alt="">
+            <picture>
+                <source type="image/webp"
+                    srcset="{{ preg_replace('/\.(png|jpe?g)(\?.*)?$/i', '.webp${2}', $item['textImage']) }}">
+                <img src="{{ $item['textImage'] }}" alt="">
+            </picture>
         </div>
 
         @if ($item['link'] === route('gameon'))

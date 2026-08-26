@@ -14,16 +14,16 @@
                     @endif
                     <picture>
                         <source
-                            srcset="{{ asset('storage/' . pathinfo(db_config('pop-up.image'), PATHINFO_DIRNAME) . '/' . pathinfo(db_config('pop-up.image'), PATHINFO_FILENAME) . '-mobile.webp') }}"
+                            srcset="{{ asset('storage/assets' . pathinfo(db_config('pop-up.image'), PATHINFO_DIRNAME) . '/' . pathinfo(db_config('pop-up.image'), PATHINFO_FILENAME) . '-mobile.webp') }}"
                             media="(max-width: 767px)"
                             type="image/webp"
                         >
                         <source
-                            srcset="{{ asset('storage/' . pathinfo(db_config('pop-up.image'), PATHINFO_DIRNAME) . '/' . pathinfo(db_config('pop-up.image'), PATHINFO_FILENAME) . '-mobile.' . pathinfo(db_config('pop-up.image'), PATHINFO_EXTENSION)) }}"
+                            srcset="{{ asset('storage/assets' . pathinfo(db_config('pop-up.image'), PATHINFO_DIRNAME) . '/' . pathinfo(db_config('pop-up.image'), PATHINFO_FILENAME) . '-mobile.' . pathinfo(db_config('pop-up.image'), PATHINFO_EXTENSION)) }}"
                             media="(max-width: 767px)"
                         >
                         <source
-                            srcset="{{ asset('storage/' . pathinfo(db_config('pop-up.image'), PATHINFO_DIRNAME) . '/' . pathinfo(db_config('pop-up.image'), PATHINFO_FILENAME) . '.webp') }}"
+                            srcset="{{ asset('storage/assets' . pathinfo(db_config('pop-up.image'), PATHINFO_DIRNAME) . '/' . pathinfo(db_config('pop-up.image'), PATHINFO_FILENAME) . '.webp') }}"
                             type="image/webp"
                         >
                         <img
