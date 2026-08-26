@@ -5,6 +5,7 @@
             <source type="image/webp" srcset="{{ $item['islandImageWebp'] }}">
             <img data-swiper-parallax="-700"
                 {{ $attributes->merge(['class' => 'max-h-[50dvh] w-auto shrink basis-1/2 object-contain']) }}
+                loading="lazy"
                 src="{{ $item['islandImage'] }}" alt="">
         </picture>
 
@@ -12,7 +13,7 @@
             <picture>
                 <source type="image/webp"
                     srcset="{{ preg_replace('/\.(png|jpe?g)(\?.*)?$/i', '.webp${2}', $item['textImage']) }}">
-                <img src="{{ $item['textImage'] }}" alt="">
+                <img loading="lazy" src="{{ $item['textImage'] }}" alt="">
             </picture>
         </div>
 

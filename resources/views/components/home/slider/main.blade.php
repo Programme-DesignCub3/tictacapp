@@ -119,11 +119,11 @@
 
             const initSlider = () => {
                 homeSlider = new window.Swiper("#home-mobile-slider", {
-
                     slidesPerView: 1,
                     parallax: true,
                     // slidesPerView: "auto",
                     spaceBetween: 200,
+                    lazy: true,
                 });
 
                 const clouds = document.querySelectorAll(".cloud-slider");
