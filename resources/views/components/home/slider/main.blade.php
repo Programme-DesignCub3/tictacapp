@@ -30,7 +30,8 @@
                         'textImage' => asset('img/text/tictactivity.png'),
                         'textImageWebp' => asset('img/text/tictactivity.webp'),
                         'text' => __('title.slider.tictactivity'),
-                        'classModifier' => '-ml-32 scale-125 mt-8',
+                        // 'classModifier' => '-ml-32 scale-125 mt-8',
+                        'classModifier' => '',
                         'link' => route('tictactivity.index'),
                     ],
                     [
@@ -48,7 +49,8 @@
                         'textImage' => asset('img/text/gameon.png'),
                         'textImageWebp' => asset('img/text/gameon.webp'),
                         'text' => __('title.slider.gameon'),
-                        'classModifier' => '-ml-32 -mb-8 scale-110',
+                        // 'classModifier' => '-ml-32 -mb-8 scale-110',
+                        'classModifier' => '',
                         'link' => route('gameon'),
                     ],
                 ];
