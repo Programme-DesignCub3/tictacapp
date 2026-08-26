@@ -16,6 +16,7 @@ deployment:
     - /bin/ln -s $DEPLOYPATH/public/.htaccess $PUBLIC_HTML_PATH/.htaccess
     - /bin/ln -s $DEPLOYPATH/public/favicon.ico $PUBLIC_HTML_PATH/favicon.ico
     - /bin/ln -s $DEPLOYPATH/public/robots.txt $PUBLIC_HTML_PATH/robots.txt
+    - /bin/cp $DEPLOYPATH/public/img $PUBLIC_HTML_PATH/img
     - $PHP_PATH ~/bin/composer install --no-dev --optimize-autoloader
     - $PHP_PATH artisan config:cache
     - $PHP_PATH artisan route:cache
