@@ -1,6 +1,14 @@
 @use('Filament\Forms\Components\RichEditor\RichContentRenderer')
 @use('App\Filament\Forms\Components\RichEditor\RichContentCustomBlocks\YoutubeBlock')
 
+<style>
+    .quicktic-quiz ul {
+        list-style-type: upper-alpha !important;
+    }
+
+    
+</style>
+
 <x-layouts.tictack class="before:bg-[url('../assets/bg/detail-bg-island.png')]">
 
     <div class="bg-white/95 mx-4 sm:mx-auto px-4 py-6 rounded-2xl max-w-6xl tictalks">
@@ -45,10 +53,11 @@
                 @endif
             </div>
 
-            <div class="prose max-w-none [&_h2]:text-[1.3rem] md:[&_h2]:text-2xl">
-                {{-- {!! RichContentRenderer::make($article->content)->customBlocks([YoutubeBlock::class])->toHtml() !!} --}}
+            <div @class([
+                'prose max-w-none [&_h2]:text-[1.3rem] md:[&_h2]:text-2xl',
+                'quicktic-quiz' => $article->slug === 'kuis-quicktic-1-menit-varian-tictac-dua-kelinci-mana-yang-fix-kamu-banget',
+            ])>
                 {!! $article->content !!}
-                {{-- {!! $article->renderRichContent('content') !!} --}}
             </div>
 
             <div class="flex flex-wrap items-center gap-4">
