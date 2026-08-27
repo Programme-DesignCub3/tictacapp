@@ -11,6 +11,7 @@ use Filament\Forms\Components\SpatieTagsInput;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Schemas\Components\Utilities\Get;
+use App\Filament\RichEditor\Plugins\ListStylePlugin;
 use Filament\Schemas\Schema;
 
 class TictalkForm
@@ -41,12 +42,25 @@ class TictalkForm
                     ])
                     ->plugins([
                         EmbedPlugin::make(),
+                        ListStylePlugin::make(),
                     ])
                     ->toolbarButtons([
                         ['bold', 'italic', 'underline', 'strike', 'subscript', 'superscript', 'link'],
+
                         ['h2', 'h3', 'alignStart', 'alignCenter', 'alignEnd'],
-                        ['blockquote', 'codeBlock', 'bulletList', 'orderedList'],
-                        ['table', 'attachFiles'], // The `customBlocks` and `mergeTags` tools are also added here if those features are used.
+
+                        [
+                            'blockquote',
+                            'codeBlock',
+                            'bulletList',
+                            'orderedList',
+                            'orderedListUpperAlpha',
+                            'orderedListLowerAlpha',
+                            'orderedListUpperRoman',
+                            'orderedListLowerRoman',
+                        ],
+
+                        ['table', 'attachFiles'],
                         ['embed'],
                         ['undo', 'redo'],
                     ])
