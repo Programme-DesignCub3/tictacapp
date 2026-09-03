@@ -220,8 +220,9 @@
 
     @if (db_config('pop-up.enable', false))
         <x-pop-up />
+    @else
+        <x-newpop-up />
     @endif
-
 
     <x-home.slider.main />
 
